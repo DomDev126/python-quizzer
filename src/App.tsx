@@ -5,6 +5,7 @@ import Options from "./components/Options";
 import Explanation from "./components/Explanation";
 import { questionFetcher } from "./utilities/questionFetcher";
 import Score from "./components/Score";
+import Footer from "./components/Footer";
 
 type QuestionData = {
   difficulty: string;
@@ -125,6 +126,7 @@ function App() {
           </button>
         )}
       </div>
+      <Footer />
     </>
   );
 }
