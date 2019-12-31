@@ -83,7 +83,7 @@ function App() {
 
   const restartQuiz = () => {
     const fetchedQuestions = questionFetcher();
-    console.log(fetchedQuestions);
+    console.log(fetchedQuestions.length);
     if (fetchedQuestions.length > 0) {
       setQuestions(fetchedQuestions);
       setCurrentQuestionIndex(0);
