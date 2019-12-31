@@ -6,6 +6,7 @@ import Explanation from "./components/Explanation";
 import { questionFetcher } from "./utilities/questionFetcher";
 import Score from "./components/Score";
 import Footer from "./components/Footer";
+import Intro from "./components/Intro";
 
 type QuestionData = {
   difficulty: string;
@@ -30,6 +31,7 @@ function App() {
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean>(false);
   const [canContinue, setCanContinue] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
+  const [gameStarted, setGameStarted] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchedQuestions = questionFetcher();
@@ -93,8 +95,14 @@ function App() {
     }
   };
 
+  const startGame = () => {
+    setGameStarted(true);
+  };
+
   if (questions.length === 0) {
     return <div>Loading...</div>;
+  } else if (!gameStarted) {
+    return <Intro onButtonClick={startGame} />;
   } else if (currentQuestionIndex >= questions.length) {
     return <Score score={score} restart={restartQuiz} />;
   }

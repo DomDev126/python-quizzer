@@ -269,7 +269,55 @@
           },
           "correctAnswer": "a",
           "explanation": "Initially, 'foo' is set to 15 and 'bar' to 10. The line 'foo = foo - bar' updates 'foo' to 5 (since 15 - 10 = 5). Next, 'bar = bar - foo' updates 'bar' to 5 (10 - 5 = 5). The line 'foo, bar = bar, foo' swaps the values of 'foo' and 'bar', but since both are 5 at this point, their values remain the same. Therefore, when 'print(foo)' is executed, the output is 5. This question tests understanding of basic arithmetic operations, variable assignments, and value swapping in Python."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "num_list = [1, 2, 3, 4, 5]\nsum = 0\n\nfor i in range(len(num_list)):\n    sum += i\n\nprint(sum)",
+          "options": {
+            "a": "10",
+            "b": "15",
+            "c": "20",
+            "d": "0",
+            "e": "5",
+            "f": "None of these"
+          },
+          "correctAnswer": "a",
+          "explanation": "The code calculates the sum of the indices of the list 'num_list', not the elements themselves. The range function generates indices from 0 to 4 (length of the list minus one). These indices (0, 1, 2, 3, 4) are added together, resulting in a total of 10. Therefore, the output of the print statement is '10'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "def foo(x, y):\n    return x * y\n\nresult = foo(2, \"Python\")\nprint(result)",
+          "options": {
+            "a": "4",
+            "b": "TypeError",
+            "c": "SyntaxError",
+            "d": "10",
+            "e": "PythonPython",
+            "f": "None of these"
+          },
+          "correctAnswer": "e",
+          "explanation": "In Python, when a string is multiplied by an integer, the string is repeated that many times. In this code snippet, 'foo' takes two arguments, 'x' and 'y', and returns the product 'x * y'. Since 'x' is 2 and 'y' is the string \"Python\", the result is the string \"Python\" repeated twice, forming \"PythonPython\". Therefore, the output of the print statement is \"PythonPython\"."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "a = 5\nb = 10\n\ndef swap(a, b):\n    temp = a\n    a = b\n    b = temp\n\nswap(a, b)\nprint(\"a:\", a, \"b:\", b)",
+          "options": {
+            "a": "a: 5 b: 10",
+            "b": "a: 10 b: 5",
+            "c": "SyntaxError",
+            "d": "TypeError",
+            "e": "a: 0 b: 0",
+            "f": "None of these"
+          },
+          "correctAnswer": "a",
+          "explanation": "In this code snippet, the function 'swap' is supposed to exchange the values of 'a' and 'b'. However, it only swaps the values locally within the function's scope. The original variables 'a' and 'b' outside the function remain unchanged. Thus, after calling 'swap(a, b)', the values of 'a' and 'b' are still 5 and 10, respectively. Therefore, the output of the print statement is 'a: 5 b: 10'."
         }
+        
+        
+        
         
         
         
@@ -494,7 +542,39 @@
         },
         "correctAnswer": "f",
         "explanation": "The 'range' function in Python creates a sequence of numbers. In this case, the 'range' function is defined with a start of 1, an end of 10, and a step of -1. However, since the start value (1) is less than the end value (10), and the step is negative, the 'range' function generates an empty sequence. Consequently, the 'for' loop does not iterate over any values, and nothing gets printed. This question tests understanding of the 'range' function in Python, especially how it behaves with different start, end, and step values."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "numbers = [1, 2, 3, 4, 5]\ntotal = 0\n\nfor number in numbers:\n    numbers.remove(number)\n    total += numbers[0]\n\nprint(total)",
+        "options": {
+          "a": "15",
+          "b": "10",
+          "c": "5",
+          "d": "9",
+          "e": "6",
+          "f": "None of these"
+        },
+        "correctAnswer": "e",
+        "explanation": "This code modifies the list 'numbers' while iterating over it, which is a common source of confusion. In each iteration, the first element of the list is removed, and the next element becomes the new first element. In the first iteration, '1' is removed and '2' (the new first element) is added to 'total'. In the next iteration, '3' is removed (since it's now the first element after '2' was removed) and '4' is added to 'total'. The loop thus adds 2 and 4 to 'total', resulting in 6. After these two iterations, the loop ends because there are no more elements to iterate over in the modified list. Therefore, the final output is 6."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "def foo(nums, threshold):\n    return [x**2 for x in nums if x > threshold]\n\nnums = [1, 4, 6, 8, 3, 2, 9]\nthreshold = 5\nresult = foo(nums, threshold)\n\nprint(result)",
+        "options": {
+          "a": "[36, 64, 81]",
+          "b": "[1, 16, 36, 64, 9, 4, 81]",
+          "c": "[6, 8, 9]",
+          "d": "[36, 49, 64, 81]",
+          "e": "[25, 36, 49, 64, 81]",
+          "f": "None of these"
+        },
+        "correctAnswer": "a",
+        "explanation": "The function 'foo' is a list comprehension that squares each number in 'nums' if it is greater than 'threshold'. The 'nums' list is [1, 4, 6, 8, 3, 2, 9], and 'threshold' is 5. Numbers greater than 5 in this list are 6, 8, and 9. Squaring these numbers results in 36 (6*6), 64 (8*8), and 81 (9*9), respectively. Therefore, the output of the function, and consequently the print statement, is [36, 64, 81]."
       }
+      
+      
       
       
       
