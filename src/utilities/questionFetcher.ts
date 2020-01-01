@@ -23,9 +23,31 @@ type QuestionsDataStructure = {
   expert: QuestionData[];
 };
 
+const shuffleOptions = (options: QuestionData['options'], correctAnswer: keyof QuestionData['options']) => {
+  let optionKeys = Object.keys(options) as (keyof QuestionData['options'])[];
+  let optionValues = Object.values(options);
+  
+  for (let i = optionValues.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [optionValues[i], optionValues[j]] = [optionValues[j], optionValues[i]];
+  }
+
+  let newOptions = {} as QuestionData['options'];
+  let newCorrectAnswer = correctAnswer;
+
+  optionKeys.forEach((key, index) => {
+    newOptions[key] = optionValues[index];
+    if (options[correctAnswer] === optionValues[index]) {
+      newCorrectAnswer = key;
+    }
+  });
+
+  return { newOptions, newCorrectAnswer };
+};
+
 export const questionFetcher = (): QuestionData[] => {
   const selectedQuestions: QuestionData[] = [];
-  const questionsDataTyped = JSON.parse(JSON.stringify(questionsData)) as QuestionsDataStructure
+  const questionsDataTyped = JSON.parse(JSON.stringify(questionsData)) as QuestionsDataStructure;
 
   const difficulties: (keyof QuestionsDataStructure)[] = ['beginner', 'medium', 'hard', 'expert'];
 
@@ -35,7 +57,15 @@ export const questionFetcher = (): QuestionData[] => {
       if (questions.length === 0) break;
 
       const randomIndex = Math.floor(Math.random() * questions.length);
-      selectedQuestions.push(questions[randomIndex]);
+      const question = questions[randomIndex];
+
+      const { newOptions, newCorrectAnswer } = shuffleOptions(question.options, question.correctAnswer as keyof QuestionData['options']);
+
+      selectedQuestions.push({
+        ...question,
+        options: newOptions,
+        correctAnswer: newCorrectAnswer
+      });
 
       questions.splice(randomIndex, 1);
     }
