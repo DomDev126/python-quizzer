@@ -872,7 +872,7 @@
           "a": "0",
           "b": "A random value between 23 and 41 that's divisible by 4",
           "c": "23",
-          "d": "A value greater than 50 but less than 60",
+          "d": "A value greater than 60 but less than 70",
           "e": "54",
           "f": "A random value between 50 and 60"
         },
