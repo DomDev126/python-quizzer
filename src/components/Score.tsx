@@ -67,7 +67,7 @@ const Score: React.FC<Props> = ({ score, restart }) => {
           <h1>{score}/20 points</h1>
           <p>{message}</p>
           <button className="wide-button" onClick={restart}>
-            Restart
+            Restart the quiz!
           </button>
         </div>
       </div>

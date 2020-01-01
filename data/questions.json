@@ -359,7 +359,102 @@
           },
           "correctAnswer": "b",
           "explanation": "The code snippet uses an f-string for string formatting, where variables 'age' and 'name' are directly embedded in the string. The f-string 'f\"{age} is {name} years old.\"' replaces '{age}' with the value of the variable 'age' (which is 30) and '{name}' with the value of the variable 'name' (which is 'Alice'). Therefore, the output of the print statement is \"30 is Alice years old.\"."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(print(\"Hello World\", end=\"\"))",
+          "options": {
+            "a": "Hello WorldNone",
+            "b": "Hello World",
+            "c": "None",
+            "d": "Hello WorldHello World",
+            "e": "SyntaxError",
+            "f": "TypeError"
+          },
+          "correctAnswer": "a",
+          "explanation": "The inner print function prints 'Hello World' and returns 'None' because every print function in Python returns 'None' by default. Since the 'end' argument is an empty string, there is no newline after 'Hello World'. The outer print function then prints the return value of the inner print, which is 'None'. Therefore, the output of the code is 'Hello WorldNone'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = 0\n\nwhile foo < 10:\n    foo += 3\n\nprint(foo)",
+          "options": {
+            "a": "9",
+            "b": "10",
+            "c": "11",
+            "d": "12",
+            "e": "SyntaxError",
+            "f": "Infinite Loop"
+          },
+          "correctAnswer": "c",
+          "explanation": "In this code, the variable 'foo' is initialized to 0 and incremented by 3 in each iteration of the while loop until 'foo' is no longer less than 10. The loop executes when 'foo' is 0, 3, 6, and 9. After 'foo' becomes 9, the loop executes one more time, incrementing 'foo' to 12. Since 12 is not less than 10, the loop terminates and the value 12 is printed. Therefore, the output of the code is '12'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following code snippet:",
+          "codeSnippet": "foo = 2 > 1\nbar = 1 > 2\n\nwhile foo:\n    continue\n\nprint(foo + bar)",
+          "options": {
+            "a": "True",
+            "b": "False",
+            "c": "1",
+            "d": "TypeError",
+            "e": "SyntaxError",
+            "f": "Infinite Loop"
+          },
+          "correctAnswer": "f",
+          "explanation": "The code creates two variables, 'foo' and 'bar'. 'foo' is set to True since 2 is greater than 1, and 'bar' is set to False since 1 is not greater than 2. The while loop continuously loops because 'foo' is True and the loop contains only a 'continue' statement, which does nothing but keeps the loop running indefinitely. As a result, the code results in an infinite loop and the print statement is never executed."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = \"hello\"\nbar = \"world\"\nprint(foo + bar)",
+          "options": {
+            "a": "helloworld",
+            "b": "hello world",
+            "c": "HelloWorld",
+            "d": "hello-world",
+            "e": "SyntaxError",
+            "f": "TypeError"
+          },
+          "correctAnswer": "a",
+          "explanation": "The code defines two string variables, 'foo' and 'bar', containing 'hello' and 'world', respectively. The print statement concatenates these two strings using the '+' operator without any space between them. Therefore, the output of the code is the combined string 'helloworld'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = \"hello\"\nbar = \"world\"\nprint(foo * bar)",
+          "options": {
+            "a": "helloworld",
+            "b": "hello world",
+            "c": "TypeError",
+            "d": "hellohellohello...",
+            "e": "0",
+            "f": "SyntaxError"
+          },
+          "correctAnswer": "c",
+          "explanation": "In Python, the '*' operator can be used to repeat a string a specified number of times. However, in this code, the '*' operator is used between two string variables ('foo' and 'bar'), which is not a valid operation and will result in a TypeError. Python does not support multiplication between two strings, and thus, executing this code will raise a TypeError."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = \"hello\"\nbar = \"world\"\nprint(foo * 2 + bar)",
+          "options": {
+            "a": "helloworld",
+            "b": "hellohelloworld",
+            "c": "hellohello world",
+            "d": "hellohello",
+            "e": "SyntaxError",
+            "f": "TypeError"
+          },
+          "correctAnswer": "b",
+          "explanation": "In this code, the '*' operator is used to repeat the string stored in 'foo' twice. Therefore, 'foo * 2' results in 'hellohello'. This repeated string is then concatenated with the string stored in 'bar', which is 'world', using the '+' operator. As a result, the output of the print statement is 'hellohelloworld'."
         }
+        
+        
+        
+        
+        
         
         
         
@@ -724,7 +819,135 @@
         },
         "correctAnswer": "a",
         "explanation": "The code snippet uses an f-string with a format specifier to control the precision of the floating-point number 'temperature'. The format specifier ':.2f' inside the curly braces indicates that the variable 'temperature' should be formatted as a floating-point number with two decimal places. Therefore, the value '25.5678' is rounded to '25.57', and the output of the print statement is \"The current temperature is 25.57°C.\"."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "foo = 10\n\nfor i in range(10):\n    if i == foo:\n        print(foo + i)\n        break\nelse:\n    print(foo - i)",
+        "options": {
+          "a": "20",
+          "b": "10",
+          "c": "1",
+          "d": "0",
+          "e": "19",
+          "f": "9"
+        },
+        "correctAnswer": "c",
+        "explanation": "The variable 'foo' is initialized to 10. The for loop iterates over the numbers from 0 to 9. The if condition within the loop checks if 'i' is equal to 'foo'. Since 'foo' is 10 and the range of 'i' is only up to 9, the condition 'i == foo' is never met, and the loop never breaks early. The 'else' block of the for loop is executed when the loop completes without encountering a 'break' statement. When the loop ends, 'i' is 9, which is the last number in the range. Therefore, 'foo - i' is 10 - 9, resulting in 1. The output of the code is 1."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "foo = \"hello world\"\nbar = [i for i in foo]\nprint(\"\".join(bar))",
+        "options": {
+          "a": "hello world",
+          "b": "['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']",
+          "c": "helloworld",
+          "d": "['hello', 'world']",
+          "e": "SyntaxError",
+          "f": "TypeError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code snippet first assigns the string 'hello world' to the variable 'foo'. Then, a list comprehension is used to create a list 'bar', which contains each character of 'foo' as a separate element. The 'join' method is then used to concatenate all elements of 'bar' into a single string, with no separator (''). Since 'bar' contains each character of 'hello world', including the space, the output of the code is the string 'hello world'."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet involving JSON parsing?",
+        "codeSnippet": "import json\n\nfoo = '{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}'\nbar = json.loads(foo)\nprint(bar[\"age\"])",
+        "options": {
+          "a": "\"Alice\"",
+          "b": "ValueError",
+          "c": "30",
+          "d": "\"New York\"",
+          "e": "SyntaxError",
+          "f": "TypeError"
+        },
+        "correctAnswer": "c",
+        "explanation": "The code snippet first defines a JSON string 'foo' containing information about a person named Alice. The 'json.loads' method is used to parse this JSON string into a Python dictionary 'bar'. When accessing 'bar[\"age\"]', the value associated with the key 'age' in the dictionary is retrieved, which is the integer 30. Therefore, the output of the print statement is the integer 30."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import os\n\nfoo = os.getcwd()\nprint(foo)",
+        "options": {
+          "a": "The name of the current Python file",
+          "b": "The current working directory path",
+          "c": "A list of files in the current directory",
+          "d": "The Python version currently being used",
+          "e": "SyntaxError",
+          "f": "TypeError"
+        },
+        "correctAnswer": "b",
+        "explanation": "The code imports the 'os' module, which provides a portable way of using operating system-dependent functionality. The 'os.getcwd()' function is used to get the current working directory of the Python process. The variable 'foo' is set to this directory path, and the print statement outputs this path as a string. Therefore, the output of the code is the path to the current working directory."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What does the function 'foo' check for when given a string 'x' as input?",
+        "codeSnippet": "import os\n\n\ndef foo(x):\n    for i in os.listdir():\n        if i == x:\n            return True\n    return False",
+        "options": {
+          "a": "If 'x' is a valid path in the file system",
+          "b": "If 'x' is the name of the current working directory",
+          "c": "If a file or directory named 'x' exists in the current directory",
+          "d": "If 'x' is an environment variable",
+          "e": "If 'x' is the name of an executable file in the current directory",
+          "f": "If 'x' is a Python script in the current directory"
+        },
+        "correctAnswer": "c",
+        "explanation": "The function 'foo' uses 'os.listdir()' to iterate through all the files and directories in the current working directory. It checks each item to see if its name matches the input string 'x'. The function returns 'True' if it finds a file or directory with a name that matches 'x', and 'False' otherwise. This indicates that the function is checking if a file or directory named 'x' exists in the current directory."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import csv\n\nfoo = \"\"\"Name,Department,Age\nAlice,Engineering,30\nBob,HR,45\"\"\"\n\nbar = []\nfor i in csv.reader(foo.splitlines()):\n    bar.append(i)\n\nprint(bar[1][1])",
+        "options": {
+          "a": "\"Engineering\"",
+          "b": "\"Alice\"",
+          "c": "\"HR\"",
+          "d": "30",
+          "e": "45",
+          "f": "SyntaxError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code snippet processes a multi-line string 'foo' using the 'csv.reader' function, which reads CSV-formatted data. 'foo.splitlines()' splits the string into separate lines, mimicking the lines of a CSV file. The for loop iterates over each line, parsed as a list by 'csv.reader', and appends each list to 'bar'. 'bar[1]' accesses the second line (after the header) of the CSV data, which is ['Alice', 'Engineering', '30']. 'bar[1][1]' then accesses the second element of this list, which is 'Engineering'. Therefore, the output of the code is 'Engineering'."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import math\n\nfoo = 16\nbar = math.sqrt(foo)\nprint(int(math.pow(bar, 2)))",
+        "options": {
+          "a": "16",
+          "b": "4",
+          "c": "256",
+          "d": "8",
+          "e": "2",
+          "f": "SyntaxError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code first calculates the square root of 'foo' (which is 16), resulting in 'bar' being 4 (since the square root of 16 is 4). Then, 'math.pow(bar, 2)' calculates the square of 'bar', which is 4^2 = 16. Finally, 'int()' is used to convert this result to an integer, though this is not strictly necessary as 'math.pow()' with integer arguments will already return an integer value. Therefore, the output of the code is 16."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import sys\n\nprint(sys.version)",
+        "options": {
+          "a": "The current Python version and additional info",
+          "b": "The current version of the operating system",
+          "c": "The current version of linux",
+          "d": "The current working directory",
+          "e": "SyntaxError",
+          "f": "TypeError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code imports the 'sys' module, which provides access to some variables used or maintained by the Python interpreter and to functions that interact strongly with the interpreter. The 'sys.version' attribute contains a string with the version number of the current Python interpreter plus additional information on the build number and compiler used. Thus, when 'print(sys.version)' is executed, it outputs the version of Python currently in use, along with additional build information."
       }
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -921,7 +1144,7 @@
           "e": "['oliver', 'julia', 'francis']",
           "f": "[]"
         },
-        "correctAnswer": "b",
+        "correctAnswer": "a",
         "explanation": "The code uses the 'filter' function with a lambda function to filter out elements from the list 'foo' based on the condition that the length of each element should be at least 4 characters. The lambda function 'lambda x: len(x) >= 4' returns 'True' for elements with 4 or more characters. As a result, 'bar' contains the same elements as bar since every name contain at least four characters."
       },
       {
@@ -998,7 +1221,87 @@
         },
         "correctAnswer": "c",
         "explanation": "'foo' is a decorator function designed to measure and print the execution time of any function it decorates. It achieves this by defining a wrapper function that records the time immediately before and after the execution of the decorated function 'x' (in this case, 'bar'). The difference in these times, calculated using 'datetime.now()', provides the total execution time in seconds. Therefore, when 'bar' is executed with the 'foo' decorator, it prints the time taken for 'bar' to complete its operation, which is iterating through a range of 10**6 without performing any specific task."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What does the function 'foo' check for when given a string 'x' as input?",
+        "codeSnippet": "import os\n\n\ndef foo(x):\n    return any([True for i in os.listdir() if i == x])",
+        "options": {
+          "a": "If 'x' is a part of any file or directory name in the current directory",
+          "b": "If the current directory is named 'x'",
+          "c": "If a file or directory named 'x' exists in the current directory",
+          "d": "If 'x' is a hidden file in the current directory",
+          "e": "If 'x' is a Python package",
+          "f": "If 'x' is a readable file in the current directory"
+        },
+        "correctAnswer": "c",
+        "explanation": "The function 'foo' uses a list comprehension combined with the 'any()' function to check the presence of an item in the current directory. The list comprehension iterates over all items returned by 'os.listdir()', checking each one to see if its name matches the input string 'x'. If an item matches 'x', 'True' is added to the list. The 'any()' function then checks if any of the elements in the list are 'True'. The function returns 'True' if at least one match is found (i.e., a file or directory named 'x' exists in the current directory), and 'False' otherwise."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "from collections import Counter\n\nfoo = ['apple', 'banana', 'orange', 'apple', 'banana', 'apple']\nbar = Counter(foo)\nprint(list(bar)[-1])",
+        "options": {
+          "a": "apple",
+          "b": "banana",
+          "c": "orange",
+          "d": "3",
+          "e": "2",
+          "f": "1"
+        },
+        "correctAnswer": "c",
+        "explanation": "The code snippet uses the 'Counter' class from the 'collections' module to count the occurrences of each element in the list 'foo'. The 'Counter(foo)' creates a dictionary-like object where keys are the elements of 'foo' and values are their respective counts. When converting this object to a list using 'list(bar)', the list only contains the keys, not the counts. The keys are ordered as they first appeared in 'foo'. The last element of this list is accessed using '[-1]', which is 'orange', as it's the last unique element to appear in the original list 'foo'. Therefore, the output of the code is 'orange'."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet involving regular expressions?",
+        "codeSnippet": "import re\n\nfoo = \"The rain in Spain\"\nbar = re.search(\"ai\", foo)\nprint(bar.start())",
+        "options": {
+          "a": "4",
+          "b": "5",
+          "c": "7",
+          "d": "9",
+          "e": "None",
+          "f": "AttributeError"
+        },
+        "correctAnswer": "b",
+        "explanation": "The Python code uses the 're' module to perform a regular expression search. The 're.search()' function is used to find the first occurrence of the pattern 'ai' in the string 'foo', which is 'The rain in Spain'. The method 'bar.start()' returns the starting index of the first match. The substring 'ai' first appears in 'rain', starting at index 5 (counting from 0). Therefore, the output of the code is 5."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What does the following Python code snippet output?",
+        "codeSnippet": "from pathlib import Path\n\nfoo = Path('.')\nprint(foo.resolve())",
+        "options": {
+          "a": "The relative path of the current directory",
+          "b": "The absolute path of the current directory",
+          "c": "The name of the current Python file",
+          "d": "A list of files in the current directory",
+          "e": "SyntaxError",
+          "f": "TypeError"
+        },
+        "correctAnswer": "b",
+        "explanation": "The code uses the 'pathlib' module, which provides an object-oriented interface to the file system. The 'Path' class is instantiated with '.', which represents the current directory. The 'resolve()' method of the 'Path' object is used to make the path absolute. This means it converts the relative path ('.') to the absolute path, which is the full path to the current directory. Therefore, the output of the code is the absolute path of the current directory where the Python script is executed."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import glob as pygame\n\nfoo = pygame.glob('*.py')\nprint(foo)",
+        "options": {
+          "a": "A list of all Python files in the current directory",
+          "b": "The contents of the first Python file in the current directory",
+          "c": "SyntaxError",
+          "d": "TypeError",
+          "e": "A snake game will start in the console",
+          "f": "A tuple of all python files on the computer"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code imports the 'glob' module with an alias 'pygame'. The 'glob' module provides a function 'glob.glob()' for Unix style pathname pattern expansion. The 'pygame.glob' (actually 'glob.glob') is called with the pattern '*.py', which matches all filenames in the current directory with the '.py' extension (Python files). The function returns a list of these filenames as strings. Therefore, the output of the code is a list of all Python files present in the current directory."
       }
+      
+      
+      
+      
+      
       
       
       
@@ -1267,7 +1570,23 @@
       },
       "correctAnswer": "c",
       "explanation": "The 'Number' class overrides arithmetic operators, but the methods do not follow conventional arithmetic rules. The '__sub__' method is designed to add, '__add__' subtracts, '__mul__' performs floor division, and '__truediv__' multiplies. In the expression 'foo - bar * 5', 'bar * 5' leads to an error because '5' is an integer, not a 'Number' instance, and the '__mul__' method expects 'other' to be a 'Number' instance with a 'value' attribute. Since the integer '5' does not have a 'value' attribute, this results in an 'AttributeError'."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet involving URL parsing?",
+      "codeSnippet": "from urllib import parse\n\nurl = \"http://www.example.com/?name=John&age=30\"\nfoo = parse.urlparse(url)\nbar = parse.parse_qs(foo.query)\nprint(bar.get(\"example\"))",
+      "options": {
+        "a": "\"John\"",
+        "b": "\"30\"",
+        "c": "None",
+        "d": "['John']",
+        "e": "['30']",
+        "f": "An empty list"
+      },
+      "correctAnswer": "c",
+      "explanation": "The code first parses the URL using 'parse.urlparse', which splits the URL into its components. 'foo.query' contains the query component of the URL, 'name=John&age=30'. This string is then parsed using 'parse.parse_qs', which returns a dictionary where the keys are the query parameters, and the values are lists of their values. In this case, 'bar' is a dictionary with keys 'name' and 'age'. The 'get' method is used to retrieve the value for the key 'example' from 'bar'. Since 'example' is not a parameter in the URL's query string, the method returns 'None'. Therefore, the output of the code is 'None'. This question tests understanding of URL parsing and query string processing in Python."
     }
+    
     
     
 
