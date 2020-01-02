@@ -387,7 +387,7 @@
             "e": "SyntaxError",
             "f": "Infinite Loop"
           },
-          "correctAnswer": "c",
+          "correctAnswer": "d",
           "explanation": "In this code, the variable 'foo' is initialized to 0 and incremented by 3 in each iteration of the while loop until 'foo' is no longer less than 10. The loop executes when 'foo' is 0, 3, 6, and 9. After 'foo' becomes 9, the loop executes one more time, incrementing 'foo' to 12. Since 12 is not less than 10, the loop terminates and the value 12 is printed. Therefore, the output of the code is '12'."
         },
         {
