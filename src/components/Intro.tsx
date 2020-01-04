@@ -1,26 +1,34 @@
 import React from "react";
 
 type Props = {
-  onButtonClick: () => void; // Type definition for the function prop
+  onStartButtonClick: () => void;
 };
 
-const Intro: React.FC<Props> = ({ onButtonClick }) => {
+const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
   return (
     <>
       <div className="main-container">
         <div className="intro-container">
-          <h1>Welcome to Python Quizzer!</h1>
+          <h1>Welcome to the Python Quizzer!</h1>
           <p>
-            Welcome to our Python quiz challenge! Here, you'll encounter a
-            series of 20 Python questions, each one designed to gradually
-            increase in difficulty as you progress. Your task is to answer as
-            many questions correctly as possible, testing both your foundational
-            knowledge and advanced understanding of Python. Dive in and aim for
-            the highest score, enhancing your skills and enjoying the journey
-            through the dynamic world of Python programming!
+            Hey there, Python fans! Get ready for a bit of Python fun. We've got
+            20 Python questions lined up for you. You'll have to pick the right
+            answer from choices labeled 'a' to 'f'. No pressure, just some
+            Python exploration ahead!
           </p>
-          <button className="wide-button" onClick={onButtonClick}>
-            Start the quiz!
+          <p>
+            These questions will start easy and gradually get trickier. But
+            don't worry, it's all part of the journey. After each question,
+            we'll explain how the code works. Learning Python while having fun,
+            what could be better?
+          </p>
+          <p>
+            Feel free to tackle the problems your way. We suggest making your
+            best guess first. If you're curious, copy the code and play around
+            with it. Python is all about experimenting and learning as you go.
+          </p>
+          <button className="wide-button" onClick={onStartButtonClick}>
+            Ready to roll? Start the quiz!
           </button>
         </div>
       </div>

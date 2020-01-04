@@ -32,6 +32,11 @@ a:visited {
   color: var(--primary-color);
 }
 
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
 .main-container {
   margin: 20px auto;
   width: 90%;
@@ -187,10 +192,13 @@ p {
 }
 
 footer {
-  font-size: 0.7rem;
   text-align: center;
   margin-top: 20px;
   padding: 20px;
+}
+
+footer p {
+  font-size: 0.7rem;
 }
 
 .intro-container {

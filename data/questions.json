@@ -1803,7 +1803,22 @@
                 "Syntax Error",
                 "Nothing is printed"
             ]
+        },
+        {
+            "difficulty": "hard",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "class Foo:\n    def __init__(self, x):\n        self._inner = x\n\n    def __call__(self, y):\n        return self._inner(y)\n\n\nclass Bar:\n    def __init__(self, z):\n        self._z = z\n\n    def __call__(self, x):\n        return x * self._z\n\n\ndef foo_bar(x, y):\n    foo = Foo(Bar(x))\n    return foo(y)\n\nprint(foo_bar(3, 5))",
+            "explanation": "This code snippet defines two classes, `Foo` and `Bar`, both of which implement the `__call__` method, making instances of these classes callable. When `foo_bar(3, 5)` is called, it first creates an instance of `Bar` with `x = 3` and then passes this instance to create an instance of `Foo`. When the `foo` instance is called with `y = 5`, it internally calls the `Bar` instance with 5. The `Bar` instance multiplies 5 with its internal state `_z`, which is 3, resulting in 15.",
+            "correctAnswer": "15",
+            "incorrectAnswers": [
+                "3",
+                "5",
+                "10",
+                "Error",
+                "None"
+            ]
         }
+        
     ],
     "expert": [
         {
