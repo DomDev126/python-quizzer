@@ -20,14 +20,10 @@ def validate_json(file_path):
                         assert category == question["difficulty"]
                         assert "question" in question
                         assert "codeSnippet" in question
-                        assert "options" in question
-                        assert "correctAnswer" in question
+                        # assert "options" in question
+                        # assert "correctAnswer" in question
                         assert "explanation" in question
 
-                        for letter in "abcdef":
-                            assert letter in question["options"]
-
-                        assert question["correctAnswer"] in question["options"]
                     except AssertionError as err:
                         raise Exception(
                             f"Invalid question data: {err}\n{question}")
