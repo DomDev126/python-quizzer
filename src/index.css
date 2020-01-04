@@ -189,12 +189,15 @@ p {
   align-items: center;
   padding-top: 50px;
   flex-direction: column;
-  margin: auto;
+}
+
+.score-container p {
+  text-align: center;
 }
 
 .score-container h1 {
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 footer {
