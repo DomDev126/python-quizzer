@@ -1,53 +1,73 @@
-# Python Quizzer - A Learning Game for Python Beginners
+# Python Quizzer
 
-Welcome to the Python Quizzer! This interactive quiz game is designed to help beginners learn Python in a fun and engaging way. By answering a series of 20 random Python questions that increase in difficulty, users can test their knowledge and gradually improve their understanding of the Python programming language.
+Welcome to the Python Quiz Game - an interactive way to test and improve your Python skills! This project is built using TypeScript and React, offering a platform to tackle Python questions of varying difficulty.
 
-Try the [Python Quizzer](https://alexandengstrom.github.io/python-quizzer/) now!
+The Python Quiz Game presents users with 20 random Python questions, each featuring a code snippet, a question, and six possible answers. After responding to a question, the game displays an explanation of the code.
+
+Try the <a href="https://alexandengstrom.github.io/python-quizzer/">Python Quizzer!</a>
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**: Clone this repo to your local machine using:
+
+```
+git clone git@github.com:alexandengstrom/python-quizzer.git
+```
+
+2. **Install Dependencies**: Navigate to the project directory and install the required dependencies with npm install.
+
+```
+npm install
+```
+
+3. **Run the Project:** Start the project using npm run dev. This will launch the game in your default browser.
+
+```
+npm run dev
+```
 
 ## Contributing
 
-Contributions are welcome! If you have a great idea for a question or an improvement, feel free to submit a pull request. Here's how you can contribute:
+Contributions are encouraged, especially from those looking to make their first pull request. Here's how you can add your own questions or contribute in other ways.
+
+To contribute, start by forking the repository. This creates a copy of the project in your GitHub account, allowing you to make changes without affecting the original project.
 
 ### Adding Questions
 
-1. **Fork the repository**: Start by forking the repository to make your changes.
-2. **Create questions**: Add your questions to the JSON file in the format specified below. Make sure your questions are appropriately categorized by difficulty and provide a clear, concise explanation.
-
-#### JSON format and validation
-
-Each question must adhere to the following format in the data/questions.json file:
-
-- Difficulty categorization matching the question's difficulty level (beginner, medium, hard, expert).
-- A clear question statement.
-- A code snippet.
-- Multiple choice options labeled from 'a' to 'f'.
-- The correct answer indicated.
-- A brief explanation of the answer.
-
-Here is an example of a well-formatted question:
+1. **JSON File**: Questions are stored in **data/questions.json**. The file structure is:
 
 ```
 {
-  "difficulty": "beginner",
-  "question": "What will be the output of the following Python code?",
-  "codeSnippet": "list1 = [1, 2, 3]\nlist2 = list1\nlist2[0] = 4\nprint(list1)",
-  "options": {
-    "a": "[1, 2, 3]",
-    "b": "[4, 2, 3]",
-    "c": "Error",
-    "d": "[1, 4, 3]",
-    "e": "None",
-    "f": "[4, 4, 4]"
-  },
-  "correctAnswer": "b",
-  "explanation": "In this code, 'list2' is not a copy of 'list1', but rather a reference to the same list object. Therefore, modifying 'list2' also changes 'list1'. The output will be '[4, 2, 3]'."
+  "beginner": [],
+  "medium": [],
+  "hard": [],
+  "expert": []
 }
 ```
 
-Make sure your Python code snippet doesn't break the JSON syntax. For example, you need to escape double quote characters or use single quote characters.
+2. **Question Format**: Add new questions using this format, ensuring JSON validity:
 
-My automated test script runs on every pull request to ensure the JSON file's integrity and format. Your submission must pass this test to be considered for merging.
+```
+{
+    "difficulty": "beginner",
+    "question": "What will be the output of the following Python code?",
+    "codeSnippet": "list1 = [1, 2, 3]\nlist2 = list1\nlist2[0] = 4\nprint(list1)",
+    "explanation": "In this code, 'list2' is not a copy of 'list1', but a reference to the same list object. Modifying 'list2' changes 'list1'. The output is '[4, 2, 3]'.",
+    "correctAnswer": "[4, 2, 3]",
+    "incorrectAnswers": [
+        "[1, 2, 3]",
+        "Error",
+        "[1, 4, 3]",
+        "None",
+        "[4, 4, 4]"
+    ]
+}
+```
 
-### User interace
+3. **Validation**: Run **scripts/validate_json.py** to check the format of your JSON file before submitting a pull request. This script will also run automatically for every pull request so make sure your submission passes this test.
 
-If you're interested in improving the design and usability of the quiz game, that's awesome! This is a casual hobby project, so any help is welcome. Whether you're familiar with React and TypeScript or have ideas to make it look and work better, feel free to get involved. You can make the game easier to use, add cool features, or simply make it more user-friendly. Just fork the repository, make your changes, and send a pull request with your improvements. Your contributions will make this project even better!
+### Design Improvements
+
+If you're skilled in TypeScript and React, feel free to improve the design and the user interface of the game.
