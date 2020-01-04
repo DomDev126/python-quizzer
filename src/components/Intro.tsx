@@ -11,10 +11,9 @@ const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
         <div className="intro-container">
           <h1>Welcome to the Python Quizzer!</h1>
           <p>
-            Hey there, Python fans! Get ready for a bit of Python fun. We've got
-            20 Python questions lined up for you. You'll have to pick the right
-            answer from choices labeled 'a' to 'f'. No pressure, just some
-            Python exploration ahead!
+            Get ready for a bit of Python fun. We've got 20 Python questions
+            lined up for you. You'll have to pick the right answer from choices
+            labeled 'a' to 'f'. No pressure, just some Python exploration ahead!
           </p>
           <p>
             These questions will start easy and gradually get trickier. But
