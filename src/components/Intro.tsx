@@ -16,10 +16,9 @@ const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
             labeled 'a' to 'f'. No pressure, just some Python exploration ahead!
           </p>
           <p>
-            These questions will start easy and gradually get trickier. But
-            don't worry, it's all part of the journey. After each question,
-            we'll explain how the code works. Learning Python while having fun,
-            what could be better?
+            These questions will start easy and gradually get trickier. After
+            each question, we'll explain how the code works. Learning Python
+            while having fun, what could be better?
           </p>
           <p>
             Feel free to tackle the problems your way. We suggest making your
