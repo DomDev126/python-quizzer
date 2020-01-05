@@ -65,7 +65,24 @@ const Score: React.FC<Props> = ({ score, restart }) => {
       <div className="main-container">
         <div className="score-container">
           <h1>{score}/20 points</h1>
-          <p>{message}</p>
+          <p>
+            <strong>{message}</strong>
+          </p>
+          {score < 10 && (
+            <p>
+              Enhance your Python skills by exploring the official
+              documentation. It's a great resource to deepen your understanding
+              and improve your performance.{" "}
+              <a
+                href="https://docs.python.org/3/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discover more here!
+              </a>
+            </p>
+          )}
+
           <p>
             Do you want to create your own questions or did you find any errors
             in the quiz? Contribute to this project on{" "}
