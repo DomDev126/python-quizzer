@@ -1,4 +1,4 @@
-![Python Quizzer](public/socialmediabanner.png)
+![Python Quizzer](public/banner.png)
 
 Welcome to the **Python Quizzer** - an interactive way to test and improve your Python skills! This is a hobby project built with React and TypeScript.
 
