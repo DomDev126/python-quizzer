@@ -1,4 +1,5 @@
 import React from "react";
+import { getTotalNumberOfQuestions } from "../utilities/questionFetcher";
 
 type Props = {
   onStartButtonClick: () => void;
@@ -9,11 +10,17 @@ const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
     <>
       <div className="main-container">
         <div className="intro-container">
-          <h1>Welcome to the Python Quizzer!</h1>
+          <div className="title-container">
+            <img src="./icon-transparent.png" />
+            <h1>Welcome to the Python Quizzer!</h1>
+          </div>
+
           <p>
-            Get ready for a bit of Python fun. We've got 20 Python questions
-            lined up for you. You'll have to pick the right answer from choices
-            labeled 'a' to 'f'. No pressure, just some Python exploration ahead!
+            Get ready for a bit of Python fun. In total, we have{" "}
+            {getTotalNumberOfQuestions()} Python questions available. You will
+            get 20 random questions each round. Each question contain a code
+            snippet and six possible answers, your job is to choose the correct
+            answer!
           </p>
           <p>
             These questions will start easy and gradually get trickier. After
@@ -21,7 +28,7 @@ const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
             while having fun, what could be better?
           </p>
           <p>
-            Feel free to tackle the problems your way. We suggest making your
+            Feel free to tackle the problems your way but we suggest making your
             best guess first. If you're curious, copy the code and play around
             with it. Python is all about experimenting and learning as you go.
           </p>
