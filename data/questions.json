@@ -1456,7 +1456,7 @@
         "JohnChristianDoe",
         "John\\nChristian\\nDoe",
         "['John', 'Christian', 'Doe']",
-        "John\nChristian\nDoe",
+        "['J', 'C', 'D']",
         "Error"
       ]
     },
