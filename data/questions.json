@@ -815,6 +815,64 @@
       "explanation": "The division is performed from left to right. '12 / 4' equals 3, and then '3 / 3' equals 1.",
       "correctAnswer": "1.0",
       "incorrectAnswers": ["4", "0", "9", "0.5", "2.0"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the result of the following Python expression?",
+      "codeSnippet": "7 % 2",
+      "explanation": "The modulo operator '%' in Python returns the remainder of the division. Here, 7 % 2 results in 1 since 7 divided by 2 leaves a remainder of 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["3.5", "2", "0", "7", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following Python code snippet?",
+      "codeSnippet": "my_list = ['a', 'b', 'c', 'd']\nprint(len(my_list))",
+      "explanation": "The 'len()' function in Python returns the number of items in an object. Here, 'my_list' contains four items, so 'len(my_list)' returns 4.",
+      "correctAnswer": "4",
+      "incorrectAnswers": [
+        "3",
+        "'abcd'",
+        "['a', 'b', 'c', 'd']",
+        "None",
+        "AttributeError"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What does the following Python code output?",
+      "codeSnippet": "print('Python' + 'Quiz')",
+      "explanation": "The '+' operator concatenates two strings in Python. Here, 'Python' + 'Quiz' results in the string 'PythonQuiz'.",
+      "correctAnswer": "'PythonQuiz'",
+      "incorrectAnswers": [
+        "'QuizPython'",
+        "'Python Quiz'",
+        "'PythonQuizPython'",
+        "'Quiz'",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "a = 10\nb = 20\nprint(a > b)",
+      "explanation": "The '>' operator checks if the value on the left is greater than the value on the right. Here, 'a > b' is 'False' since 10 is not greater than 20.",
+      "correctAnswer": "False",
+      "incorrectAnswers": ["True", "'10 > 20'", "'20 > 10'", "None", "10"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What does the following Python code snippet output?",
+      "codeSnippet": "my_dict = {'a': 1, 'b': 2}\nprint(my_dict['b'])",
+      "explanation": "In Python, a dictionary value can be accessed by using its corresponding key. Here, 'my_dict['b']' accesses the value associated with the key 'b', which is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": [
+        "1",
+        "'a'",
+        "{'a': 1, 'b': 2}",
+        "KeyError",
+        "RecursionError"
+      ]
     }
   ],
   "medium": [
