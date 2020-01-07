@@ -101,7 +101,11 @@ function App() {
   };
 
   if (questions.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <main>
+        <h1>Loading Python Quiz...</h1>
+      </main>
+    );
   } else if (!gameStarted) {
     return <Intro onStartButtonClick={startGame} />;
   } else if (currentQuestionIndex >= questions.length) {
@@ -112,7 +116,7 @@ function App() {
 
   return (
     <>
-      <div className="main-container">
+      <main role="main" className="main-container">
         <h4 className="question-count">
           Question {currentQuestionIndex + 1}/20:
         </h4>
@@ -136,7 +140,7 @@ function App() {
             Continue
           </button>
         )}
-      </div>
+      </main>
       <Footer />
     </>
   );

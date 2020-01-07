@@ -6,17 +6,14 @@ type Props = {
 };
 
 const Explanation: React.FC<Props> = ({ explanation, correctAnswer }) => {
+  const statusHeading = correctAnswer ? "Correct!" : "Incorrect!";
+  const statusClass = correctAnswer ? "correct-answer" : "incorrect-answer";
+
   return (
-    <>
-      <div className="explanation-container">
-        {correctAnswer ? (
-          <h2 className="correct-answer">Correct!</h2>
-        ) : (
-          <h2 className="incorrect-answer">Incorrect!</h2>
-        )}
-        <p>{explanation}</p>
-      </div>
-    </>
+    <section className="explanation-container" aria-live="polite">
+      <h2 className={statusClass}>{statusHeading}</h2>
+      <p>{explanation}</p>
+    </section>
   );
 };
 
