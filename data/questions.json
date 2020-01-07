@@ -873,6 +873,148 @@
         "KeyError",
         "RecursionError"
       ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'sum' after the for loop?",
+      "codeSnippet": "sum = 0\nfor i in range(3):\n    sum += i\nprint(sum)",
+      "explanation": "The loop iterates over the range 0, 1, 2. The sum of these numbers is 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["2", "1", "0", "4", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is printed after the loop completes?",
+      "codeSnippet": "fruits = ['apple', 'banana', 'cherry']\nfor fruit in fruits:\n    if fruit == 'banana':\n        break\nprint(fruit)",
+      "explanation": "The loop breaks when the fruit is 'banana'. Thus, 'banana' is printed.",
+      "correctAnswer": "banana",
+      "incorrectAnswers": ["apple", "cherry", "None", "SyntaxError", "KeyError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'count' when the while loop exits?",
+      "codeSnippet": "count = 0\nwhile count < 3:\n    count += 1\nprint(count)",
+      "explanation": "The while loop increments 'count' until it becomes 3, at which point the loop exits.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["2", "4", "0", "1", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'result' after the nested loops?",
+      "codeSnippet": "for i in range(2):\n    for j in range(2):\n        if i == j:\n            result = i + j\nprint(result)",
+      "explanation": "The last iteration where i equals j is when both are 1. Thus, result is 1 + 1 = 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["0", "1", "3", "4", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'result' after concatenating characters in the loop?",
+      "codeSnippet": "result = ''\nfor char in 'Hi!':\n    result += char\nprint(result)",
+      "explanation": "The loop concatenates each character of the string 'Hi!' to 'result'. The final value is 'Hi!'.",
+      "correctAnswer": "Hi!",
+      "incorrectAnswers": ["Hi", "H", "!", "H!", "i!"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'num' after the while loop?",
+      "codeSnippet": "num = 5\nwhile num > 0:\n    num -= 2\nprint(num)",
+      "explanation": "The loop decreases 'num' by 2 in each iteration. It stops when 'num' becomes -1.",
+      "correctAnswer": "-1",
+      "incorrectAnswers": ["1", "0", "2", "3", "4"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the sum of numbers in the range from 0 to 4 with a step of 2?",
+      "codeSnippet": "sum = 0\nfor i in range(0, 5, 2):\n    sum += i\nprint(sum)",
+      "explanation": "The loop iterates over 0, 2, 4. Their sum is 6.",
+      "correctAnswer": "6",
+      "incorrectAnswers": ["4", "5", "7", "8", "9"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the final value of 'count' when the loop condition becomes False?",
+      "codeSnippet": "count = 10\nwhile count > 5:\n    count -= 1\nprint(count)",
+      "explanation": "The loop decrements 'count' until it is no longer greater than 5. The loop exits when 'count' is 5.",
+      "correctAnswer": "5",
+      "incorrectAnswers": ["4", "6", "10", "11", "0"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What are the final values of 'x' and 'y' when the while loop exits?",
+      "codeSnippet": "x = 0\ny = 5\nwhile x < 3 and y > 0:\n    x += 1\n    y -= 1\nprint(x, y)",
+      "explanation": "The loop runs until either x is no longer less than 3 or y is no longer greater than 0. The loop stops when x is 3 and y is 2.",
+      "correctAnswer": "3 2",
+      "incorrectAnswers": ["2 3", "0 5", "3 3", "2 2", "4 1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the value of 'x' after the if statement?",
+      "codeSnippet": "x = 5\nif x > 3:\n    x = 10\nprint(x)",
+      "explanation": "Since x is greater than 3, the if condition is true, and x is set to 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["5", "3", "0", "15", "8"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the value of 'y' after the if-else statement?",
+      "codeSnippet": "y = 2\nif y > 5:\n    y = 3\nelse:\n    y = 4\nprint(y)",
+      "explanation": "Since y is not greater than 5, the else block is executed, setting y to 4.",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["2", "3", "5", "6", "0"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the value of 'a' after the if-elif-else statement?",
+      "codeSnippet": "a = 10\nif a < 5:\n    a = 1\nelif a < 10:\n    a = 2\nelse:\n    a = 3\nprint(a)",
+      "explanation": "Since a is not less than 5 and also not less than 10, the else block is executed, setting a to 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["1", "2", "10", "4", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the value of 'greeting'?",
+      "codeSnippet": "name = 'Alice'\nif name == 'Alice':\n    greeting = 'Hello, Alice!'\nelse:\n    greeting = 'Hello, stranger!'\nprint(greeting)",
+      "explanation": "Since name is equal to 'Alice', the if block is executed, and 'greeting' is set to 'Hello, Alice!'.",
+      "correctAnswer": "Hello, Alice!",
+      "incorrectAnswers": [
+        "Hello, stranger!",
+        "stranger",
+        "Hello",
+        "Hi, Alice!",
+        "Hi, stranger!"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will 'result' be after evaluating the if statement?",
+      "codeSnippet": "num = 7\nif num > 5 and num < 10:\n    result = 'In range'\nelse:\n    result = 'Out of range'\nprint(result)",
+      "explanation": "Since num is greater than 5 and less than 10, the if condition is true. So, 'result' is set to 'In range'.",
+      "correctAnswer": "In range",
+      "incorrectAnswers": ["Out of range", "7", "5", "True", "False"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the value of 'message'?",
+      "codeSnippet": "color = 'green'\nif color == 'red' or color == 'blue':\n    message = 'Primary color'\nelse:\n    message = 'Not a primary color'\nprint(message)",
+      "explanation": "Since color is neither 'red' nor 'blue', the else block is executed, and 'message' is set to 'Not a primary color'.",
+      "correctAnswer": "Not a primary color",
+      "incorrectAnswers": ["Primary color", "green", "red", "blue", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the value of 'status'?",
+      "codeSnippet": "flag = False\nif not flag:\n    status = 'Flag is down'\nelse:\n    status = 'Flag is up'\nprint(status)",
+      "explanation": "Since flag is False, 'not flag' is True. Therefore, the if block is executed, setting 'status' to 'Flag is down'.",
+      "correctAnswer": "Flag is down",
+      "incorrectAnswers": ["Flag is up", "True", "False", "Down", "Up"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the value of 'grade' for the given score?",
+      "codeSnippet": "score = 85\nif score >= 50:\n    if score >= 75:\n        grade = 'Good'\n    else:\n        grade = 'Average'\nelse:\n    grade = 'Poor'\nprint(grade)",
+      "explanation": "Since the score is 85, which is greater than 75, the nested if condition is true and 'grade' is set to 'Good'.",
+      "correctAnswer": "Good",
+      "incorrectAnswers": ["Average", "Poor", "85", "50", "75"]
     }
   ],
   "medium": [
@@ -1847,6 +1989,136 @@
       "explanation": "Multiplying a string by a number repeats the string. Here, 'a' is repeated 3 times, resulting in 'aaa'.",
       "correctAnswer": "aaa",
       "incorrectAnswers": ["3a", "TypeError", "None", "9", "ValueError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'sum' after the for loop completes?",
+      "codeSnippet": "sum = 0\nfor i in range(5, 0, -1):\n    sum += i\nprint(sum)",
+      "explanation": "The range starts at 5 and goes down to 1 (not including 0) in steps of -1. The sum of these numbers is 15.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["10", "5", "0", "20", "ValueError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the second call to 'append_to' function?",
+      "codeSnippet": "def append_to(element, to=[]):\n    to.append(element)\n    return to\n\nprint(append_to(12))\nprint(append_to(3))",
+      "explanation": "The default argument 'to' is mutable. It retains its value between function calls, so the second call will print [12, 3].",
+      "correctAnswer": "[12, 3]",
+      "incorrectAnswers": ["[3]", "[12]", "12", "3", "[]"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'i' after the loop and the else clause?",
+      "codeSnippet": "for i in range(3):\n    if i == 2:\n        break\nelse:\n    i = 10\nprint(i)",
+      "explanation": "The loop breaks when i is 2, so the else clause is not executed. The final value of i is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["10", "1", "0", "3", "4"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'count' after the nested loops?",
+      "codeSnippet": "count = 0\nfor i in range(3):\n    for j in range(3):\n        if j == 1:\n            continue\n        count += 1\nprint(count)",
+      "explanation": "The inner loop skips the increment when j is 1. This happens three times, so out of 9 iterations, 6 increments occur.",
+      "correctAnswer": "6",
+      "incorrectAnswers": ["9", "3", "0", "7", "8"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'result' after the loop?",
+      "codeSnippet": "word = 'Python'\nresult = ''\nfor char in word:\n    if char in 'aeiou':\n        continue\n    result += char\nprint(result)",
+      "explanation": "The loop skips vowels. The final string, excluding vowels from 'Python', is 'Pythn'.",
+      "correctAnswer": "Pythn",
+      "incorrectAnswers": ["Python", "Pyn", "P", "Ythn", "Pthn"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the content of 'numbers' after modifying it in the loop?",
+      "codeSnippet": "numbers = [1, 2, 3, 4, 5]\nfor number in numbers:\n    numbers.remove(number)\nprint(numbers)",
+      "explanation": "Modifying a list while iterating over it leads to skipping elements. The final list is [2, 4].",
+      "correctAnswer": "[2, 4]",
+      "incorrectAnswers": [
+        "[1, 3, 5]",
+        "[]",
+        "[1, 2, 3, 4, 5]",
+        "[1, 4]",
+        "[1, 2]"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the content of 'items' after the while loop?",
+      "codeSnippet": "items = [1, 2, 3, 4, 5]\nwhile items:\n    items.pop(0)\nprint(items)",
+      "explanation": "The loop removes the first element of the list in each iteration. The final list is empty.",
+      "correctAnswer": "[]",
+      "incorrectAnswers": [
+        "[1, 2, 3, 4, 5]",
+        "[5]",
+        "[1]",
+        "[1, 3, 5]",
+        "[2, 4]"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final sum of all elements in 'pairs'?",
+      "codeSnippet": "pairs = [(1, 2), (3, 4), (5, 6)]\nsum = 0\nfor x, y in pairs:\n    sum += x + y\nprint(sum)",
+      "explanation": "Each tuple is unpacked into x and y, and their sum is added to 'sum'. The final sum is 21.",
+      "correctAnswer": "21",
+      "incorrectAnswers": ["15", "12", "6", "9", "18"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'x' after the nested if statements?",
+      "codeSnippet": "x = 10\nif x > 5:\n    if x > 10:\n        x = 1\n    else:\n        x = 2\nprint(x)",
+      "explanation": "The first condition 'x > 5' is true, but the nested condition 'x > 10' is false, so x is set to 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["10", "1", "5", "0", "11"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will be the value of 'a' after the if-elif-else chain?",
+      "codeSnippet": "a = 5\nif a > 10:\n    a = 1\nelif a > 3:\n    a = 2\nelif a > 4:\n    a = 3\nelse:\n    a = 4\nprint(a)",
+      "explanation": "The first elif condition 'a > 3' is true, so a is set to 2. The subsequent elif and else are not executed.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["1", "3", "4", "5", "0"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'num' after the if statement?",
+      "codeSnippet": "num = 7\nif num < 10 or num > 5:\n    num = 1\nelse:\n    num = 2\nprint(num)",
+      "explanation": "The condition 'num < 10 or num > 5' is true, so num is set to 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["7", "2", "0", "5", "10"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What are the final values of 'x' and 'y'?",
+      "codeSnippet": "x, y = 10, 20\nif x < y:\n    x = 5\nif x > y:\n    y = 5\nelse:\n    x = 0\nprint(x, y)",
+      "explanation": "The first if condition sets x to 5. The second if condition is false, so the else part sets x to 0. y remains unchanged.",
+      "correctAnswer": "0 20",
+      "incorrectAnswers": ["5 20", "10 5", "5 5", "0 5", "5 0"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final state of the 'elements' list?",
+      "codeSnippet": "elements = [1, 2, 3]\nif elements[1] == 2:\n    elements[1] = 4\nif elements[1] == 3:\n    elements[0] = 0\nelse:\n    elements[2] = 0\nprint(elements)",
+      "explanation": "After the first if statement, 'elements' becomes [1, 4, 3]. The second if is false, so the else part is executed, setting the last element to 0.",
+      "correctAnswer": "[1, 4, 0]",
+      "incorrectAnswers": [
+        "[1, 2, 3]",
+        "[0, 4, 3]",
+        "[1, 2, 0]",
+        "[0, 2, 3]",
+        "[0, 4, 0]"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the final value of 'text'?",
+      "codeSnippet": "text = 'hello'\nif text == 'Hello':\n    text = 'Hi'\nelif text > 'Hello':\n    text = 'Hey'\nelse:\n    text = 'Hello'\nprint(text)",
+      "explanation": "The first condition is false. The elif condition is true because 'hello' is greater than 'Hello' in lexicographical order, so text is set to 'Hey'.",
+      "correctAnswer": "Hey",
+      "incorrectAnswers": ["Hello", "Hi", "hello", "Ho", "Ha"]
     }
   ],
   "hard": [
@@ -2713,6 +2985,104 @@
       "explanation": "The function 'foo' returns a lambda function that adds 'y' to 'x'. The lambda function is immediately invoked with 'x * 2'. For 'foo(3)', the lambda receives 6, and returns 6 + 3, resulting in 9.",
       "correctAnswer": "9",
       "incorrectAnswers": ["6", "12", "3", "TypeError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output of the following Python code snippet?",
+      "codeSnippet": "x = list(range(10))\ny = [i if i else i + 1 for i in x if i % 2]\nprint(y)",
+      "explanation": "This code snippet uses list comprehension with a conditional expression and a filter. The 'range(10)' generates numbers from 0 to 9. In the list comprehension, 'if i % 2' filters out even numbers, including 0. For odd numbers (which are truthy), 'i if i' keeps the number as is. For 0 (which is falsy), 'i + 1' changes it to 1. Thus, the output includes 1 (from 0) and all odd numbers from 1 to 9.",
+      "correctAnswer": "[1, 3, 5, 7, 9]",
+      "incorrectAnswers": [
+        "[0, 2, 4, 6, 8]",
+        "[2, 4, 6, 8]",
+        "[0, 1, 3, 5, 7, 9]",
+        "TypeError",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output of the following Python code snippet?",
+      "codeSnippet": "class Foo:\n    def __init__(self):\n        self.value = 5\n\n    @staticmethod\n    def get_value():\n        return self.value\n\nprint(Foo().get_value())",
+      "explanation": "The code defines a class 'Foo' with an instance variable 'value' and a static method 'get_value'. Static methods in Python do not have access to instance variables ('self.value') because they do not receive the instance ('self') as an argument. Attempting to access 'self.value' in a static method will result in a NameError since 'self' is undefined in this context.",
+      "correctAnswer": "NameError",
+      "incorrectAnswers": ["5", "AttributeError", "0", "None", "TypeError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the 'Counter' object return for a non-existing element, like 'z' in the string 'banana'?",
+      "codeSnippet": "from collections import Counter\nc = Counter('banana')\nprint(c['z'])",
+      "explanation": "The 'Counter' class in the collections module returns 0 for any element not found in the container.",
+      "correctAnswer": "0",
+      "incorrectAnswers": ["1", "None", "KeyError", "-1", "ValueError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output when the custom exception 'MyError' is raised and caught?",
+      "codeSnippet": "class MyError(Exception):\n    pass\n\ndef test():\n    raise MyError(\"An error occurred\")\n\ntry:\n    test()\nexcept MyError as e:\n    print(e)",
+      "explanation": "When 'MyError' is raised in the 'test' function, it is caught in the except block. The message 'An error occurred' is then printed.",
+      "correctAnswer": "An error occurred",
+      "incorrectAnswers": [
+        "MyError",
+        "SyntaxError",
+        "None",
+        "RuntimeError",
+        "test"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the 'os.path.splitext' function return for the path '/path/to/somefile.txt'?",
+      "codeSnippet": "import os\nprint(os.path.splitext('/path/to/somefile.txt'))",
+      "explanation": "The 'os.path.splitext' function splits the path into a tuple (root, ext) where 'ext' is the extension including the dot ('.') and 'root' is everything before that. It returns ('/path/to/somefile', '.txt').",
+      "correctAnswer": "('/path/to/somefile', '.txt')",
+      "incorrectAnswers": ["somefile.txt", ".txt", "somefile", "Error", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What are the final values of 'x' and 'y' when the while loop exits?",
+      "codeSnippet": "x, y = 0, 5\nwhile x < 3 and not y % 2:\n    x += 1\n    y -= 1\nprint(x, y)",
+      "explanation": "The loop runs until x is no longer less than 3 or y becomes odd. The loop never runs because y starts as an odd number.",
+      "correctAnswer": "0 5",
+      "incorrectAnswers": ["3 2", "2 3", "1 4", "3 3", "2 4"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the content of 'lst' after the loop?",
+      "codeSnippet": "lst = [1, 2, 3, 4, 5]\nfor i in lst[1:3]:\n    lst.remove(i)\nprint(lst)",
+      "explanation": "The loop iterates over a slice of 'lst' (values 2 and 3), removing these values. The resulting list is [1, 4, 5].",
+      "correctAnswer": "[1, 4, 5]",
+      "incorrectAnswers": [
+        "[1, 2, 4, 5]",
+        "[1, 3, 4, 5]",
+        "[2, 3, 4, 5]",
+        "[1, 2, 3, 5]",
+        "[]"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What are the final values of 'i' and 'j'?",
+      "codeSnippet": "for i in range(1, 4):\n    for j in range(1, 4):\n        if i * j > 4:\n            break\n    else:\n        continue\n    break\nprint(i, j)",
+      "explanation": "The inner loop breaks for i=2, j=3. The else block is skipped, and the outer loop breaks, setting i and j to 2 and 3.",
+      "correctAnswer": "2 3",
+      "incorrectAnswers": ["1 4", "3 2", "4 1", "3 3", "2 2"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the final value of 'output'?",
+      "codeSnippet": "output = 0\nfor i in range(3):\n    for j in range(i):\n        output += j\nprint(output)",
+      "explanation": "The nested loop iterates with j in range(0) then range(1) then range(2), accumulating the sum of 0 + 0 + 1, which is 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["0", "2", "3", "4", "5"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the length of 'elements' when the loop exits?",
+      "codeSnippet": "elements = [3, 2, 1, 0]\nwhile elements:\n    if elements.pop() > 0:\n        continue\n    else:\n        break\nprint(len(elements))",
+      "explanation": "The loop pops elements from the end. It stops when it pops 0. The remaining list has three elements.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["4", "1", "2", "0", "5"]
     }
   ],
   "expert": [
@@ -3647,6 +4017,102 @@
         "Error",
         "b'\\x04\\x00\\x00\\x00'"
       ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise AND operation on the binary numbers 0b1101 and 0b1011?",
+      "codeSnippet": "a = 0b1101\nb = 0b1011\nresult = a & b\nprint(result)",
+      "explanation": "The bitwise AND operation compares each bit of the number. Only if both bits are 1, the result is 1. 0b1101 & 0b1011 equals 0b1001.",
+      "correctAnswer": "9",
+      "incorrectAnswers": ["4", "6", "7", "8", "TypeError"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise OR operation on the binary numbers 0b1100 and 0b1010?",
+      "codeSnippet": "a = 0b1100\nb = 0b1010\nresult = a | b\nprint(result)",
+      "explanation": "The bitwise OR operation compares each bit of the number. If either bit is 1, the result is 1. 0b1100 | 0b1010 equals 0b1110.",
+      "correctAnswer": "14",
+      "incorrectAnswers": ["10", "12", "6", "8", "ValueError"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise XOR operation on the binary numbers 0b1101 and 0b1011?",
+      "codeSnippet": "a = 0b1101\nb = 0b1011\nresult = a ^ b\nprint(result)",
+      "explanation": "The bitwise XOR operation compares each bit of the number. The result is 1 if the bits are different, and 0 if they are the same. 0b1101 ^ 0b1011 equals 0b0110.",
+      "correctAnswer": "6",
+      "incorrectAnswers": ["9", "4", "5", "7", "TypeError"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise NOT operation on the binary number 0b1101?",
+      "codeSnippet": "a = 0b1101\nresult = ~a\nprint(result)",
+      "explanation": "The bitwise NOT operation inverts each bit of the number. For 0b1101, the inverted result is 0b0010. Note that Python uses two's complement for negative numbers, so the result will be -14.",
+      "correctAnswer": "-14",
+      "incorrectAnswers": ["2", "13", "-13", "14", "-2"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise left shift operation on the binary number 0b1101 shifted by 2 bits?",
+      "codeSnippet": "a = 0b1101\nresult = a << 2\nprint(result)",
+      "explanation": "The bitwise left shift operation shifts the bits to the left by the specified number of positions. 0b1101 << 2 equals 0b110100, which is 52.",
+      "correctAnswer": "52",
+      "incorrectAnswers": ["13", "26", "104", "208", "2"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise right shift operation on the binary number 0b1101 shifted by 2 bits?",
+      "codeSnippet": "a = 0b1101\nresult = a >> 2\nprint(result)",
+      "explanation": "The bitwise right shift operation shifts the bits to the right by the specified number of positions. 0b1101 >> 2 equals 0b11, which is 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["13", "6", "26", "52", "5"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise AND operation after left shifting 0b1101 by 2 bits and then applying it to 0b1011?",
+      "codeSnippet": "a = 0b1101\nb = 0b1011\nresult = (a << 2) & b\nprint(result)",
+      "explanation": "First, 0b1101 is left shifted by 2 bits, resulting in 0b110100. This result is then bitwise AND-ed with 0b1011, which yields 0b0000.",
+      "correctAnswer": "0",
+      "incorrectAnswers": ["52", "3", "13", "9", "102"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise OR operation after right shifting 0b1101 by 2 bits and then applying it to 0b1011?",
+      "codeSnippet": "a = 0b1101\nb = 0b1011\nresult = (a >> 2) | b\nprint(result)",
+      "explanation": "First, 0b1101 is right shifted by 2 bits, resulting in 0b11. This result is then bitwise OR-ed with 0b1011, which yields 0b1011.",
+      "correctAnswer": "11",
+      "incorrectAnswers": ["3", "6", "13", "52", "652"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the bitwise XOR operation between the binary number 0b1101 and its bitwise NOT?",
+      "codeSnippet": "a = 0b1101\nresult = a ^ ~a\nprint(result)",
+      "explanation": "The bitwise XOR of a number and its bitwise NOT always results in -1, as every bit will be different between a number and its complement.",
+      "correctAnswer": "-1",
+      "incorrectAnswers": ["0", "1", "2", "3", "-2"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following combination of bitwise operations: (AND operation on 0b1101 and 0b1011, left shifted by 1) OR (XOR operation on 0b1101 and 0b1011)?",
+      "codeSnippet": "a = 0b1101\nb = 0b1011\nresult = ((a & b) << 1) | (a ^ b)\nprint(result)",
+      "explanation": "First, 0b1101 AND 0b1011 equals 0b1001, which is left shifted by 1 to get 0b10010. Then, 0b1101 XOR 0b1011 equals 0b0110. The OR operation of 0b10010 and 0b0110 results in 0b10110.",
+      "correctAnswer": "22",
+      "incorrectAnswers": ["18", "6", "9", "12", "99"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the 'recursive_xor' function when called with the argument 5?",
+      "codeSnippet": "def recursive_xor(n):\n    return n ^ recursive_xor(n-1) if n > 0 else 0\n\nprint(recursive_xor(5))",
+      "explanation": "This function computes the cumulative XOR of all numbers from 0 to n recursively. For n = 5, it computes 5 ^ 4 ^ 3 ^ 2 ^ 1 ^ 0, which results in 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["5", "0", "4", "2", "3"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the sum of the elements in the 'result' list, which contains numbers from 0 to 9 inclusive, XORed with 2, but only for those divisible by 3?",
+      "codeSnippet": "numbers = [i for i in range(10)]\nresult = [x ^ 2 for x in numbers if x % 3 == 0]\nprint(sum(result))",
+      "explanation": "The list comprehension selects numbers divisible by 3 from 0 to 9 and performs XOR with 2. The numbers are 0, 3, 6, and 9. XORing these with 2 results in [2, 1, 4, 11], and their sum is 18.",
+      "correctAnswer": "18",
+      "incorrectAnswers": ["17", "16", "15", "14", "13"]
     }
   ]
 }
