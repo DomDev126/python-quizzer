@@ -3083,6 +3083,90 @@
       "explanation": "The loop pops elements from the end. It stops when it pops 0. The remaining list has three elements.",
       "correctAnswer": "3",
       "incorrectAnswers": ["4", "1", "2", "0", "5"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the result of the following expression: repr(Foo(3) + Foo(2))?",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nf1 = Foo(3)\nf2 = Foo(2)\nprint(repr(f1 + f2))",
+      "explanation": "The __add__ method creates a new Foo object with the sum of the values of f1 and f2, which are 3 and 2 respectively. The __repr__ method returns the sum of numbers from 0 up to the value (exclusive). Hence, repr(Foo(3) + Foo(2)) will be sum(range(5)), which is 0 + 1 + 2 + 3 + 4 = 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["5", "6", "15", "KeyError", "SyntaxError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the following code snippet output? foo = Foo(4)\nprint(list(foo))",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nfoo = Foo(4)\nprint(list(foo))",
+      "explanation": "The Foo class is an iterable. When iterated over, it yields numbers from 0 up to, but not including, its value. In this case, foo = Foo(4) will produce [0, 1, 2, 3].",
+      "correctAnswer": "[0, 1, 2, 3]",
+      "incorrectAnswers": [
+        "[1, 2, 3, 4]",
+        "[0, 1, 2, 3, 4]",
+        "4",
+        "ValueError",
+        "TypeError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nfoo = Foo(4)\nprint(foo | Foo(2))",
+      "explanation": "The __or__ method of the Foo class creates a new Foo instance with the value being the bitwise OR of the two operands' values. Bitwise OR of 4 (100 in binary) and 2 (10 in binary) is 6 (110 in binary). The __repr__ method then returns the sum of numbers from 0 up to (but not including) 6, which is 0 + 1 + 2 + 3 + 4 + 5 = 15.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["6", "10", "TypeError", "True", "False"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following code snippet when trying to access the index 6 of an instance of Foo with a value of 5?",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nfoo = Foo(5)\nprint(foo[6])",
+      "explanation": "The __getitem__ method of the Foo class raises an IndexError if the index is not between 0 and the value (inclusive). Since the index 6 is greater than the value 5, it will raise an IndexError.",
+      "correctAnswer": "IndexError",
+      "incorrectAnswers": ["15", "21", "None", "True", "False"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nfoo = Foo(3)\nprint(sum(foo))",
+      "explanation": "Since the Foo class is iterable, sum(foo) will calculate the sum of all elements produced by the iterator. The iterator generates numbers from 0 to the value (exclusive). Thus, sum(foo) for Foo(3) will be the sum of 0, 1, and 2, which is 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": [
+        "6",
+        "5",
+        "TypeError",
+        "ValueError",
+        "RecursionError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What happens when you try to add a Foo object with an integer using the '+' operator?",
+      "codeSnippet": "class Foo:\n    def __init__(self, value):\n        self.value = value\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current == self.value:\n            raise StopIteration\n\n        self.current += 1\n        return self.current - 1\n\n    def __add__(self, other):\n        return Foo(self.value + other.value)\n\n    def __repr__(self):\n        return str(sum(range(self.value)))\n\n    def __getitem__(self, index):\n        if 0 <= index <= self.value:\n            return sum(range(index))\n        else:\n            raise IndexError\n\n    def __or__(self, other):\n        return Foo(self.value | other.value)\n\nfoo = Foo(3)\nprint(foo + 5)",
+      "explanation": "The __add__ method of the Foo class expects another instance of Foo as its argument. Attempting to add a Foo object with an integer results in an AttributeError because the integer does not have a 'value' attribute.",
+      "correctAnswer": "AttributeError",
+      "incorrectAnswers": ["8", "7", "TypeError", "6", "ValueError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "wl = WeirdList(10, 20, 30)\nprint(next(iter(wl)))",
+      "explanation": "The WeirdList class iterates over its elements in reverse order. The first call to next() on the iterator returns the last element in the list, which is 30.",
+      "correctAnswer": "30",
+      "incorrectAnswers": ["10", "20", "StopIteration", "50", "60"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of 'wl[1]' in the following code snippet?",
+      "codeSnippet": "wl = WeirdList(3, 6, 9, 12)\nprint(wl[1])",
+      "explanation": "The WeirdList class does not define a __getitem__ method, so attempting to access an element by index results in a TypeError.",
+      "correctAnswer": "TypeError",
+      "incorrectAnswers": ["6", "9", "IndexError", "ValueError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "class WeirdList:\n    def __init__(self, *args):\n        self.value = args\n        self.current = len(args)\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        self.current -= self.value[0]\n        if self.current < 0:\n            raise StopIteration\n        return self.value[self.current]\n\n\nfoo = WeirdList(1, 3, 5, 7)\nbar = WeirdList(2, 4, 6, 8)\nresult = sum(foo) + sum(bar)\nprint(result)",
+      "explanation": "In the WeirdList class, the __next__ method reduces 'current' by the first element of 'value' each iteration. For foo, it subtracts 1 each time, iterating normally. For bar, it subtracts 2, skipping every other element. The sum of foo is 1+3+5+7=16. The sum of bar is 2+6=8. Therefore, result is 16+8=24.",
+      "correctAnswer": "24",
+      "incorrectAnswers": ["30", "16", "42", "StopIteration", "TypeError"]
     }
   ],
   "expert": [
