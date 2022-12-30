@@ -1,0 +1,943 @@
+{
+  "beginner": [
+      {
+          "difficulty": "beginner",
+          "question": "What will be the output of the following Python code?",
+          "codeSnippet": "list1 = [1, 2, 3]\nlist2 = list1\nlist2[0] = 4\nprint(list1)",
+          "options": {
+            "a": "[1, 2, 3]",
+            "b": "[4, 2, 3]",
+            "c": "Error",
+            "d": "[1, 4, 3]",
+            "e": "None",
+            "f": "[4, 4, 4]"
+          },
+          "correctAnswer": "b",
+          "explanation": "In this code, 'list2' is not a copy of 'list1', but rather a reference to the same list object. Therefore, modifying 'list2' also changes 'list1'. The output will be '[4, 2, 3]'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "for i in range(5):\n    x = i\n\nprint(x)",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3",
+            "e": "4",
+            "f": "Error"
+          },
+          "correctAnswer": "e",
+          "explanation": "The for loop iterates over a range of numbers from 0 to 4. In each iteration, the variable 'x' is assigned the value of 'i'. After the loop completes, 'x' retains the value from the last iteration, which is 4. Therefore, the output of the print statement is '4'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What will be the output of the following code snippet?",
+          "codeSnippet": "foo = [1, 2, 3, 4]\nfoo.append(5)\nprint(foo)",
+          "options": {
+            "a": "[1, 2, 3, 4]",
+            "b": "[5, 1, 2, 3, 4]",
+            "c": "[1, 2, 3, 4, 5]",
+            "d": "5",
+            "e": "Error",
+            "f": "None of these"
+          },
+          "correctAnswer": "c",
+          "explanation": "The 'append' method in Python adds a single element to the end of a list. In this case, '5' is added to the end of the list 'foo', which initially contains [1, 2, 3, 4]. Therefore, the final list printed is [1, 2, 3, 4, 5]."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "Why would this code not work?",
+          "codeSnippet": "def greet(name)\n    print(f\"Hello {name}\")\n\ngreet(\"John\")",
+          "options": {
+            "a": "The function name 'greet' is a reserved keyword in Python",
+            "b": "The print statement is incorrectly formatted",
+            "c": "The colon ':' is missing after the function definition",
+            "d": "The function does not return anything",
+            "e": "The string 'John' is not enclosed in quotes",
+            "f": "There is a an misplaced f before the string that is being printed"
+          },
+          "correctAnswer": "c",
+          "explanation": "In Python, a function definition must end with a colon ':' to indicate the start of the function's body. In this code snippet, the colon is missing after the function definition 'def greet(name)'. This syntax error prevents the code from working correctly."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What will be the output of the following code snippet?",
+          "codeSnippet": "foo = 11\nbar = 2\nfoo_bar = foo // bar\nfoo_bar = foo_bar ** 2\nprint(foo_bar % 3)",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "4",
+            "e": "5",
+            "f": "6"
+          },
+          "correctAnswer": "b",
+          "explanation": "The code performs several operations: floor division (//), exponentiation (**), and modulo (%). First, 'foo' (11) is divided by 'bar' (2) using floor division, resulting in 5. Then, this result (5) is squared (25). Finally, the modulo operation finds the remainder when 25 is divided by 3, which is 1. Therefore, the output of the code is 1."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = 'Hello world'\nfoo.replace('hello', 'goodbye')\nprint(foo)",
+          "options": {
+            "a": "Goodbye world",
+            "b": "Hello world",
+            "c": "goodbye world",
+            "d": "hello world",
+            "e": "Error",
+            "f": "None"
+          },
+          "correctAnswer": "b",
+          "explanation": "The string method 'replace' is case-sensitive and does not modify the string in place. Since 'Hello world' does not contain the substring 'hello' (with a lowercase 'h'), the original string remains unchanged. Therefore, 'Hello world' is printed."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of 'print(x)' in the following Python code snippet?",
+          "codeSnippet": "x, y = 1, 2\nx, y = y, x\n\nprint(x)",
+          "options": {
+            "a": "1",
+            "b": "0",
+            "c": "2",
+            "d": "An error occurs",
+            "e": "(1, 2)",
+            "f": "(2, 1)"
+          },
+          "correctAnswer": "c",
+          "explanation": "The code snippet swaps the values of 'x' and 'y' using tuple unpacking. Initially, 'x' is 1 and 'y' is 2. After 'x, y = y, x', 'x' becomes 2 and 'y' becomes 1. Therefore, the output of 'print(x)' is 2."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following line of Python code:",
+          "codeSnippet": "print(\"False\" if False else \"True\")",
+          "options": {
+            "a": "False",
+            "b": "True",
+            "c": "0",
+            "d": "1",
+            "e": "Syntax Error",
+            "f": "None"
+          },
+          "correctAnswer": "b",
+          "explanation": "The given code is an example of Python's inline if-else statement, also known as the ternary operator. The expression 'False if False else True' evaluates the condition 'False'. Since the condition is 'False', the expression after the 'else' is returned, which is 'True'. Hence, the output of the code is 'True'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following line of Python code:",
+          "codeSnippet": "import random\n\nprint(random.randint(1, 10))",
+          "options": {
+            "a": "1",
+            "b": "10",
+            "c": "0",
+            "d": "An error occurs",
+            "e": "A number between 1 and 100",
+            "f": "We dont know"
+          },
+          "correctAnswer": "f",
+          "explanation": "The 'random.randint(1, 10)' function generates a random integer between 1 and 10, inclusive of both 1 and 10. Since the output is randomly generated each time the code is executed, it is unpredictable. Therefore, we cannot definitively say what the output will be on any given execution."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet:",
+          "codeSnippet": "foo = [0, 1, 2, 3, 4]\nbar = foo[-1] * foo[1]\nprint(bar)",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3",
+            "e": "4",
+            "f": "Error"
+          },
+          "correctAnswer": "e",
+          "explanation": "The list 'foo' contains the elements [0, 1, 2, 3, 4]. The expression 'foo[-1]' accesses the last element of the list, which is 4. The expression 'foo[1]' accesses the second element of the list, which is 1. Multiplying these two values (4 * 1) results in 4. Therefore, the output of the code is 4."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the outcome when the following Python code snippet is executed:",
+          "codeSnippet": "foo = 5\n\nif (foo > 4) {\n    print(\"Over 4\")\n} else if (foo < 4) {\n    print(\"Under 4\")\n} else {\n    print(\"Exactly 4\")\n}",
+          "options": {
+            "a": "\"Over 4\"",
+            "b": "\"Under 4\"",
+            "c": "\"Exactly 4\"",
+            "d": "Nothing is printed",
+            "e": "Runtime Error",
+            "f": "SyntaxError"
+          },
+          "correctAnswer": "f",
+          "explanation": "The code snippet contains syntax errors typical of someone transitioning from a language like JavaScript or C to Python. In Python, curly braces are not used to denote code blocks; instead, indentation is used. Additionally, 'else if' should be written as 'elif'. Therefore, the code will not run and will result in a 'SyntaxError'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What will be the last number printed by the following Python code snippet?",
+          "codeSnippet": "foo = 10\n\nwhile foo >= 0:\n    print(foo)\n    foo = foo / 2 - 1",
+          "options": {
+            "a": "0",
+            "b": "0.5",
+            "c": "2",
+            "d": "2.5",
+            "e": "4",
+            "f": "1.0"
+          },
+          "correctAnswer": "f",
+          "explanation": "In the code, 'foo' starts at 10 and is continuously halved and reduced by 1 in each iteration of the while loop. The loop continues as long as 'foo' is greater than or equal to 0. The value of 'foo' becomes 1.0 in the last iteration before it becomes negative, making 1.0 the last number to be printed."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet:",
+          "codeSnippet": "foo = 1 + 2 % 3 * 4 - 5\nprint(foo)",
+          "options": {
+            "a": "2",
+            "b": "0",
+            "c": "-2",
+            "d": "3",
+            "e": "-1",
+            "f": "4"
+          },
+          "correctAnswer": "f",
+          "explanation": "In the expression '1 + 2 % 3 * 4 - 5', the modulus operator (%) and multiplication (*) are executed before addition (+) and subtraction (-) due to operator precedence. The expression simplifies as follows: 2 % 3 equals 2 (since 2 divided by 3 leaves a remainder of 2), then 2 * 4 equals 8, and the expression becomes 1 + 8 - 5. This simplifies to 9 - 5, which equals 4. Therefore, the output of the code is 4."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet:",
+          "codeSnippet": "prices = {\"apple\": 1, \"banana\": 2, \"orange\": 3}\npear_price = prices.get(\"pear\", 4)\nprint(pear_price)",
+          "options": {
+            "a": "\"pear\"",
+            "b": "None",
+            "c": "2",
+            "d": "3",
+            "e": "KeyError",
+            "f": "4"
+          },
+          "correctAnswer": "f",
+          "explanation": "The code snippet uses the '.get()' method on a dictionary to retrieve the value associated with the key 'pear'. Since 'pear' is not present in the 'prices' dictionary, the method returns the default value provided, which is 4. Hence, the output of the code is 4."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "import math\n\nfoo = 3 - 1 * 4\n\nprint(int(math.fabs(foo)))",
+          "options": {
+            "a": "1",
+            "b": "3",
+            "c": "4",
+            "d": "2",
+            "e": "SyntaxError",
+            "f": "TypeError"
+          },
+          "correctAnswer": "a",
+          "explanation": "The code first evaluates the expression '3 - 1 * 4'. According to Python's operator precedence rules, multiplication is performed before subtraction, so '1 * 4' equals 4, and then '3 - 4' results in -1. The 'math.fabs' function computes the absolute value of -1, which is 1.0. The 'int' function then converts this floating-point number to an integer, 1. Therefore, the output of the code is 1."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(\"hello\", sep=\" \", end=\"world\")",
+          "options": {
+            "a": "hello world",
+            "b": "helloworld",
+            "c": "hello worldworld",
+            "d": "SyntaxError",
+            "e": "hello",
+            "f": "world"
+          },
+          "correctAnswer": "b",
+          "explanation": "The 'print' function in Python outputs the provided arguments to the console. The 'sep' parameter specifies the separator to use between multiple values, and the 'end' parameter specifies what to print at the end of the output. In this code, 'sep=\" \"' indicates a space as the separator, but since there is only one value ('hello'), the separator is not used. The 'end=\"world\"' parameter appends 'world' to the end of the output, resulting in the combined output 'helloworld' without a space in between. This question tests understanding of the 'print' function and its parameters in Python."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the last printed value in the output of the following Python code snippet?",
+          "codeSnippet": "for every item in range(10):\n    if item == 0:\n        print(item)\n        break",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "9",
+            "d": "SyntaxError",
+            "e": "Nothing is printed",
+            "f": "10"
+          },
+          "correctAnswer": "d",
+          "explanation": "The code snippet contains a syntax error in the 'for' loop statement. The correct syntax for a 'for' loop in Python is 'for variable in iterable:', where 'variable' is the name of the variable that will take on the value of each element in the 'iterable' as the loop runs. In this case, 'every item' is used instead of a single variable name, causing a syntax error. Therefore, the last printed value is a 'SyntaxError', as the code will not execute successfully. This question tests understanding of the syntax for 'for' loops in Python."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the value of 'foo' after executing the following Python code snippet?",
+          "codeSnippet": "foo = 15\nbar = 10\nfoo = foo - bar\nbar = bar - foo\nfoo, bar = bar, foo\n\nprint(foo)",
+          "options": {
+            "a": "5",
+            "b": "0",
+            "c": "10",
+            "d": "15",
+            "e": "20",
+            "f": "-5"
+          },
+          "correctAnswer": "a",
+          "explanation": "Initially, 'foo' is set to 15 and 'bar' to 10. The line 'foo = foo - bar' updates 'foo' to 5 (since 15 - 10 = 5). Next, 'bar = bar - foo' updates 'bar' to 5 (10 - 5 = 5). The line 'foo, bar = bar, foo' swaps the values of 'foo' and 'bar', but since both are 5 at this point, their values remain the same. Therefore, when 'print(foo)' is executed, the output is 5. This question tests understanding of basic arithmetic operations, variable assignments, and value swapping in Python."
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+  ],
+  "medium": [
+      {
+          "difficulty": "medium",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "list = []\nfor i in range(1, 5):\n    list.append(i ** i if i % 2 else 2)\n\nprint(list)",
+          "options": {
+            "a": "[1, 2, 9, 2]",
+            "b": "[1, 2, 27, 2]",
+            "c": "[1, 4, 27, 16]",
+            "d": "[2, 2, 2, 2]",
+            "e": "Error",
+            "f": "[1, 4, 9, 16]"
+          },
+          "correctAnswer": "b",
+          "explanation": "The code uses a for loop to iterate over numbers 1 to 4. For each number 'i', it appends 'i ** i' to the list if 'i' is odd (i % 2 evaluates to True), otherwise, it appends 2. The final list is [1, 2, 27, 2], where 1 and 27 are the results of 1^1 and 3^3, respectively, and 2 is appended for even numbers 2 and 4."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "data = [1, 2, 3, 4, 5, 6]\ndata = [i % 3 == 0 for i in data]\nprint(data[3])",
+          "options": {
+            "a": "True",
+            "b": "False",
+            "c": "3",
+            "d": "4",
+            "e": "IndexError",
+            "f": "None"
+          },
+          "correctAnswer": "b",
+          "explanation": "The list comprehension '[i % 3 == 0 for i in data]' transforms 'data' into a list of boolean values, each indicating whether the corresponding element in the original 'data' list is divisible by 3. The transformed list is '[False, False, True, False, False, True]'. Accessing the element at index 3 (which is the fourth element due to zero-based indexing) returns 'False'."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What will be the last number printed by the following code snippet?",
+          "codeSnippet": "for i in range(0, 9, 3):\n    print(i)",
+          "options": {
+            "a": "3",
+            "b": "1",
+            "c": "9",
+            "d": "12",
+            "e": "0",
+            "f": "None of these"
+          },
+          "correctAnswer": "f",
+          "explanation": "The range function in the loop is defined as range(start, stop, step). Here, it starts from 0 and goes up to but does not include 9, in steps of 3. The numbers printed are 0, 3, and 6. Therefore, the last number printed is 6."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What will be the output of the following code snippet?",
+          "codeSnippet": "foo = ['a', 'b', 'c']\nbar = [1, 2, 3]\nfoo_bar = dict(zip(bar, foo))\nprint(foo_bar['a'])",
+          "options": {
+            "a": "'1'",
+            "b": "1",
+            "c": "None",
+            "d": "'a'",
+            "e": "TypeError",
+            "f": "KeyError"
+          },
+          "correctAnswer": "f",
+          "explanation": "The zip function combines elements of the lists 'bar' and 'foo' into pairs, which are then used to create a dictionary with 'bar' elements as keys and 'foo' elements as values. The resulting dictionary is {'1': 'a', '2': 'b', '3': 'c'}. However, when trying to access foo_bar['a'], it results in a KeyError because 'a' is not a key in this dictionary; the keys are integers from the 'bar' list."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What numbers will be printed from the following code snippet?",
+          "codeSnippet": "def foo(num):\n    return not num % 2\n\nfor i in range(7):\n    if not foo(i):\n        break\n    print(i)",
+          "options": {
+            "a": "0, 1, 2, 3, 4, 5, 6",
+            "b": "0, 2, 4, 6",
+            "c": "1, 3, 5",
+            "d": "0",
+            "e": "No numbers will be printed",
+            "f": "2, 4, 6"
+          },
+          "correctAnswer": "d",
+          "explanation": "The function 'foo' returns 'True' if the passed number is even (including zero) and 'False' if it is odd. The for loop iterates from 0 to 6. When 'i' is 0, 'foo(i)' returns 'True', so the print statement executes. However, when 'i' becomes 1, 'foo(i)' returns 'False', triggering the break statement. Therefore, only '0' is printed before the loop terminates."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = 'hello world'\nbar = '.'.join(reversed(foo.title().split()))\n\nprint(bar)",
+          "options": {
+            "a": "dLroW.olleH",
+            "b": "Hello World",
+            "c": "World.Hello",
+            "d": "hello world",
+            "e": "dlroW.olleH",
+            "f": "world hello"
+          },
+          "correctAnswer": "c",
+          "explanation": "The code first converts 'foo' to title case ('Hello World'), then splits it into a list ['Hello', 'World']. 'reversed' creates an iterator that reads the list in reverse order. Finally, 'join' combines the elements with a period ('.'). So, the output is 'World.Hello'."
+        },
+        {
+          "difficulty": "medium",
+          "question": "Which index will be printed as a result of the given Python code snippet?",
+          "codeSnippet": "def foo(x):\n    x[2] = 100\n    y = tuple(x)\n    return y\n\nx = [1, 2, 3, 4, 5]\ny = foo(x)\n\nfor i in range(len(x)):\n    if x[i] != y[i]:\n        print(i)\n        break",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3",
+            "e": "4",
+            "f": "No index will be printed"
+          },
+          "correctAnswer": "f",
+          "explanation": "The function 'foo' modifies the third element of the list 'x' to 100 and then converts the modified list into a tuple 'y'. Since lists are mutable, the change in 'x[2]' is reflected outside the function. Both 'x' and 'y' have the same elements after modification. Therefore, no index will be printed as there is no difference between the elements of 'x' and 'y'."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What is the output of the given Python code snippet?",
+          "codeSnippet": "foo = 'Hello World'\nbar = foo[::-1]\nprint(bar)",
+          "options": {
+            "a": "dlroW olleH",
+            "b": "Hello World",
+            "c": "World Hello",
+            "d": "d l r o W   o l l e H",
+            "e": "H e l l o   W o r l d",
+            "f": "Error"
+          },
+          "correctAnswer": "a",
+          "explanation": "The code uses string slicing to reverse the string 'Hello World'. The slice '[::-1]' means to start at the end of the string and end at position 0, moving backward one step at a time. Thus, it prints 'dlroW olleH'."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What is the output of the Python code snippet involving list slicing and insertion?",
+          "codeSnippet": "foo = [1, 2, 3, 4, 5]\nfoo[3:3] = [100, 200]\n\nprint(foo)",
+          "options": {
+            "a": "[1, 2, 3, [100, 200], 4, 5]",
+            "b": "[1, 2, 3, 4, 5, 100, 200]",
+            "c": "[100, 200, 1, 2, 3, 4, 5]",
+            "d": "[1, 2, 3, 100, 200]",
+            "e": "An error occurs",
+            "f": "[1, 2, 3, 100, 200, 4, 5]"
+          },
+          "correctAnswer": "f",
+          "explanation": "The code uses list slicing to insert elements at a specific position. 'foo[3:3] = [100, 200]' inserts the elements 100 and 200 at index 3, without removing any elements. The resulting list is '[1, 2, 3, 100, 200, 4, 5]'."
+        },
+        {
+          "difficulty": "medium",
+          "question": "What will the variable 'bar' contain after executing the given Python code snippet?",
+          "codeSnippet": "foo = ['apple', 'banana', 'cherry']\nbar = {i: len(i) for i in foo}",
+          "options": {
+              "a": "A list of the lengths of each word in 'foo'",
+              "b": "A tuple with words from 'foo' and their lengths",
+              "c": "A set containing the lengths of words in 'foo'",
+              "d": "A dictionary with words from 'foo' as keys and their lengths as values",
+              "e": "A list of tuples, each containing a word from 'foo' and its length",
+              "f": "An error occurs"
+          },
+          "correctAnswer": "d",
+          "explanation": "The code uses a dictionary comprehension to create 'bar'. Each element in 'foo' is used as a key, and its length (found using the 'len' function) is the corresponding value. Thus, 'bar' is a dictionary with words from 'foo' as keys and their lengths as values."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "foo = \"my name is john doe\"\nbar = foo.capitalize().split().sort(key=lambda x: x[0])\nprint(bar)",
+        "options": {
+          "a": "['is', 'john', 'doe', 'My', 'name']",
+          "b": "['My', 'name', 'is', 'john', 'doe']",
+          "c": "['doe', 'is', 'john', 'My', 'name']",
+          "d": "None",
+          "e": "['john', 'doe', 'is', 'My', 'name']",
+          "f": "Syntax Error"
+        },
+        "correctAnswer": "d",
+        "explanation": "The given code first capitalizes the string stored in 'foo', resulting in 'My name is john doe'. Then it splits the string into a list of words ['My', 'name', 'is', 'john', 'doe']. The 'sort()' method is then called on this list with a lambda function sorting by the first character of each word. However, 'sort()' modifies the list in place and returns 'None'. Therefore, when 'print(bar)' is executed, it prints 'None' as the 'sort()' method does not return the sorted list."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "def foo(bar):\n    output = []\n    for i in bar:\n        if i % 2 == 0 and i not in output:\n            output.append(i)\n    return output\n\nx = [1, 4, 2, 2, 3, 4, 5, 6, 6]\nprint(foo(x))",
+        "options": {
+          "a": "[4, 2, 6]",
+          "b": "[1, 3, 5]",
+          "c": "[4, 2, 3, 6]",
+          "d": "[1, 4, 2, 3, 5, 6]",
+          "e": "[2, 4, 6]",
+          "f": "[1, 2, 3, 4, 5, 6]"
+        },
+        "correctAnswer": "a",
+        "explanation": "The function 'foo' takes a list 'bar' and creates an empty list 'output'. It then iterates over 'bar', adding each even number to 'output' only if it is not already present. For the given list 'x', the even numbers are 4, 2, and 6. Each of these numbers is added to 'output' only once, despite some of them appearing more than once in 'x'. Hence, the final list 'output' is [4, 2, 6], and that is the output of the code."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "foo = [bool(i*i) for i in range(5)]\nprint(foo)",
+        "options": {
+          "a": "[True, True, True, True, True]",
+          "b": "[False, True, True, True, True]",
+          "c": "[False, False, True, True, True]",
+          "d": "[False, True, False, True, False]",
+          "e": "[True, False, True, False, True]",
+          "f": "[None, None, None, None, None]"
+        },
+        "correctAnswer": "b",
+        "explanation": "The list comprehension 'bool(i*i) for i in range(5)' generates a list where each element is the boolean value of the square of numbers from 0 to 4. The 'bool' function converts its argument to a boolean, where 0 is 'False' and any non-zero number is 'True'. The squares of the numbers from 0 to 4 are [0, 1, 4, 9, 16]. The boolean values of these numbers are [False (for 0), True (for 1), True (for 4), True (for 9), True (for 16)]. Therefore, the output is [False, True, True, True, True]."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the last printed number in the output of the following Python code snippet?",
+        "codeSnippet": "for i in range(1, 10, -1):\n    print(i)",
+        "options": {
+          "a": "Infinite loop",
+          "b": "Recursion error",
+          "c": "1",
+          "d": "9",
+          "e": "0",
+          "f": "Nothing is printed"
+        },
+        "correctAnswer": "f",
+        "explanation": "The 'range' function in Python creates a sequence of numbers. In this case, the 'range' function is defined with a start of 1, an end of 10, and a step of -1. However, since the start value (1) is less than the end value (10), and the step is negative, the 'range' function generates an empty sequence. Consequently, the 'for' loop does not iterate over any values, and nothing gets printed. This question tests understanding of the 'range' function in Python, especially how it behaves with different start, end, and step values."
+      }
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+  ],
+  "hard": [
+      {
+          "difficulty": "hard",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "def function(x):\n    return lambda y: y ** x\n\nprint(function(3)(3))",
+          "options": {
+            "a": "None",
+            "b": "9",
+            "c": "6",
+            "d": "3",
+            "e": "27",
+            "f": "Error"
+          },
+          "correctAnswer": "e",
+          "explanation": "The function named 'function' takes an argument 'x' and returns a lambda function. This lambda function takes one argument 'y' and returns 'y ** x'. When 'function(3)(3)' is executed, it first returns a lambda function equivalent to 'lambda y: y ** 3', and then this lambda function is called with '3', resulting in '3 ** 3' which equals 27."
+      },
+      {
+          "difficulty": "hard",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "data = {'a': 1, 'b': 2, 'c': 3}\n\nfor index, key, value in enumerate(data):\n    if index > 1:\n        print(value)",
+          "options": {
+            "a": "3",
+            "b": "2",
+            "c": "'c'",
+            "d": "Error",
+            "e": "None",
+            "f": "[('c', 3)]"
+          },
+          "correctAnswer": "d",
+          "explanation": "The code results in an error because 'enumerate(data)' produces a sequence of tuples, each containing an index and a key from the dictionary, not a key-value pair. The correct way to unpack these tuples in the loop header would be 'for index, key in enumerate(data)'. As written, Python will raise a 'ValueError' due to attempting to unpack two items into three variables."
+      },
+      {
+          "difficulty": "hard",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = [[1, 2], [3, 4], [5, 6]]\nbar = foo.copy()\nbar[2] = [7, 9]\nfoo[0].append(0)\n\nprint(len(bar[0]) + foo[2][-1])",
+          "options": {
+            "a": "7",
+            "b": "8",
+            "c": "9",
+            "d": "10",
+            "e": "11",
+            "f": "12"
+          },
+          "correctAnswer": "c",
+          "explanation": "The method 'copy()' creates a shallow copy of the list 'foo'. When 'bar[2]' is modified, it doesn't affect 'foo'. However, modifying the contents of 'foo[0]' (which is also referenced by 'bar[0]') affects both 'foo' and 'bar'. After appending 0 to 'foo[0]', the length of 'bar[0]' becomes 3. The last element of 'foo[2]' remains 6. Therefore, the expression 'len(bar[0]) + foo[2][-1]' evaluates to 3 + 6, which is 9."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What will be printed when the following code is executed?",
+        "codeSnippet": "def foo(bar=[]):\n    if len(bar) > 5:\n        print(bar[-1])\n    else:\n        bar.append(len(bar))\n\nfoo([1, 2])\nfoo()\nfoo([3, 4])\nfoo()\nfoo([5, 6])\nfoo()",
+        "options": {
+          "a": "Nothing will be printed",
+          "b": "2, 4, 6",
+          "c": "0, 1, 2",
+          "d": "5",
+          "e": "1, 2, 3",
+          "f": "2, 3"
+        },
+        "correctAnswer": "a",
+        "explanation": "In this code, the 'foo' function prints the last element of the list 'bar' if its length is greater than 5. Otherwise, it appends the current length of 'bar' to itself. The function is first called with [1, 2], and nothing is printed. The next call, 'foo()', uses the default list 'bar', which is empty initially, and appends its length (0) to itself. Subsequent calls either pass a new list, which doesn't affect the default list, or continue to append to the default list without ever exceeding the length of 5. Therefore, nothing gets printed throughout the execution of this code."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What will be printed when the following code is executed?",
+        "codeSnippet": "class Foo:\n    def __init__(self):\n        self.__hidden_number = 7\n\n    def add_number(self, number):\n        return self.__hidden_number + number\n\n\nclass Bar(Foo):\n    def __init__(self):\n        super().__init__()\n        self.__hidden_number = 3\n\n\ninstance = Bar()\nresult = instance.add_number(5)\nprint(result)",
+        "options": {
+          "a": "8",
+          "b": "10",
+          "c": "12",
+          "d": "3",
+          "e": "5",
+          "f": "7"
+        },
+        "correctAnswer": "c",
+        "explanation": "In this code, 'Bar' inherits from 'Foo'. However, the variable '__hidden_number' is name-mangled due to the double underscores, which makes it specific to the class it's defined in. When the 'Bar' instance is created, it first calls 'Foo's __init__, setting 'self.__hidden_number' to 7, and then 'Bar's __init__ sets a different '__hidden_number' to 3, but this doesn't affect the one in 'Foo'. When 'add_number' is called, it uses 'Foo's '__hidden_number', which is 7. Adding 5 to it results in 12."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What does the function 'foo' do when given a number as input?",
+        "codeSnippet": "def foo(num):\n    if num < 2:\n        return False\n\n    if num > 2 and num % 2 == 0:\n        return False\n\n    for i in range(3, int(num**0.5) + 1, 2):\n        if num % i == 0:\n            return False\n\n    return True\n\nfor i in range(30):\n    if foo(i):\n        print(i)",
+        "options": {
+          "a": "Determines if the number is an even number.",
+          "b": "Calculates the factorial of the number.",
+          "c": "Verifies if the number is less than 2.",
+          "d": "Checks if the number is divisible by any number up to its square root.",
+          "e": "Determines if the number is a perfect square.",
+          "f": "Finds if the number is greater than its square root."
+        },
+        "correctAnswer": "d",
+        "explanation": "The function 'foo' checks if a given number is a prime number. It first eliminates numbers less than 2 and even numbers greater than 2 as they are not prime. Then, it checks for factors only up to the square root of the number, incrementing by 2 to skip even numbers. If no factors are found, it returns True, indicating the number is prime. This process aligns with option 'd' – checking if the number is divisible by any number up to its square root."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the result of the expression 'foo + bar' in the given Python code snippet involving a custom class 'Foo'?",
+        "codeSnippet": "class Foo:\n    def __init__(self, x):\n        self.bar = x\n\n    def __add__(self, x):\n        return self.bar - x.bar\n\nfoo = Foo(8)\nbar = Foo(4)\nprint(foo + bar)",
+        "options": {
+          "a": "4",
+          "b": "12",
+          "c": "2",
+          "d": "An error occurs",
+          "e": "8",
+          "f": "0"
+        },
+        "correctAnswer": "a",
+        "explanation": "The '__add__' method in class 'Foo' is overridden to subtract the 'bar' attribute of the second operand from the first. When 'foo + bar' is executed, it translates to 'foo.__add__(bar)', which computes 'foo.bar - bar.bar' (8 - 4). Hence, the result is 4."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the time complexity of the following code in Big O notation, based on the variable 'n'?",
+        "codeSnippet": "n = 100\n\nfor i in range(n):\n    print(i)",
+        "options": {
+          "a": "O(1)",
+          "b": "O(log n)",
+          "c": "O(n)",
+          "d": "O(100)",
+          "e": "O(n^2)",
+          "f": "O(100n)"
+        },
+        "correctAnswer": "c",
+        "explanation": "The code consists of a single for-loop that iterates 'n' times. The time complexity of a single for-loop iterating 'n' times is O(n), as the number of iterations is directly proportional to the value of 'n'. In this case, the time complexity is O(n) where 'n' is the variable being iterated over, even though it is assigned a fixed value (100) in the code."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "import random\n\ndef foo(num):\n    choices = [num**2 + 5 for i in range(23, 41, 4)] * 3\n    print(choices)\n    return random.choice(choices)\n\nprint(foo(7))",
+        "options": {
+          "a": "0",
+          "b": "A random value between 23 and 41 that's divisible by 4",
+          "c": "23",
+          "d": "A value greater than 50 but less than 60",
+          "e": "54",
+          "f": "A random value between 50 and 60"
+        },
+        "correctAnswer": "e",
+        "explanation": "The function 'foo' creates a list named 'choices' using a list comprehension. The expression 'num**2 + 5' with 'num' being 7 results in 54. The range(23, 41, 4) generates numbers from 23 to 41 in steps of 4, but these numbers are not used in the list comprehension itself. Instead, the list 'choices' is filled with the same value, 54, repeated multiple times (once for each number generated by range). When 'random.choice(choices)' is called, it randomly selects an element from 'choices', which will always be 54. Thus, the correct answer is '54'."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "def foo(x):\n    return lambda y: y + x\n\nbar = foo(5)\n\nprint(bar(5))",
+        "options": {
+          "a": "0",
+          "b": "10",
+          "c": "5",
+          "d": "Syntax Error",
+          "e": "None",
+          "f": "Type Error"
+        },
+        "correctAnswer": "b",
+        "explanation": "The function 'foo' returns a lambda function that takes one argument 'y' and returns 'y + x'. When 'foo(5)' is called, it returns a lambda function where 'x' is bound to 5. This returned function is then stored in 'bar'. Calling 'bar(5)' executes the lambda function with 'y' as 5, resulting in '5 + 5', which equals 10. Therefore, the output of the code is 10."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "def foo(num):\n    while True:\n        yield num * num\n        num += 1\n\nbar = foo(3)\nprint(next(bar))",
+        "options": {
+          "a": "9",
+          "b": "16",
+          "c": "An infinite loop occurs",
+          "d": "3",
+          "e": "SyntaxError",
+          "f": "None"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code defines a generator function 'foo' that yields the square of the given number and then increments it. The generator 'bar' is initialized with 'foo(3)', so when 'next(bar)' is called, it yields the square of 3, which is 9. The generator then increments the number to 4, but since 'next' is only called once, only the first value (9) is printed. The key concept here is understanding how generator functions and the 'next' function work in Python."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "foo = [\"john\", \"jane\", \"olaf\", \"oliver\", \"julia\", \"francis\"]\nbar = list(filter(lambda x: len(x) >= 4, foo))\nprint(bar)",
+        "options": {
+          "a": "['john', 'jane', 'olaf', 'oliver', 'julia', 'francis']",
+          "b": "['john', 'jane', 'oliver', 'julia', 'francis']",
+          "c": "['olaf', 'oliver', 'julia', 'francis']",
+          "d": "['john', 'jane', 'olaf']",
+          "e": "['oliver', 'julia', 'francis']",
+          "f": "[]"
+        },
+        "correctAnswer": "b",
+        "explanation": "The code uses the 'filter' function with a lambda function to filter out elements from the list 'foo' based on the condition that the length of each element should be at least 4 characters. The lambda function 'lambda x: len(x) >= 4' returns 'True' for elements with 4 or more characters. As a result, 'bar' contains the same elements as bar since every name contain at least four characters."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "class Foo:\n    def __init__(self, x):\n        self.x = x\n\n    def __repr__(self):\n        return f\"{self.x * 2}\"\n\n    def to_string(self):\n        return f\"{self.x * 3}\"\n\n    def __str__(self):\n        return f\"{self.x * 4}\"\n\n    def represent(self):\n        return f\"{self.x * 5}\"\n\n\nfoo = Foo(1)\nprint(foo)",
+        "options": {
+          "a": "2",
+          "b": "3",
+          "c": "4",
+          "d": "5",
+          "e": "10",
+          "f": "15"
+        },
+        "correctAnswer": "c",
+        "explanation": "The class 'Foo' defines several methods for string representation: '__repr__', 'to_string', '__str__', and 'represent'. The '__repr__' method returns the object representation with the 'x' attribute multiplied by 2, 'to_string' returns it multiplied by 3, '__str__' returns it multiplied by 4, and 'represent' returns it multiplied by 5. When an instance of 'Foo' is printed using 'print(foo)', the '__str__' method is invoked by default, which returns 'self.x * 4'. Since 'self.x' is initialized to 1, this results in '1 * 4', which is 4. Therefore, the output of the code is '4'. This question tests understanding of Python's special methods for string representation and their usage in different contexts."
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+                    
+  ],
+  "expert": [
+      {
+          "difficulty": "expert",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "def foo(x, y):\n    return lambda z: x(y, z)\n\n\ndef bar(x, y):\n    return lambda z: x(y(z))\n\nx = foo(filter, lambda x: x % 2 == 0)\ny = foo(map, lambda x: x ** 2)\nz = bar(x, y)\ndata = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nprint(list(z(data)))",
+          "options": {
+            "a": "[1, 4, 9, 16, 25, 36, 49, 64, 81]",
+            "b": "Error",
+            "c": "[1, 3, 5, 7, 9]",
+            "d": "[2, 4, 6, 8]",
+            "e": "[]",
+            "f": "[4, 16, 36, 64]"
+          },
+          "correctAnswer": "f",
+          "explanation": "The function 'foo' returns a lambda that applies a function 'x' to the result of applying another function 'y'. 'x' in 'foo(filter, lambda x: x % 2 == 0)' applies 'filter' to a lambda function checking for even numbers. 'y' in 'foo(map, lambda x: x ** 2)' applies 'map' to a lambda function squaring numbers. 'z' in 'bar(x, y)' applies 'x' to the result of 'y'. Thus, 'z(data)' filters even numbers and squares them, resulting in [4, 16, 36, 64]."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What will be the output of the following code snippet?",
+        "codeSnippet": "data = [1, 2, 3, 4, 5]\ntransformed = list(map(lambda x: x**2, [y for y in data if y % 2 == 0]))\nresult = sum(filter(lambda z: z > 10 and z < 20, transformed))\nprint(result)",
+        "options": {
+          "a": "20",
+          "b": "16",
+          "c": "30",
+          "d": "14",
+          "e": "10",
+          "f": "0"
+        },
+        "correctAnswer": "b",
+        "explanation": "The code first filters even numbers from 'data' ([2, 4]), then squares each number (4, 16) using a map function. The resulting list 'transformed' is [4, 16]. Then, the 'filter' function selects elements greater than 10 and less than 20 from 'transformed'. The only number satisfying this condition is 16. Finally, 'sum' adds up the elements of the filtered list, resulting in 16. Therefore, the output is 16."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What will be the output of the following code snippet?",
+        "codeSnippet": "class Foo:\n    def __init__(self, number):\n        self.number = number\n\n    def __call__(self, value):\n        if value == 0:\n            return self.number\n        else:\n            return Foo(self.number + value)\n\n\ndef bar(obj, limit):\n    if limit <= 0:\n        return obj(0)\n    else:\n        return bar(obj(limit), limit - 1)\n\n\nfoo = Foo(5)\nresult = bar(foo, 3)\nprint(result)",
+        "options": {
+          "a": "11",
+          "b": "15",
+          "c": "8",
+          "d": "TypeError",
+          "e": "RecursionError",
+          "f": "10"
+        },
+        "correctAnswer": "a",
+        "explanation": "The 'Foo' class defines a callable object with the '__call__' method. Initially, 'foo' is an instance of 'Foo' with 'number' 5. 'bar' is a recursive function, and each recursive call reduces 'limit' by 1. On each call, 'obj(limit)' creates a new 'Foo' instance with 'number' incremented by 'limit'. At 'limit' 3, 2, and 1, the numbers added are 3, 5 (3+2), and 8 (5+3), respectively. Finally, when 'limit' becomes 0, 'obj(0)' returns the current 'number', which is 11. Thus, the output is 11."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What will be the output of the following code snippet?",
+        "codeSnippet": "foo = {j: sum([i for i in range(j)]) for j in range(5)}\n\nfor i, (k, v) in enumerate(foo.items()):\n    continue\n\nprint(i, k, v)",
+        "options": {
+          "a": "[4, 4, 6]",
+          "b": "[3, 3, 3]",
+          "c": "[2, 1, 1]",
+          "d": "SyntaxError",
+          "e": "ValueError",
+          "f": "[1, 2, 1]"
+        },
+        "correctAnswer": "a",
+        "explanation": "The dictionary comprehension creates 'foo' with keys from 0 to 4 and values as the sum of numbers from 0 to one less than the key. The final dictionary is {0: 0, 1: 0, 2: 1, 3: 3, 4: 6}. The loop iterates over each item, but 'continue' does nothing meaningful here. After the loop, 'i' is 4 (last index), 'k' is 4 (last key), and 'v' is 6 (last value). Therefore, the output is [4, 4, 6]."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What will be the behavior of the following code snippet?",
+        "codeSnippet": "import random\n\ndef foo():\n    num = 0\n    while num:\n        yield num\n        num += int(random.choice([0, 0, 0, 1]) * 0)\n    else:\n        for _ in range(3):\n            num = (num + 1) % 2\n\n\nfor i in foo():\n    print(i)",
+        "options": {
+          "a": "Nothing gets printed",
+          "b": "It prints random values forever",
+          "c": "It prints random values until the random value is 0",
+          "d": "It prints a sequence of 1s three times",
+          "e": "It prints a sequence of 0s three times",
+          "f": "It prints '1, 0, 1'"
+        },
+        "correctAnswer": "a",
+        "explanation": "The function 'foo' is a generator with a while loop that only executes if 'num' is non-zero. Since 'num' is initialized to 0 and the expression 'int(random.choice([0, 0, 0, 1]) * 0)' always evaluates to 0, the while loop never executes. The else block modifies 'num' but does not yield any values. As a result, the for loop that iterates over 'foo()' does not print anything. Therefore, nothing gets printed."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the function 'foo' when called with the arguments 1 and 3?",
+        "codeSnippet": "def foo(x, y):\n    return (x & y) << 2\n\nprint(foo(1, 3))",
+        "options": {
+          "a": "0",
+          "b": "2",
+          "c": "4",
+          "d": "8",
+          "e": "12",
+          "f": "16"
+        },
+        "correctAnswer": "c",
+        "explanation": "The function 'foo' performs a bitwise AND operation on the inputs 'x' and 'y' (1 and 3 respectively). The result of 1 & 3 is 1 (both in binary: 01 & 11). This result is then left-shifted by 2 bits, which turns 1 (binary 01) into 4 (binary 0100). Therefore, the output is 4."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the list comprehension combined with the lambda function in the given Python code?",
+        "codeSnippet": "foo = lambda x: not (x & 1)\nbar = [i for i in range(10) if foo(i)]\n\nprint(bar)",
+        "options": {
+          "a": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+          "b": "[0, 2, 4, 6, 8]",
+          "c": "[1, 3, 5, 7, 9]",
+          "d": "[2, 4, 6, 8]",
+          "e": "[0, 1, 3, 5, 7, 9]",
+          "f": "[]"
+        },
+        "correctAnswer": "b",
+        "explanation": "The lambda function 'foo' returns True for even numbers. It uses a bitwise AND operation with 1 to check if the least significant bit is 0 (even). The list comprehension generates a list of numbers from 0 to 9, including only those for which 'foo' returns True. As 'foo' returns True for even numbers, the output is [0, 2, 4, 6, 8]."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the time complexity of the following code in Big O notation, based on the variable 'n'?",
+        "codeSnippet": "n = 153\ni = 0\n\nwhile i < n:\n    j = 1\n    while j < n:\n        j *= 2\n    i += 1",
+        "options": {
+          "a": "O(n)",
+          "b": "O(n log n)",
+          "c": "O(log n)",
+          "d": "O(n^2)",
+          "e": "O(2^n)",
+          "f": "O(log^2 n)"
+        },
+        "correctAnswer": "b",
+        "explanation": "The code has two nested loops. The outer loop runs 'n' times as it increments 'i' from 0 to 'n'. The inner loop is a bit trickier; it doubles 'j' each time until 'j' is greater than or equal to 'n'. This doubling means the inner loop runs in O(log n) time, as doubling a number a certain number of times to reach 'n' is logarithmic in nature. Therefore, the overall time complexity of the nested loops is O(n) for the outer loop multiplied by O(log n) for the inner loop, resulting in O(n log n)."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the time complexity of the following code in Big O notation, based on the variable 'n'?",
+        "codeSnippet": "def foo(num):\n    for i in range(num):\n        if num % 2 == 0:\n            return True\n        else:\n            return False\n\nfor i in range(n):\n    if (foo(i)):\n        break\n    else:\n        print(i)",
+        "options": {
+          "a": "O(n^2)",
+          "b": "O(n log n)",
+          "c": "O(log n)",
+          "d": "O(2^n)",
+          "e": "O(n)",
+          "f": "O(1)"
+        },
+        "correctAnswer": "f",
+        "explanation": "Despite the appearance of nested loops, the time complexity of this code is O(1). The function 'foo(num)' checks whether 'num' is even or odd and returns immediately in the first iteration of its loop. Therefore, its time complexity is constant. In the main loop, 'foo(i)' will return 'True' when 'i' is even, causing an immediate break on the first even number (i.e., 'i=0'). Thus, the main loop does not iterate based on 'n' and has a constant time complexity. Overall, the time complexity of the entire code is O(1), as it does not depend on the size of 'n'."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "import itertools\n\nclass Foo:\n    def __init__(self, limit):\n        self.limit = limit\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.limit <= 0:\n            raise StopIteration\n        self.limit -= 1\n        return 2 ** self.limit\n\n\ndef bar(z):\n    y = (x for x in z if x % 2 == 0)\n    return sum(itertools.islice(y, 0, 3))\n\nprint(bar(Foo(5)))",
+        "options": {
+          "a": "16",
+          "b": "32",
+          "c": "24",
+          "d": "20",
+          "e": "28",
+          "f": "30"
+        },
+        "correctAnswer": "e",
+        "explanation": "The 'Foo' class is an iterator that generates powers of 2, decreasing the exponent in each iteration. When 'bar(Foo(5))' is called, it generates the first 5 powers of 2 in descending order: 16, 8, 4, 2, 1. The generator expression in 'bar' filters these to keep only even numbers. The 'itertools.islice' function then slices the first 3 of these even numbers, which are 16, 8, and 4. Summing these numbers (16 + 8 + 4) results in 28. Thus, the output of the code is 28."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the following Python code snippet when executed?",
+        "codeSnippet": "def foo(x):\n    def wrapper():\n        print(x()(bar()(2)))\n    return wrapper\n\n\ndef bar():\n    return lambda x: x - 3\n\n\n@foo\ndef foo_bar():\n    return lambda x: x*x\n\n\nfoo_bar()",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "4",
+          "e": "Syntax Error",
+          "f": "Nothing is printed"
+        },
+        "correctAnswer": "a",
+        "explanation": "This code uses a decorator ('foo') applied to the 'foo_bar' function. When 'foo_bar()' is called, it actually calls the 'wrapper' function defined inside 'foo'. The 'wrapper' function calls 'x()', which is 'foo_bar()', returning a lambda function 'lambda x: x*x'. This lambda is called with the result of 'bar()(2)', where 'bar()' returns another lambda 'lambda x: x - 3', which is then called with 2, resulting in -1. Thus, the final call is the square of -1, which is 1. Therefore, the output is 1."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the following Python code snippet:",
+        "codeSnippet": "def foo(num):\n    def bar(x):\n        return lambda y: lambda z: z + y - x\n    return lambda x: lambda y: bar(num + x - y)\n\nprint(foo(0)(1)(2)(3)(4))",
+        "options": {
+          "a": "None",
+          "b": "Address to function",
+          "c": "Syntax Error",
+          "d": "8",
+          "e": "5",
+          "f": "2"
+        },
+        "correctAnswer": "d",
+        "explanation": "This code snippet features a complex and unconventional use of nested lambda functions and closures. The nested lambda functions and the sequence of calls make the code difficult to follow and understand. It is designed to be intentionally challenging to interpret, focusing more on testing the understanding of Python's syntax and function behaviors in a complex scenario rather than practical application."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "import asyncio\n\nasync def foo(x, y):\n    await asyncio.sleep(x / 1000)\n    y.append(x)\n\nasync def bar(x, y=[]):\n    tasks = [foo(value, y) for value in x]\n    await asyncio.gather(*tasks)\n    return y\n\ntry:\n    result = asyncio.run(bar([163, 99, 12]))\nfinally:\n    result = asyncio.run(bar([199, 1, 64]))\n\nprint(result)",
+        "options": {
+          "a": "Probably [163, 99, 12, 199, 1, 64] but it's not sure",
+          "b": "Probably [12, 99, 163, 1, 64, 199] but it's not sure",
+          "c": "[1, 12, 64, 99, 163, 199]",
+          "d": "[199, 1, 64] in a random order",
+          "e": "An error occurs",
+          "f": "An empty list"
+        },
+        "correctAnswer": "b",
+        "explanation": "This code snippet involves asynchronous programming with Python's asyncio module. The 'bar' function creates and runs asynchronous tasks that sleep for a duration proportional to their input value and then append this value to a list. Due to the nature of asynchronous programming and the 'await asyncio.sleep(x / 1000)' call, the order in which values are appended to the list depends on their sleep duration. Shorter durations will result in earlier completion and appending. The final result is likely to be ordered by duration (shortest to longest sleep times), but this is not guaranteed due to potential variations in execution timing. Therefore, the output is probably [12, 99, 163, 1, 64, 199], but it's not sure."
+      },
+      {
+        "difficulty": "expert",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "class Foo:\n    def __init__(self):\n        self.value = 0\n\n    def __enter__(self):\n        return self\n\n    def __exit__(self, exc_type, exc_value, traceback):\n        return True\n\n\nwith Foo() as data:\n    print(1 / data.value)",
+        "options": {
+            "a": "0",
+            "b": "ZeroDivision Error",
+            "c": "None",
+            "d": "Syntax Error",
+            "e": "Nothing is printed",
+            "f": "1"
+        },
+        "correctAnswer": "e",
+        "explanation": "In this code, the class 'Foo' is defined as a context manager using the '__enter__' and '__exit__' magic methods. When entering the 'with' statement, '__enter__' is called, returning the 'Foo' instance with 'value' set to 0. Inside the 'with' block, attempting to perform '1 / data.value' would normally raise a 'ZeroDivisionError', as 'data.value' is 0. However, the '__exit__' method of 'Foo' returns 'True', which tells Python to suppress the exception. As a result, the exception is caught and handled within the '__exit__' method, and no output is printed. This is a classic example of using context managers to control the flow of exceptions in Python."
+    }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+  ]
+}
