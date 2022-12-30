@@ -25,7 +25,7 @@ type QuestionsDataStructure = {
 
 export const questionFetcher = (): QuestionData[] => {
   const selectedQuestions: QuestionData[] = [];
-  const questionsDataTyped = questionsData as QuestionsDataStructure;
+  const questionsDataTyped = JSON.parse(JSON.stringify(questionsData)) as QuestionsDataStructure
 
   const difficulties: (keyof QuestionsDataStructure)[] = ['beginner', 'medium', 'hard', 'expert'];
 
