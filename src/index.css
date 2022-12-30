@@ -72,6 +72,7 @@ p {
   background-color: var(--button-hover-color);
   color: white;
   border-color: var(--button-hover-color);
+  transform: scale(1.02);
 }
 
 .options-button h3 {
@@ -92,6 +93,16 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-left: 5px solid;
   border-color: var(--secondary-color);
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .button-correct,
@@ -167,9 +178,13 @@ p {
   margin-bottom: 20px;
 }
 
+.footer {
+  font-size: 0.7rem;
+}
+
 @media only screen and (max-width: 600px) {
   .code-snippet {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .main-container {
