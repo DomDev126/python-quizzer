@@ -2,14 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer
-      style={{
-        textAlign: "center",
-        marginTop: "20px",
-        padding: "10px",
-        fontSize: "0.8rem",
-      }}
-    >
+    <footer>
       <div className="footer">
         <p>Created and designed by Alexander Engström 2023</p>
         <p>

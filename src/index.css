@@ -23,6 +23,7 @@ body {
   width: 100%;
   color: var(--text-color);
   background-color: var(--background-color);
+  min-height: 100vh;
 }
 
 .main-container {
@@ -75,6 +76,10 @@ p {
   transform: scale(1.02);
 }
 
+.options-button:disabled:hover {
+  transform: scale(1);
+}
+
 .options-button h3 {
   margin-right: 10px;
   font-size: 1.5rem;
@@ -110,6 +115,22 @@ p {
   background-color: var(--correct-color);
   color: white;
   border-color: var(--correct-color);
+}
+
+.button-correct {
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .button-incorrect,
@@ -161,7 +182,8 @@ p {
 }
 
 .wide-button:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
 .score-container {
@@ -178,8 +200,20 @@ p {
   margin-bottom: 20px;
 }
 
-.footer {
+footer {
   font-size: 0.7rem;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.intro-container {
+  justify-content: center;
+}
+
+.intro-container h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 @media only screen and (max-width: 600px) {

@@ -27,6 +27,8 @@ def validate_json(file_path):
                         raise Exception(
                             f"Invalid question data: {err}\n{question}")
 
+        print("JSON is valid")
+
     except json.JSONDecodeError as err:
         raise Exception(f"JSON file is invalid: {err}")
 
