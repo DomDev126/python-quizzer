@@ -112,7 +112,9 @@ function App() {
   return (
     <>
       <div className="main-container">
-        <h4>Question {currentQuestionIndex + 1}/20</h4>
+        <h4 className="question-count">
+          Question {currentQuestionIndex + 1}/20:
+        </h4>
         <Question
           question={currentQuestion.question}
           codeSnippet={currentQuestion.codeSnippet}

@@ -2,6 +2,8 @@ import json
 
 
 def validate_json(file_path):
+    question_count = {}
+
     try:
         with open(file_path, 'r') as file:
             data = json.load(file)
@@ -9,7 +11,10 @@ def validate_json(file_path):
             assert len(data) == 4
 
             for category, questions in data.items():
+                question_count[category] = 0
+
                 for question in questions:
+                    question_count[category] += 1
 
                     try:
                         assert category == question["difficulty"]
@@ -27,7 +32,8 @@ def validate_json(file_path):
                         raise Exception(
                             f"Invalid question data: {err}\n{question}")
 
-        print("JSON is valid")
+        for category, count in question_count.items():
+            print(f"{category}: {count} questions.")
 
     except json.JSONDecodeError as err:
         raise Exception(f"JSON file is invalid: {err}")

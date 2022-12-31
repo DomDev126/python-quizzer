@@ -216,13 +216,18 @@ footer {
   color: var(--primary-color);
 }
 
+.question-count {
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   .code-snippet {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .main-container {
     margin: 0px;
+    margin-top: 20px;
     width: 100%;
   }
 }
