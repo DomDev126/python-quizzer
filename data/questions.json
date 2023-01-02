@@ -449,7 +449,118 @@
           },
           "correctAnswer": "b",
           "explanation": "In this code, the '*' operator is used to repeat the string stored in 'foo' twice. Therefore, 'foo * 2' results in 'hellohello'. This repeated string is then concatenated with the string stored in 'bar', which is 'world', using the '+' operator. As a result, the output of the print statement is 'hellohelloworld'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(min(-2, -1, 0, 1, 2))",
+          "options": {
+            "a": "-2",
+            "b": "-1",
+            "c": "0",
+            "d": "1",
+            "e": "2",
+            "f": "TypeError"
+          },
+          "correctAnswer": "a",
+          "explanation": "The `min` function in Python returns the smallest of the input values. When called with the values -2, -1, 0, 1, and 2, the smallest value among these is -2. Therefore, the output of the code is '-2'. This function is commonly used to find the minimum value in a collection of numbers."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(max(-255, -1, 0, 1, 2))",
+          "options": {
+            "a": "-255",
+            "b": "-1",
+            "c": "0",
+            "d": "1",
+            "e": "2",
+            "f": "TypeError"
+          },
+          "correctAnswer": "e",
+          "explanation": "The `max` function in Python returns the largest of the input values. When called with the values -255, -1, 0, 1, and 2, the largest value among these is 2. Therefore, the output of the code is '2'. This function is commonly used to find the maximum value in a collection of numbers."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(sum([1, 2, 3]))",
+          "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "6",
+            "e": "TypeError",
+            "f": "SyntaxError"
+          },
+          "correctAnswer": "d",
+          "explanation": "The `sum` function in Python calculates the total of all the numbers in an iterable. In this case, the function is called with a list containing the numbers 1, 2, and 3. The sum of these numbers is 1 + 2 + 3, which equals 6. Therefore, the output of the code is '6'. This function is commonly used for adding up numbers in a list or any other iterable."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(pow(2, -1))",
+          "options": {
+            "a": "2",
+            "b": "-1",
+            "c": "0.5",
+            "d": "0",
+            "e": "TypeError",
+            "f": "SyntaxError"
+          },
+          "correctAnswer": "c",
+          "explanation": "The `pow` function in Python calculates the power of a number, with the first argument being the base and the second argument being the exponent. In this case, `pow(2, -1)` calculates 2 raised to the power of -1. The result of raising a number to a negative exponent is the reciprocal of that number raised to the absolute value of the exponent, which in this case is 1/2 or 0.5. Therefore, the output of the code is '0.5'."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "print(type(3.14))",
+          "options": {
+            "a": "<class 'int'>",
+            "b": "<class 'float'>",
+            "c": "<class 'str'>",
+            "d": "<class 'bool'>",
+            "e": "SyntaxError",
+            "f": "TypeError"
+          },
+          "correctAnswer": "b",
+          "explanation": "The `type` function in Python returns the type of an object. In this case, `3.14` is a floating-point number, so `type(3.14)` returns `<class 'float'>`. The output of the code is therefore '<class 'float'>'. Understanding data types and how to check them with the `type` function is a fundamental aspect of Python programming."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = 'john doe'\nprint(foo.title())",
+          "options": {
+            "a": "john doe",
+            "b": "John doe",
+            "c": "John Doe",
+            "d": "JOHN DOE",
+            "e": "jOHn dOE",
+            "f": "TypeError"
+          },
+          "correctAnswer": "c",
+          "explanation": "The `title` method in Python converts the first character of each word in a string to uppercase and the remaining characters to lowercase. In this case, `foo.title()` converts the string 'john doe' to 'John Doe', with the first letters of both 'john' and 'doe' capitalized. Therefore, the output of the code is 'John Doe'. This method is commonly used for formatting names or titles in a standardized way."
+        },
+        {
+          "difficulty": "beginner",
+          "question": "What is the output of the following Python code snippet?",
+          "codeSnippet": "foo = 'john doe'\nprint(foo.capitalize())",
+          "options": {
+            "a": "john doe",
+            "b": "John Doe",
+            "c": "JOHN DOE",
+            "d": "John doe",
+            "e": "jOHn dOE",
+            "f": "TypeError"
+          },
+          "correctAnswer": "d",
+          "explanation": "The `capitalize` method in Python converts the first character of a string to uppercase and the rest of the characters to lowercase. In this case, `foo.capitalize()` converts the string 'john doe' to 'John doe', with only the first letter 'j' of 'john' capitalized, and the rest of the string remaining in lowercase. Therefore, the output of the code is 'John doe'. This method is often used for ensuring that a string conforms to a format where only the first character is capitalized."
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -954,7 +1065,134 @@
         },
         "correctAnswer": "a",
         "explanation": "In this code, 'foo' is initially set to 10. 'bar' is then set to 'foo + 2', which evaluates to 12. Next, 'bar' is updated to be 'foo - bar', which is 10 - 12, resulting in -2. Thus, when 'print(bar)' is executed, the output is -2."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "p = True\nq = False\n\nprint(not p and q or not (p or not q))",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "None",
+          "d": "Syntax Error",
+          "e": "Runtime Error",
+          "f": "TypeError"
+        },
+        "correctAnswer": "b",
+        "explanation": "The expression involves logical operators 'not', 'and', and 'or'. First, 'not p' is False, and 'q' is False, so 'not p and q' is False. Next, 'p or not q' is True since 'p' is True, so 'not (p or not q)' is False. Finally, 'False or False' is False. Therefore, the output of the code is False."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(id(256) == id(128 + 128))",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "Syntax Error",
+          "d": "Runtime Error",
+          "e": "TypeError",
+          "f": "None"
+        },
+        "correctAnswer": "a",
+        "explanation": "In Python, small integers (typically from -5 to 256) are cached and reused for performance reasons. The `id()` function returns the unique identifier of an object. Since both `256` and `128 + 128` evaluate to 256, which falls within this caching range, they refer to the same integer object in memory. Therefore, their ids are the same, and the output of the code is `True`."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(\"a\" * 5 is \"aaaaa\")",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "Syntax Error",
+          "d": "Runtime Error",
+          "e": "TypeError",
+          "f": "None"
+        },
+        "correctAnswer": "a",
+        "explanation": "In Python, the expression '\"a\" * 5' creates a new string by repeating the character 'a' five times, resulting in 'aaaaa'. The 'is' operator checks for object identity, not just value equality. Due to Python's optimization for small strings, both '\"a\" * 5' and '\"aaaaa\"' refer to the same string object in memory. Therefore, their identity is the same, and the output of the code is `True`. This behavior might vary across different Python implementations and is not recommended to be relied upon for checking string equality."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print([0, 1, 2, 3, 4][::-2])",
+        "options": {
+          "a": "[4, 2, 0]",
+          "b": "[0, 2, 4]",
+          "c": "[1, 3]",
+          "d": "[4, 3, 2, 1, 0]",
+          "e": "Syntax Error",
+          "f": "TypeError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The code snippet demonstrates the use of Python list slicing with a negative step. The slice `[::-2]` starts from the end of the list and selects every second element moving backwards. For the list `[0, 1, 2, 3, 4]`, this results in `[4, 2, 0]`, as it starts with the last element (4), skips one element (3), includes the next (2), skips one element (1), and includes the next (0). Thus, the output of the code is `[4, 2, 0]`."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(next(enumerate('Python')))",
+        "options": {
+          "a": "(0, 'P')",
+          "b": "(1, 'P')",
+          "c": "(0, 'y')",
+          "d": "Syntax Error",
+          "e": "Runtime Error",
+          "f": "TypeError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The `enumerate` function in Python adds a counter to an iterable and returns it in a form of an enumerate object. This object yields pairs containing a count (from start, which defaults to 0) and the values obtained from iterating over the iterable. The `next` function retrieves the next item from the iterator, which in this case is the first item of the enumeration of the string 'Python'. Since enumeration starts from 0, the first item is `(0, 'P')`, representing the index 0 and the first character 'P' of the string 'Python'. Therefore, the output of the code is `(0, 'P')`."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(max(abs(-255), -1, 0, abs(1), 2))",
+        "options": {
+          "a": "-255",
+          "b": "-1",
+          "c": "0",
+          "d": "1",
+          "e": "2",
+          "f": "255"
+        },
+        "correctAnswer": "f",
+        "explanation": "The `max` function in Python returns the largest of the input values. The `abs` function returns the absolute value of a number. In this code, `abs(-255)` returns 255, and `abs(1)` returns 1. The values being compared are 255, -1, 0, 1, and 2. Among these, the largest value is 255. Therefore, the output of the code is '255'. This question tests understanding of the `max` function and its interaction with the `abs` function."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(divmod(24, 4))",
+        "options": {
+          "a": "(0, 6)",
+          "b": "(6, 0)",
+          "c": "6",
+          "d": "0",
+          "e": "TypeError",
+          "f": "SyntaxError"
+        },
+        "correctAnswer": "b",
+        "explanation": "The `divmod` function in Python takes two numbers as arguments and returns a tuple consisting of their quotient and remainder. When dividing 24 by 4, the quotient is 6 and the remainder is 0, since 24 is evenly divisible by 4. Therefore, `divmod(24, 4)` returns (6, 0), and the output of the code is '(6, 0)'. This function is useful for obtaining both the quotient and remainder of a division operation in a single step."
+      },
+      {
+        "difficulty": "medium",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "foo = [True, True, False]\nbar = [any(foo), all(foo)]\nprint(any(bar))",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "[True, False]",
+          "d": "[False, True]",
+          "e": "Syntax Error",
+          "f": "TypeError"
+        },
+        "correctAnswer": "a",
+        "explanation": "The `any` function returns True if any element in the iterable is True, otherwise False. The `all` function returns True if all elements in the iterable are True, otherwise False. In the list `foo`, `any(foo)` returns True because there are True elements, but `all(foo)` returns False because not all elements are True. Thus, `bar` becomes [True, False]. When `any(bar)` is called, it returns True since one of the elements in `bar` is True. Therefore, the output of the code is 'True'. This code snippet tests the understanding of the `any` and `all` functions and their behavior with different types of iterables."
       }
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -1342,7 +1580,71 @@
         },
         "correctAnswer": "e",
         "explanation": "The function 'foo' is defined with '**kwargs', allowing it to accept keyword arguments. Inside the function, a for loop attempts to iterate over 'kwargs.items()', which returns pairs of key and value. However, the loop incorrectly tries to unpack each pair as 'value, key' instead of 'key, value'. Due to this, 'key' will never match the string \"apple\", and as a result, nothing gets printed. The correct unpacking should be 'for key, value in kwargs.items():'. Therefore, the output of the code is nothing."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "p = True\nq = False\n\np = (not p or q) and (p and not q)\nq = not p or (q and not p)\n\nprint((p or not q) and not (not p and q))",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "None",
+          "d": "Syntax Error",
+          "e": "Runtime Error",
+          "f": "TypeError"
+        },
+        "correctAnswer": "b",
+        "explanation": "Initially, 'p' is True and 'q' is False. The expression '(not p or q) and (p and not q)' evaluates to False, since 'not p' is False, 'q' is False, and 'p and not q' is True, making the entire expression False. Then, 'q = not p or (q and not p)' also evaluates to False, as 'not p' is False and 'q and not p' is False. Finally, '(p or not q) and not (not p and q)' simplifies to 'False or True and not (False and False)', which ultimately evaluates to False. Therefore, the output of the code is False."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(all(x > 5 for x in range(6)))",
+        "options": {
+          "a": "True",
+          "b": "False",
+          "c": "Syntax Error",
+          "d": "[0, 2, 4]",
+          "e": "[0, 1, 2, 3, 4, 5]",
+          "f": "None"
+        },
+        "correctAnswer": "b",
+        "explanation": "The `all` function in Python checks if all elements in an iterable are True. The code snippet uses a generator expression to create an iterable where each element is the result of the expression 'x > 5' for each 'x' in 'range(6)'. Since 'range(6)' generates numbers from 0 to 5, none of these numbers is greater than 5. As a result, at least one element in the iterable is False (in fact, all of them are). Therefore, the `all` function returns False, making the output of the code False."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "print(hex(255))",
+        "options": {
+          "a": "255",
+          "b": "0xff",
+          "c": "ff",
+          "d": "0x255",
+          "e": "TypeError",
+          "f": "0b11111111"
+        },
+        "correctAnswer": "b",
+        "explanation": "The `hex` function in Python converts an integer number to a lowercase hexadecimal string prefixed with '0x'. When called with the integer 255, `hex(255)` returns '0xff'. In hexadecimal notation, 'ff' represents the decimal number 255, with the '0x' prefix indicating that the number is in hexadecimal format. Therefore, the output of the code is '0xff'."
+      },
+      {
+        "difficulty": "hard",
+        "question": "What is the output of the following Python code snippet?",
+        "codeSnippet": "class Foo():\n    def __init__(self, x):\n        print(x, end='')\n\n\nclass Bar(Foo):\n    def __init__(self, x):\n        super().__init__(x*2)\n        print(x, end='')\n\n\nclass FooBar(Bar):\n    def __init__(self, x):\n        super().__init__(x * 2)\n        print(x)\n\nx = FooBar(1)",
+        "options": {
+          "a": "421",
+          "b": "1",
+          "c": "4",
+          "d": "123",
+          "e": "Syntax Error",
+          "f": "Nothing is printed"
+        },
+        "correctAnswer": "a",
+        "explanation": "In this code, `FooBar` inherits from `Bar`, which in turn inherits from `Foo`. When `FooBar(1)` is instantiated, the `__init__` method in `FooBar` is called with `x` as 1. This method then calls `super().__init__(x * 2)`, which invokes `Bar`'s `__init__` method with `x * 2` (so 2). Inside `Bar`'s constructor, it first calls `super().__init__(x*2)` (invoking `Foo`'s `__init__` with 4), then prints `x` (2). Finally, back in `FooBar`'s constructor, it prints `x` (1). The sequence of print statements outputs '421'. Therefore, the output of the code is '421'."
       }
+      
+      
+      
+      
       
       
       
@@ -1663,7 +1965,87 @@
       },
       "correctAnswer": "d",
       "explanation": "The code sorts a list of tuples 'data' based on a custom comparison function 'foo'. The 'foo' function compares the second element of each tuple. 'functools.cmp_to_key' converts the comparison function to a key function. After sorting, 'bar' is a list of tuples sorted by the second element of each tuple in ascending order. Since 'bar' is a list of tuples, the type of the first element of 'bar' (which is a tuple itself) is '<class 'tuple'>'. Thus, 'print(type(bar[0]))' outputs '<class 'tuple'>'."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "print((9 ^ 5) | 3)",
+      "options": {
+        "a": "12",
+        "b": "14",
+        "c": "15",
+        "d": "16",
+        "e": "10",
+        "f": "13"
+      },
+      "correctAnswer": "c",
+      "explanation": "The expression involves bitwise XOR (^) and OR (|) operators. First, it computes the XOR of 9 and 5. In binary, 9 is 1001 and 5 is 0101; XORing these gives 1100, which is 12 in decimal. Then, it computes the OR of this result with 3 (binary 0011), which gives 1111. In decimal, 1111 is 15. Therefore, the output of the code is 15."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "print(14 & 7)",
+      "options": {
+        "a": "4",
+        "b": "5",
+        "c": "6",
+        "d": "7",
+        "e": "8",
+        "f": "9"
+      },
+      "correctAnswer": "c",
+      "explanation": "The code performs a bitwise AND operation between the numbers 14 and 7. In binary, 14 is 1110 and 7 is 0111. The bitwise AND operation compares each corresponding bit of these binary representations and returns 1 if both bits are 1, otherwise, it returns 0. For 1110 AND 0111, the result is 0110, which is 6 in decimal. Therefore, the output of the code is 6."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "print(12 >> 2 | 3 << 1)",
+      "options": {
+        "a": "5",
+        "b": "6",
+        "c": "7",
+        "d": "8",
+        "e": "9",
+        "f": "10"
+      },
+      "correctAnswer": "c",
+      "explanation": "This code snippet uses both the right shift (>>) and left shift (<<) bitwise operations, followed by a bitwise OR (|). The expression '12 >> 2' right shifts the binary representation of 12 (1100) by two places, resulting in 3 (11 in binary). The expression '3 << 1' left shifts the binary representation of 3 (11) by one place, resulting in 6 (110 in binary). The bitwise OR of these two results, 3 (11) and 6 (110), is 7 (111 in binary). Therefore, the output of the code is 7."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "print(~4 & 6)",
+      "options": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3",
+        "e": "4",
+        "f": "5"
+      },
+      "correctAnswer": "c",
+      "explanation": "The code performs a bitwise NOT operation (~) on the number 4, followed by a bitwise AND operation (&) with the number 6. The bitwise NOT operation inverts each bit, turning 4 (binary 0100) into -5 (binary ...11111011 in two's complement representation). The bitwise AND operation is then performed between -5 (binary ...11111011) and 6 (binary 0110), resulting in 2 (binary 0010). Therefore, the output of the code is 2."
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "print(8 >> 1 ^ 5)",
+      "options": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3",
+        "e": "4",
+        "f": "5"
+      },
+      "correctAnswer": "b",
+      "explanation": "The code snippet executes a right shift (>>) operation on the number 8 by 1 bit, resulting in 4 (as 8 in binary is 1000, which becomes 0100 after shifting right by 1 bit). It then performs a bitwise XOR (^) operation with the number 5 (binary 0101). The XOR operation compares each corresponding bit of 4 (binary 0100) and 5 (binary 0101) and returns 1 if the bits are different, otherwise, it returns 0. The result of XORing 0100 and 0101 is 0001, which is 1 in decimal. Therefore, the output of the code is 1."
     }
+    
+    
+    
+    
+    
     
     
     
