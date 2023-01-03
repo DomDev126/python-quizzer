@@ -4,6 +4,15 @@ type QuestionData = {
   difficulty: string;
   question: string;
   codeSnippet: string;
+  correctAnswer: string;
+  incorrectAnswers: string[];
+  explanation: string;
+};
+
+type FormattedQuestionData = {
+  difficulty: string;
+  question: string;
+  codeSnippet: string;
   options: {
     a: string;
     b: string;
@@ -12,7 +21,7 @@ type QuestionData = {
     e: string;
     f: string;
   };
-  correctAnswer: string;
+  correctAnswer: keyof FormattedQuestionData['options'];
   explanation: string;
 };
 
@@ -23,30 +32,31 @@ type QuestionsDataStructure = {
   expert: QuestionData[];
 };
 
-const shuffleOptions = (options: QuestionData['options'], correctAnswer: keyof QuestionData['options']) => {
-  let optionKeys = Object.keys(options) as (keyof QuestionData['options'])[];
-  let optionValues = Object.values(options);
-  
-  for (let i = optionValues.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [optionValues[i], optionValues[j]] = [optionValues[j], optionValues[i]];
+const shuffleAnswers = (correctAnswer: string, incorrectAnswers: string[]): FormattedQuestionData['options'] => {
+  const allAnswers = [correctAnswer, ...incorrectAnswers];
+  for (let i = allAnswers.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allAnswers[i], allAnswers[j]] = [allAnswers[j], allAnswers[i]];
   }
 
-  let newOptions = {} as QuestionData['options'];
-  let newCorrectAnswer = correctAnswer;
+  const options: FormattedQuestionData['options'] = {
+    a: allAnswers[0],
+    b: allAnswers[1],
+    c: allAnswers[2],
+    d: allAnswers[3],
+    e: allAnswers[4],
+    f: allAnswers[5]
+  };
 
-  optionKeys.forEach((key, index) => {
-    newOptions[key] = optionValues[index];
-    if (options[correctAnswer] === optionValues[index]) {
-      newCorrectAnswer = key;
-    }
-  });
-
-  return { newOptions, newCorrectAnswer };
+  return options;
 };
 
-export const questionFetcher = (): QuestionData[] => {
-  const selectedQuestions: QuestionData[] = [];
+const getCorrectAnswerKey = (options: FormattedQuestionData['options'], correctAnswer: string): keyof FormattedQuestionData['options'] => {
+  return (Object.keys(options).find(key => options[key as keyof FormattedQuestionData['options']] === correctAnswer) as keyof FormattedQuestionData['options']) || 'a';
+};
+
+export const questionFetcher = (): FormattedQuestionData[] => {
+  const selectedQuestions: FormattedQuestionData[] = [];
   const questionsDataTyped = JSON.parse(JSON.stringify(questionsData)) as QuestionsDataStructure;
 
   const difficulties: (keyof QuestionsDataStructure)[] = ['beginner', 'medium', 'hard', 'expert'];
@@ -59,12 +69,16 @@ export const questionFetcher = (): QuestionData[] => {
       const randomIndex = Math.floor(Math.random() * questions.length);
       const question = questions[randomIndex];
 
-      const { newOptions, newCorrectAnswer } = shuffleOptions(question.options, question.correctAnswer as keyof QuestionData['options']);
+      const options = shuffleAnswers(question.correctAnswer, question.incorrectAnswers);
+      const correctAnswerKey = getCorrectAnswerKey(options, question.correctAnswer);
 
       selectedQuestions.push({
-        ...question,
-        options: newOptions,
-        correctAnswer: newCorrectAnswer
+        difficulty: question.difficulty,
+        question: question.question,
+        codeSnippet: question.codeSnippet,
+        options: options,
+        correctAnswer: correctAnswerKey,
+        explanation: question.explanation
       });
 
       questions.splice(randomIndex, 1);
@@ -75,4 +89,3 @@ export const questionFetcher = (): QuestionData[] => {
 };
 
 export default questionFetcher;
-
