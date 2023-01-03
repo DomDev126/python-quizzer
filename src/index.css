@@ -138,6 +138,12 @@ p {
   border-color: var(--not-chosen-color);
 }
 
+.button-correct:hover,
+.button-incorrect:hover,
+.button-not-chosen:hover {
+  cursor: auto;
+}
+
 .correct-answer,
 .incorrect-answer {
   font-weight: 600;
