@@ -102,7 +102,7 @@ function App() {
   if (questions.length === 0) {
     return <div>Loading...</div>;
   } else if (!gameStarted) {
-    return <Intro onButtonClick={startGame} />;
+    return <Intro onStartButtonClick={startGame} />;
   } else if (currentQuestionIndex >= questions.length) {
     return <Score score={score} restart={restartQuiz} />;
   }
