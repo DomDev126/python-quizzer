@@ -1817,7 +1817,22 @@
                 "Error",
                 "None"
             ]
+        },
+        {
+            "difficulty": "hard",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "def foo(x):\n    return x % 3 == 0\n\n\ndef bar(x): return not not foo(x)\n\n\nfoo_bar = list(filter(bar, range(10)))\n\nprint(foo_bar)",
+            "explanation": "The function 'foo' returns True if the input 'x' is divisible by 3. The function 'bar' uses double negation on the result of 'foo', which essentially does not change the Boolean value returned by 'foo'. The 'filter' function is used to apply 'bar' on each element in the range from 0 to 9. It filters the elements for which 'bar' returns True, which are the numbers divisible by 3 in this range. Therefore, the output of the code is [0, 3, 6, 9], which are the numbers divisible by 3 in the given range.",
+            "correctAnswer": "[0, 3, 6, 9]",
+            "incorrectAnswers": [
+                "[1, 4, 7]",
+                "[2, 5, 8]",
+                "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+                "[3, 6, 9]",
+                "[]"
+            ]
         }
+        
         
     ],
     "expert": [
@@ -2170,6 +2185,81 @@
                 "4",
                 "5"
             ]
+        },
+        {
+            "difficulty": "expert",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "import heapq\n\nfoo = [1, 5, 22, 21, 19, 7]\nbar = heapq.heapify(foo)\nprint(foo[0])",
+            "explanation": "The 'heapq.heapify' function transforms the list 'foo' into a min-heap, in-place, resulting in the smallest element being moved to the index 0. However, the function itself returns 'None' and does not affect the assignment of 'bar'. Thus, the print statement outputs the smallest element in the heapified list, which is 1.",
+            "correctAnswer": "1",
+            "incorrectAnswers": [
+                "5",
+                "7",
+                "19",
+                "None",
+                "22"
+            ]
+        },
+        {
+            "difficulty": "expert",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "import heapq\n\nfoo = []\n\nheapq.heappush(foo, 3)\nheapq.heappush(foo, 8)\nheapq.heappush(foo, 4)\nheapq.heappush(foo, 7)\nheapq.heappush(foo, 5)\n\nprint(foo[0])",
+            "explanation": "The code uses the 'heapq' module to create a min-heap. The 'heappush' function is used to add elements to the heap. The nature of a min-heap is such that the smallest element is always at the root, which is the first element in the list representation of the heap. Since '3' is the smallest number added to the heap, it remains at the root after all insertions. Hence, 'foo[0]' prints '3', the smallest element in the heap.",
+            "correctAnswer": "3",
+            "incorrectAnswers": [
+                "4",
+                "5",
+                "7",
+                "8",
+                "None of these"
+            ]
+        },
+        {
+            "difficulty": "expert",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "import heapq\n\nfoo = []\n\nheapq.heappush(foo, -3)\nheapq.heappush(foo, -1)\nheapq.heappush(foo, -4)\nheapq.heappush(foo, -1)\nheapq.heappush(foo, -5)\n\nprint(-foo[0])",
+            "explanation": "This code constructs a min-heap using negative values. In a min-heap, the smallest element is placed at the root (index 0). By pushing negative values, the largest original value (in this case, -5) becomes the smallest in terms of negative magnitude and thus is placed at the root. When we print '-foo[0]', we are negating the smallest (most negative) value in the heap, which is -5. Thus, the output is 5, the largest number in the original set.",
+            "correctAnswer": "5",
+            "incorrectAnswers": [
+                "3",
+                "-3",
+                "1",
+                "-1",
+                "-5"
+            ]
+        },
+        {
+            "difficulty": "expert",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "from queue import PriorityQueue\n\npq = PriorityQueue()\n\npq.put((3, 'three'))\n pq.put((1, 'one'))\n pq.put((4, 'four'))\n pq.put((2, 'two'))\n pq.put((5, 'five'))\n\nprint(pq.get())",
+            "explanation": "The PriorityQueue class in Python implements a min-heap queue, where items are sorted in ascending order based on the first element of the tuple. When 'pq.get()' is called, it retrieves and removes the smallest item from the queue. Since the tuple (1, 'one') has the smallest first element, it is the first item to be retrieved from the priority queue, resulting in the output (1, 'one').",
+            "correctAnswer": "(1, 'one')",
+            "incorrectAnswers": [
+                "1",
+                "'five'",
+                "5",
+                "(5, 'five')",
+                "None"
+            ]
+        },
+        {
+            "difficulty": "expert",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "from itertools import compress\n\nfoo = list(compress(range(8), range(4)))\n\nprint(sum(foo))",
+            "explanation": "The 'compress' function from the itertools module filters elements from the first iterable (range(8)) using the truthiness of each element in the second iterable (range(4)). Since 'range(4)' yields [0, 1, 2, 3], the truthiness of these values is [False, True, True, True]. Therefore, 'compress' selects the first four elements from 'range(8)' corresponding to the truthiness values, resulting in [1, 2, 3]. The sum of [1, 2, 3] is 6.",
+            "correctAnswer": "6",
+            "incorrectAnswers": [
+                "10",
+                "14",
+                "21",
+                "0",
+                "3"
+            ]
         }
+        
+        
+        
+        
+        
     ]
 }
