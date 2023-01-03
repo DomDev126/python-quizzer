@@ -23,6 +23,7 @@ def validate_json(file_path):
                         assert "explanation" in question
                         assert "correctAnswer" in question
                         assert "incorrectAnswers" in question
+                        assert len(question["incorrectAnswers"]) == 5
                         assert question["correctAnswer"] not in question["incorrectAnswers"]
 
                     except AssertionError as err:

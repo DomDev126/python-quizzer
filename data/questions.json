@@ -517,7 +517,202 @@
                 "jOHn dOE",
                 "TypeError"
             ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What will be the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nfoo.extend([3])\nprint(foo)",
+            "explanation": "The 'extend' method in Python adds all elements of an iterable (in this case, the list [3]) to the end of the list. Since 'foo' initially contains [1, 2, 3], after extending it with [3], the list becomes [1, 2, 3, 3]. Therefore, the output of the print statement is '[1, 2, 3, 3]'.",
+            "correctAnswer": "[1, 2, 3, 3]",
+            "incorrectAnswers": [
+                "[1, 2, 3]",
+                "[3, 1, 2, 3]",
+                "Error",
+                "None",
+                "[1, 2, 3, [3]]"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(foo.index(2))",
+            "explanation": "The 'index' method in Python returns the first index of the specified value in a list. In this case, 'foo.index(2)' will return the index of the value '2' in the list 'foo', which is '[1, 2, 3]'. The value '2' is at index 1 in the list (as Python lists are zero-indexed), so the output of the print statement will be '1'.",
+            "correctAnswer": "1",
+            "incorrectAnswers": [
+                "2",
+                "0",
+                "KeyError",
+                "None",
+                "3"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(foo.pop())",
+            "explanation": "The 'pop' method in Python removes and returns the last item from a list. If no index is specified, the default is -1, which refers to the last item. In this code, 'foo.pop()' removes and returns '3', the last item in the list 'foo', which is '[1, 2, 3]'. Therefore, the output of the print statement will be '3'.",
+            "correctAnswer": "3",
+            "incorrectAnswers": [
+                "1",
+                "2",
+                "[1, 2]",
+                "[2, 3]",
+                "Error"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nfoo.append([1, 2, 3])\nprint(foo)",
+            "explanation": "The 'append' method in Python adds its argument as a single element to the end of a list. In this case, 'foo.append([1, 2, 3])' adds the list '[1, 2, 3]' as a single element to the list 'foo', which initially contains [1, 2, 3]. As a result, the new list becomes '[1, 2, 3, [1, 2, 3]]'. Therefore, the output of the print statement is '[1, 2, 3, [1, 2, 3]]'.",
+            "correctAnswer": "[1, 2, 3, [1, 2, 3]]",
+            "incorrectAnswers": [
+                "[1, 2, 3, 1, 2, 3]",
+                "[[1, 2, 3], [1, 2, 3]]",
+                "1",
+                "[1, 2, 3, 1, 2]",
+                "Error"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(\"1\" in foo)",
+            "explanation": "The 'in' operator in Python checks if the specified item is present in the iterable. In this case, it checks if the string '1' is in the list 'foo', which contains integers [1, 2, 3]. Since '1' is a string and the elements in 'foo' are integers, the string '1' is not in the list. Therefore, the output of the print statement is 'False'.",
+            "correctAnswer": "False",
+            "incorrectAnswers": [
+                "True",
+                "Error",
+                "None",
+                "0",
+                "1"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(foo.count(4))",
+            "explanation": "The 'count' method in Python returns the number of times a specified value appears in a list. In this code, 'foo.count(4)' checks for the occurrence of the integer '4' in the list 'foo', which is '[1, 2, 3]'. Since '4' is not present in the list, the count is '0'. Therefore, the output of the print statement will be '0'.",
+            "correctAnswer": "0",
+            "incorrectAnswers": [
+                "1",
+                "4",
+                "Error",
+                "None",
+                "3"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(set(foo + foo))",
+            "explanation": "In this code, 'foo + foo' concatenates the list 'foo' with itself, resulting in '[1, 2, 3, 1, 2, 3]'. The 'set()' function then converts this list into a set, which removes any duplicate elements. Sets in Python are unordered collections of unique elements. Therefore, the resulting set will contain each element from 'foo' only once, regardless of how many times they appear in the list. The output will be a set containing the elements {1, 2, 3}.",
+            "correctAnswer": "{1, 2, 3}",
+            "incorrectAnswers": [
+                "[1, 2, 3, 1, 2, 3]",
+                "[1, 2, 3]",
+                "Error",
+                "None",
+                "{1, 1, 2, 2, 3, 3}"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = [1, 2, 3]\n\nprint(foo.clear())",
+            "explanation": "The 'clear' method in Python removes all items from a list. This method does not return any value; it performs the action of clearing the list in-place. Therefore, when 'foo.clear()' is called, the list 'foo' becomes empty, but the method itself returns 'None'. As a result, the output of the print statement will be 'None'.",
+            "correctAnswer": "None",
+            "incorrectAnswers": [
+                "[]",
+                "[1, 2, 3]",
+                "Error",
+                "0",
+                "True"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = \"hello world\"\n\nprint(foo.endswith(\"d\"))",
+            "explanation": "The 'endswith' method in Python is used to check if a string ends with the specified suffix. In this case, 'foo.endswith(\"d\")' checks whether the string stored in 'foo', which is 'hello world', ends with the character 'd'. Since 'hello world' does indeed end with 'd', the method returns 'True'. Therefore, the output of the print statement will be 'True'.",
+            "correctAnswer": "True",
+            "incorrectAnswers": [
+                "False",
+                "Error",
+                "None",
+                "\"d\"",
+                "\"world\""
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = \"hello world\"\n\nprint(foo.istitle())",
+            "explanation": "The 'istitle' method in Python checks if a string is titled, meaning that the first character of each word is uppercase and all other characters are lowercase. In this case, 'foo.istitle()' checks if the string 'hello world' is a title-cased string. Since neither 'hello' nor 'world' start with an uppercase letter, the method returns 'False'. Therefore, the output of the print statement will be 'False'.",
+            "correctAnswer": "False",
+            "incorrectAnswers": [
+                "True",
+                "Error",
+                "None",
+                "\"hello world\"",
+                "\"Hello World\""
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = \"hello world\"\n\nprint(foo.lower().upper())",
+            "explanation": "In this code, two string methods are chained together. The 'lower' method converts all characters in the string 'foo' to lowercase, and the 'upper' method then converts these characters to uppercase. Since the string 'foo' is already in lowercase ('hello world'), the 'lower' method makes no changes, and the 'upper' method subsequently converts all characters to uppercase. Therefore, the output of the print statement will be 'HELLO WORLD'.",
+            "correctAnswer": "HELLO WORLD",
+            "incorrectAnswers": [
+                "hello world",
+                "Hello World",
+                "HELLO world",
+                "Error",
+                "hELLO wORLD"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = \"hello world\"\n\nprint(foo.split(\"w\"))",
+            "explanation": "The 'split' method in Python splits a string into a list, separating the string at each occurrence of the specified delimiter. In this case, 'foo.split(\"w\")' splits the string 'hello world' at the letter 'w'. Since 'w' is present only once in 'hello world', the string is split into two parts, ['hello ', 'orld']. Therefore, the output of the print statement will be '['hello ', 'orld']'.",
+            "correctAnswer": "['hello ', 'orld']",
+            "incorrectAnswers": [
+                "['hello', 'world']",
+                "['h', 'ello world']",
+                "Error",
+                "None",
+                "['hello w', 'orld']"
+            ]
+        },
+        {
+            "difficulty": "beginner",
+            "question": "What is the output of the following Python code?",
+            "codeSnippet": "foo = \"hello world\"\n\nprint(foo[0] + foo[4])",
+            "explanation": "In this code, 'foo[0]' and 'foo[4]' refer to the characters at index 0 and index 4 of the string 'foo', which is 'hello world'. In Python, string indexing starts at 0, so 'foo[0]' is 'h', and 'foo[4]' is 'o'. Concatenating these two characters results in the string 'ho'. Therefore, the output of the print statement will be 'ho'.",
+            "correctAnswer": "ho",
+            "incorrectAnswers": [
+                "hello",
+                "world",
+                "hw",
+                "Error",
+                "ol"
+            ]
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     ],
     "medium": [
         {
@@ -1079,7 +1274,142 @@
                 "Syntax Error",
                 "TypeError"
             ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving set operations?",
+            "codeSnippet": "p = {1, 2, 3}\nq = {3, 4, 5}\n\nprint(p.intersection(q))",
+            "explanation": "The 'intersection' method in Python, when used with sets, returns a new set containing only elements that are common to both sets. In this code, 'p.intersection(q)' will return the set of elements that are present in both 'p' ({1, 2, 3}) and 'q' ({3, 4, 5}). The only common element between these two sets is '3'. Therefore, the output of the print statement will be '{3}'.",
+            "correctAnswer": "{3}",
+            "incorrectAnswers": [
+                "{1, 2, 3, 4, 5}",
+                "{4, 5}",
+                "SyntaxError",
+                "{}",
+                "{1, 2}"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving set operations?",
+            "codeSnippet": "p = {1, 2, 3}\nq = {3, 4, 5}\n\nprint(p.union(q))",
+            "explanation": "The 'union' method in Python, when used with sets, returns a new set containing all elements from both sets, but each element is unique. In this code, 'p.union(q)' combines the elements of sets 'p' ({1, 2, 3}) and 'q' ({3, 4, 5}). The result is a set that includes every unique element from both 'p' and 'q', which are {1, 2, 3, 4, 5}. Note that the common element '3' is included only once in the union. Therefore, the output of the print statement will be '{1, 2, 3, 4, 5}'.",
+            "correctAnswer": "{1, 2, 3, 4, 5}",
+            "incorrectAnswers": [
+                "{3}",
+                "{1, 2, 3, 3, 4, 5}",
+                "Error",
+                "{}",
+                "{1, 2, 4, 5}"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving a recursive function?",
+            "codeSnippet": "def foo(x):\n    return 0 if x < 2 else foo(x - 1) + 1\n\nprint(foo(5))",
+            "explanation": "The function 'foo' is a recursive function that returns 0 if the input 'x' is less than 2. Otherwise, it calls itself with 'x - 1' and adds 1 to the result. When 'foo(5)' is called, the function executes recursively as follows: 'foo(5)' calls 'foo(4)', 'foo(4)' calls 'foo(3)', 'foo(3)' calls 'foo(2)', and 'foo(2)' calls 'foo(1)'. Since 'foo(1)' returns 0, each call adds 1 to this result as the recursion unwinds. The final output is the sum of these added ones, which is 4. Therefore, the output of the print statement will be '4'.",
+            "correctAnswer": "4",
+            "incorrectAnswers": [
+                "3",
+                "5",
+                "0",
+                "Error",
+                "1"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving tuples?",
+            "codeSnippet": "foo = (100,)\nbar = foo * 2\nprint(bar)",
+            "explanation": "In this code, 'foo' is a tuple containing a single element, 100. The syntax '(100,)' is used to define a single-element tuple in Python. The expression 'foo * 2' multiplies the tuple 'foo' by 2, which results in the tuple being concatenated with itself. Therefore, 'bar' becomes '(100, 100)'. The output of the print statement will thus be '(100, 100)'.",
+            "correctAnswer": "(100, 100)",
+            "incorrectAnswers": [
+                "(200,)",
+                "(100, 100, 100, 100)",
+                "SyntaxError",
+                "None",
+                "(100,)"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving variable types?",
+            "codeSnippet": "foo = (\"hello world\")\nprint(type(foo))",
+            "explanation": "In this code, 'foo' is assigned the value 'hello world' enclosed in parentheses. However, since there is no comma within the parentheses, Python interprets this as a string, not a tuple. In Python, a single-element tuple must have a comma after the element, like '(element,)'. Without the comma, it's just a regular expression in parentheses. Therefore, 'foo' is a string, and the output of 'print(type(foo))' will be '<class 'str'>'.",
+            "correctAnswer": "<class 'str'>",
+            "incorrectAnswers": [
+                "<class 'tuple'>",
+                "<class 'int'>",
+                "Error",
+                "None",
+                "<class 'list'>"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving dictionary keys and list comprehension?",
+            "codeSnippet": "foo = {\"1\": 1, \"2\": 4, \"3\": 9}\nbar = [int(i)**2 for i in foo.keys()]\nprint(bar)",
+            "explanation": "In this code, 'foo' is a dictionary with string keys and integer values. The list comprehension '[int(i)**2 for i in foo.keys()]' iterates over the keys of the dictionary 'foo', converts each key to an integer using 'int(i)', and then squares it with '**2'. The keys of 'foo' are the strings '1', '2', and '3', which when converted to integers and squared result in 1, 4, and 9, respectively. Therefore, the output of the print statement will be '[1, 4, 9]'.",
+            "correctAnswer": "[1, 4, 9]",
+            "incorrectAnswers": [
+                "[1, 16, 81]",
+                "[1, 2, 3]",
+                "Error",
+                "[1, 2, 4, 3, 9]",
+                "[]"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving a class and its method?",
+            "codeSnippet": "class Foo:\n    def __init__(self, x):\n        self.value = x\n\n    def get_value(self):\n        return self.value\n\nfoo = Foo(5)\nprint(foo.get_value())",
+            "explanation": "In this code, a class named 'Foo' is defined with an initializer (`__init__`) that takes a parameter 'x' and assigns it to the instance variable 'value'. The class also has a method 'get_value' that returns the value of this instance variable. An object 'foo' of class 'Foo' is created with the value '5'. When 'foo.get_value()' is called, it returns the value of the 'value' instance variable of 'foo', which is '5'. Therefore, the output of the print statement will be '5'.",
+            "correctAnswer": "5",
+            "incorrectAnswers": [
+                "Foo(5)",
+                "SyntaxError",
+                "None",
+                "0",
+                "TypeError"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving exception handling?",
+            "codeSnippet": "foo = 1 / 0\n\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")\nfinally:\n    print(\"Done\")",
+            "explanation": "This code snippet attempts to perform division by zero, which will raise a 'ZeroDivisionError'. However, the syntax for exception handling is incorrect. The correct way to handle exceptions in Python is by using a 'try' block followed by 'except' blocks. This snippet is missing the 'try' block. As a result, Python will raise a syntax error when it encounters the 'except' statement outside of the proper 'try-except' structure. Therefore, the output of this code will be a 'SyntaxError'.",
+            "correctAnswer": "SyntaxError",
+            "incorrectAnswers": [
+                "Cannot divide by zero\nDone",
+                "Done",
+                "Cannot divide by zero",
+                "ZeroDivisionError",
+                "None"
+            ]
+        },
+        {
+            "difficulty": "medium",
+            "question": "What is the output of the following Python code involving set comprehensions?",
+            "codeSnippet": "foo = [1, 1, 2, 2, 3, 3]\nbar = {i + 1 for i in foo}\nprint(bar)",
+            "explanation": "The code uses a set comprehension to create a new set 'bar' from the list 'foo'. In the set comprehension '{i + 1 for i in foo}', each element 'i' in the list 'foo' is incremented by 1 and then added to the set 'bar'. Since sets automatically remove duplicate elements, the repeated elements in 'foo' result in unique elements in 'bar'. The original list 'foo' contains the elements [1, 1, 2, 2, 3, 3]. When incremented by 1, these elements become 2, 2, 3, 3, 4, 4. However, in the set 'bar', each element appears only once, resulting in {2, 3, 4}. Therefore, the output of the print statement will be '{2, 3, 4}'.",
+            "correctAnswer": "{2, 3, 4}",
+            "incorrectAnswers": [
+                "[2, 3, 4]",
+                "{1, 2, 3, 4, 5, 6}",
+                "Error",
+                "{2, 2, 3, 3, 4, 4}",
+                "{1, 2, 3}"
+            ]
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
     ],
     "hard": [
         {
