@@ -1693,7 +1693,7 @@
             "explanation": "The regular expression pattern is designed to capture two groups: the date in 'YYYY/MM/DD' format and the event name consisting of two words. The pattern '(\\d{4}/\\d{2}/\\d{2})' captures the date, and '(\\w+ \\w+)' captures the event name. The 're.search' function searches for this pattern in the string 'foo'. Upon finding a match, 'bar.groups()[0][0]' accesses the first character of the first captured group (the date), which is '2' from '2023'. If no match is found, it would print 'No match found'. However, in this case, it successfully finds a match and thus prints '2'.",
             "correctAnswer": "2",
             "incorrectAnswers": [
-                "2",
+                "RecursionError",
                 "3",
                 "4",
                 "0",
