@@ -66,6 +66,18 @@ const Score: React.FC<Props> = ({ score, restart }) => {
         <div className="score-container">
           <h1>{score}/20 points</h1>
           <p>{message}</p>
+          <p>
+            Do you want to create your own questions or did you find any errors
+            in the quiz? Contribute to this project on{" "}
+            <a
+              href="https://github.com/alexandengstrom/python-quizzer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            .
+          </p>
           <button className="wide-button" onClick={restart}>
             Restart the quiz!
           </button>
