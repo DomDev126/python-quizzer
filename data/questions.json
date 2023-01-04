@@ -549,6 +549,36 @@
       "explanation": "In this code, 'foo[0]' and 'foo[4]' refer to the characters at index 0 and index 4 of the string 'foo', which is 'hello world'. In Python, string indexing starts at 0, so 'foo[0]' is 'h', and 'foo[4]' is 'o'. Concatenating these two characters results in the string 'ho'. Therefore, the output of the print statement will be 'ho'.",
       "correctAnswer": "ho",
       "incorrectAnswers": ["hello", "world", "hw", "Error", "ol"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the output of the following code?",
+      "codeSnippet": "x = 5\ny = 3\nprint(x + y)",
+      "explanation": "The code performs a simple addition operation with two integers, 5 and 3. When added together, the result is 8.",
+      "correctAnswer": "8",
+      "incorrectAnswers": ["15", "2", "53", "TypeError", "8.0"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "Which data type is used to store the value 'Hello World'?",
+      "codeSnippet": "greeting = 'Hello World'\nprint(type(greeting))",
+      "explanation": "The variable 'greeting' stores a string value 'Hello World'. The 'type' function in Python is used to determine the data type of a variable, which in this case is 'str' (string).",
+      "correctAnswer": "<class 'str'>",
+      "incorrectAnswers": [
+        "<class 'int'>",
+        "<class 'list'>",
+        "<class 'bool'>",
+        "SyntaxError",
+        "<class 'float'>"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code?",
+      "codeSnippet": "list_numbers = [1, 2, 3, 4, 5]\nprint(list_numbers[2])",
+      "explanation": "The code accesses the third element (index 2) of the list 'list_numbers', which contains the numbers 1, 2, 3, 4, 5. Indexing in Python starts from 0, so the third element is 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["2", "4", "5", "IndexError", "1"]
     }
   ],
   "medium": [
@@ -566,6 +596,38 @@
         "[1, 4, 9, 16]"
       ]
     },
+    {
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses a tuple?",
+      "codeSnippet": "data = (10, 20, 30, 40, 50)\nprint(data[1:-1])",
+      "explanation": "The slicing operation 'data[1:-1]' takes elements from index 1 to one before the last index (-1) of the tuple 'data'. This results in the tuple (20, 30, 40).",
+      "correctAnswer": "(20, 30, 40)",
+      "incorrectAnswers": [
+        "(10, 20, 30, 40)",
+        "(20, 30)",
+        "(30, 40, 50)",
+        "(10, 20, 30)",
+        "TypeError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this code involving a while loop?",
+      "codeSnippet": "count = 0\nwhile count < 5:\n    if count == 2:\n        break\n    count += 1\nprint(count)",
+      "explanation": "The while loop increments 'count' until it reaches 2. When 'count' equals 2, the 'break' statement is executed, which exits the loop. Therefore, the value of 'count' printed is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["1", "3", "4", "5", "0"]
+    },
+
+    {
+      "difficulty": "medium",
+      "question": "What is the result of the following dictionary operation?",
+      "codeSnippet": "info = {'name': 'Alice', 'age': 30, 'city': 'New York'}\ndel info['city']\nprint('city' in info)",
+      "explanation": "The code deletes the key 'city' from the dictionary 'info'. The 'in' operator then checks if 'city' is a key in 'info', which it is not after the deletion.",
+      "correctAnswer": "False",
+      "incorrectAnswers": ["True", "KeyError", "None", "'New York'", "30"]
+    },
+
     {
       "difficulty": "medium",
       "question": "What is the output of the following Python code snippet?",
@@ -1677,6 +1739,94 @@
         "SyntaxError",
         "ValueError"
       ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class Foo:\n    def __init__(self):\n        return 'Hello'\n\n    def __new__(self):\n        return 'World'\n\n    def __repr__(self):\n        return 'Foo'\n\n\nfoo = Foo()\nprint(foo)",
+      "explanation": "In Python, the '__new__' method is responsible for creating a new instance of a class. It has priority over the '__init__' method, which is for initializing the instance. Here, the '__new__' method of class 'Foo' returns the string 'World', so the instance creation of 'Foo' results in 'World' being returned, not a 'Foo' object. The '__init__' method is not called since '__new__' doesn't return an instance of 'Foo'. When 'print(foo)' is executed, it prints the result of '__new__', which is 'World'.",
+      "correctAnswer": "'World'",
+      "incorrectAnswers": [
+        "'Hello'",
+        "'Foo'",
+        "TypeError",
+        "None",
+        "RecursionError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this Python code snippet?",
+      "codeSnippet": "try:\n    raise Exception('Error1')\nexcept Exception as e:\n    try:\n        raise TypeError('Error2')\n    except TypeError as t:\n        print(t, end=\"\")\n    finally:\n        print(e)",
+      "explanation": "When the code is executed, 'Exception('Error1')' is raised first and caught by the outer 'except' block. Inside this block, a new 'TypeError('Error2')' is raised and immediately caught by the inner 'except' block. Thus, 'Error2' is printed first. The 'finally' block executes next, printing 'Error1'.",
+      "correctAnswer": "Error2Error1",
+      "incorrectAnswers": [
+        "Error1",
+        "Error2",
+        "Exception",
+        "TypeError",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this Python code?",
+      "codeSnippet": "def func():\n    try:\n        return 'From try'\n    finally:\n        return 'From finally'\n\nprint(func())",
+      "explanation": "In Python, if a 'finally' block is present, it always executes after the 'try' block, even if the 'try' block has a return statement. In this case, 'From finally' is returned from the 'finally' block, overriding the 'From try' return from the 'try' block.",
+      "correctAnswer": "From finally",
+      "incorrectAnswers": [
+        "From try",
+        "RecursionError",
+        "None",
+        "Nothing is printed",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the following fractions-related code output?",
+      "codeSnippet": "from fractions import Fraction\n\na = Fraction(5, 10)\nb = Fraction(3, 4)\nc = a * b\nprint(c.denominator)",
+      "explanation": "The code multiplies two fractions: 5/10 and 3/4, resulting in the fraction 15/40. This fraction is automatically reduced to 3/8 by the Fraction class. The output is the denominator of the resulting fraction, which is 8.",
+      "correctAnswer": "8",
+      "incorrectAnswers": ["15", "40", "3", "5", "8/3"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output of this code involving the fractions module?",
+      "codeSnippet": "from fractions import Fraction\n\nx = Fraction(1, 2)\ny = Fraction(1, 3)\nresult = x / y\nprint(result == Fraction(3, 2))",
+      "explanation": "The code divides fraction 1/2 by 1/3. The result of this division is 3/2. The final print statement checks if the result is equal to the fraction 3/2, which it is, so the output is True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "1/2", "2/3", "1 1/2", "ValueError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this Python code using the operator module?",
+      "codeSnippet": "import operator\n\nx = 5\ny = 3\nresult = operator.add(operator.mul(x, y), operator.floordiv(x, y))\nprint(result)",
+      "explanation": "The code first multiplies 'x' (5) and 'y' (3) using 'operator.mul', resulting in 15. Then, it performs floor division on 'x' by 'y' using 'operator.floordiv', resulting in 1 (since 5 // 3 is 1). These two results are then added using 'operator.add', giving 15 + 1 = 16.",
+      "correctAnswer": "16",
+      "incorrectAnswers": ["15", "1", "8", "6", "2"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does this code snippet from the operator module output?",
+      "codeSnippet": "import operator\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = operator.getitem(list1, operator.indexOf(list2, 5))\nprint(result)",
+      "explanation": "The code uses 'operator.indexOf' to find the index of the number 5 in 'list2', which is 1. Then, it uses 'operator.getitem' to get the item at index 1 from 'list1', which is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["5", "1", "3", "4", "0"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the result of this Python code using the operator module?",
+      "codeSnippet": "import operator\n\na = {'x': 2, 'y': 3}\nresult = operator.itemgetter('y', 'x')(a)\nprint(result)",
+      "explanation": "The 'operator.itemgetter' function creates a callable that fetches item from its operand using the operand’s '__getitem__' method. In this case, it fetches the values of keys 'y' and 'x' from the dictionary 'a', resulting in (3, 2).",
+      "correctAnswer": "(3, 2)",
+      "incorrectAnswers": [
+        "(2, 3)",
+        "{'y': 3, 'x': 2}",
+        "{'x': 2, 'y': 3}",
+        "2",
+        "3"
+      ]
     }
   ],
   "expert": [
@@ -2181,6 +2331,138 @@
       "explanation": "This code defines a metaclass 'Meta' that modifies any callable (method) in the class by wrapping it in another function 'wrapper'. This 'wrapper' function adds 5 to the result of the original function. In class 'A', 'foo', 'bar', and 'baz' are modified by 'Meta'. The 'foo' method returns 'self.y' (3) plus 5, resulting in 8. The 'bar' class method returns 7 plus 5, resulting in 12. The 'baz' static method returns 11 plus 5, resulting in 16. The final print statement calculates 8 (from foo) + 12 (from bar) - 16 (from baz), resulting in -1.",
       "correctAnswer": "-1",
       "incorrectAnswers": ["-139", "17", "23", "2899", "TypeError"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code snippet using the fractions library?",
+      "codeSnippet": "from fractions import Fraction\n\nf1 = Fraction(4, 6)\nf2 = Fraction(10, -15)\nresult = f1 == f2\nprint(result)",
+      "explanation": "Both fractions, 4/6 and 10/-15, are reduced to their simplest forms by the 'Fraction' class, resulting in 2/3 and -2/3, respectively. Since these fractions are not equal, the output of the comparison is False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": ["True", "1", "-2/3", "2/3", "1 2/3"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What happens when this Python code using pickle is executed?",
+      "codeSnippet": "import pickle\n\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n\nobj = MyClass(10)\npickled_obj = pickle.dumps(obj)\nunpickled_obj = pickle.loads(pickled_obj)\nprint(unpickled_obj.value)",
+      "explanation": "The code serializes an instance of 'MyClass' using 'pickle.dumps' and then deserializes it back using 'pickle.loads'. The 'value' attribute of the deserialized object ('unpickled_obj') remains intact, so the output is 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": [
+        "None",
+        "Error",
+        "'MyClass' object has no attribute 'value'",
+        "0",
+        "'obj'"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code involving conditional pickling?",
+      "codeSnippet": "import pickle\n\na = {'x': 10, 'y': 20}\nb = pickle.dumps(a) if 'x' in a else pickle.dumps(None)\nresult = pickle.loads(b)\nprint(result)",
+      "explanation": "The code checks if the key 'x' is in dictionary 'a'. Since 'x' is indeed a key in 'a', the dictionary is pickled. The unpickled result is the original dictionary {'x': 10, 'y': 20}.",
+      "correctAnswer": "{'x': 10, 'y': 20}",
+      "incorrectAnswers": ["{'y': 20}", "None", "'x'", "{'x': 10}", "Error"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this pickle code do?",
+      "codeSnippet": "import pickle, io\n\nclass MyClass:\n    pass\n\nbuffer = io.BytesIO()\npickle.dump(MyClass, buffer)\nbuffer.seek(0)\ndata = buffer.getvalue()\nobj = pickle.loads(data)\nprint(obj.__name__)",
+      "explanation": "The code serializes the class 'MyClass' itself, not an instance of it, to a BytesIO buffer. When deserialized, it retrieves the class back, and the '__name__' attribute of the class is 'MyClass'.",
+      "correctAnswer": "MyClass",
+      "incorrectAnswers": [
+        "'__main__.MyClass'",
+        "TypeError",
+        "None",
+        "'buffer'",
+        "'data'"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What output does this complex pickle operation produce?",
+      "codeSnippet": "import pickle\n\nclass MyClass:\n    def __init__(self, num):\n        self.num = num\n\n    def __reduce__(self):\n        return (self.__class__, (self.num + 10,))\n\nobj = MyClass(5)\npickled_obj = pickle.dumps(obj)\nunpickled_obj = pickle.loads(pickled_obj)\nprint(unpickled_obj.num)",
+      "explanation": "The '__reduce__' method in 'MyClass' modifies the pickling process. When an instance of 'MyClass' is pickled, '__reduce__' returns a tuple with the class and a modified constructor argument (num + 10). Thus, when unpickled, 'num' is 15, not 5.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["5", "10", "25", "TypeError", "'num'"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of this code involving the io module?",
+      "codeSnippet": "import io\n\nbuffer = io.BytesIO()\nbuffer.write(b'12345')\nbuffer.getvalue()[1:4] = b'abc'\nprint(buffer.getvalue())",
+      "explanation": "This code tries to mutate a slice of the byte array returned by 'getvalue()', which is not allowed in Python. Bytearrays are immutable, so attempting to modify it will result in a TypeError.",
+      "correctAnswer": "TypeError",
+      "incorrectAnswers": [
+        "b'1abc5'",
+        "b'12345'",
+        "b'abc45'",
+        "ValueError",
+        "b'ab12345'"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the result of executing this io module code?",
+      "codeSnippet": "import io\n\nclass CountingStream(io.StringIO):\n    def __init__(self):\n        super().__init__()\n        self.write_count = 0\n\n    def write(self, s):\n        self.write_count += 1\n        return super().write(s)\n\nstream = CountingStream()\nstream.write('Hello')\nstream.write('World')\nprint(stream.write_count)",
+      "explanation": "The 'CountingStream' class, a subclass of 'io.StringIO', overrides the 'write' method to increment 'write_count' each time it's called. Two writes ('Hello' and 'World') result in 'write_count' being 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["1", "0", "'HelloWorld'", "10", "11"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this Python code using difflib?",
+      "codeSnippet": "import difflib\n\ns1 = 'apple pie'\ns2 = 'apple pi'\nmatcher = difflib.SequenceMatcher(None, s1, s2)\nprint(matcher.ratio())",
+      "explanation": "The 'SequenceMatcher' class from 'difflib' compares the similarity of two sequences. In this case, it compares 'apple pie' and 'apple pi'. The ratio method returns a float representing the similarity, which is high in this case due to the minor difference.",
+      "correctAnswer": "0.9473684210526315",
+      "incorrectAnswers": [
+        "apple",
+        "pie",
+        "apple pi",
+        "0.8421052631578947",
+        "TypeError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this Python code involving zoneinfo output?",
+      "codeSnippet": "from zoneinfo import ZoneInfo\nfrom datetime import datetime\n\ndt = datetime(2021, 1, 1, tzinfo=ZoneInfo('Europe/London'))\nprint(dt.tzname())",
+      "explanation": "This code creates a datetime object representing January 1, 2021, in the 'Europe/London' time zone. The 'tzname' method returns the name of the time zone associated with the datetime object, which is 'GMT' during the non-Daylight Saving Time period.",
+      "correctAnswer": "GMT",
+      "incorrectAnswers": ["UTC", "BST", "Europe/London", "EDT", "PST"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code using bisect?",
+      "codeSnippet": "import bisect\n\nlst = [10, 20, 30, 40, 50]\nbisect.insort(lst, 35)\nprint(lst[-2])",
+      "explanation": "The 'bisect.insort' function inserts an element into a list while maintaining the list's order. The number 35 is inserted between 30 and 40. The second to last element in the list, which is now [10, 20, 30, 35, 40, 50], is 40.",
+      "correctAnswer": "40",
+      "incorrectAnswers": ["35", "30", "50", "20", "10"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this Python code using reprlib output?",
+      "codeSnippet": "import reprlib\n\nlarge_list = list(range(100))\nformatted = reprlib.repr(large_list)\nprint(formatted)",
+      "explanation": "The 'reprlib' module is used for producing shortened string representations of large or deeply nested objects. In this case, it provides a shortened representation of a large list containing 100 integers.",
+      "correctAnswer": "[0, 1, 2, 3, 4, 5, ...]",
+      "incorrectAnswers": [
+        "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+        "list(range(100))",
+        "Nothing is printed",
+        "[...]",
+        "TypeError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this Python code using difflib's get_close_matches?",
+      "codeSnippet": "import difflib\n\nwords = ['cat', 'caterpillar', 'whale', 'car', 'dog']\nresult = difflib.get_close_matches('ca', words, n=2, cutoff=0.5)\nprint(result)",
+      "explanation": "The 'get_close_matches' function finds the best 'n' matches for a given word that have a similarity score above 'cutoff'. Here, it finds the two closest matches to 'ca' in the list, with a similarity cutoff of 0.5. The closest matches are 'cat' and 'car'.",
+      "correctAnswer": "['cat', 'car']",
+      "incorrectAnswers": [
+        "['cat', 'caterpillar']",
+        "['caterpillar', 'whale']",
+        "['cat']",
+        "['car', 'dog']",
+        "ValueError"
+      ]
     }
   ]
 }
