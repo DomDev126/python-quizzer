@@ -3053,6 +3053,64 @@
         "ValueError",
         "GraphError"
       ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class Foo(str):\n    def __init__(self, value):\n        self.value = value\n\n    def __cap__(self):\n        return \"HELLO WORLD\"\n\n\nfoo = Foo(\"hello world\")\nprint(foo.capitalize())",
+      "explanation": "The Foo class inherits from the built-in str class. The __init__ method assigns a value to the instance variable 'value'. The __cap__ method is defined but not used or recognized as a special method in Python. When 'foo.capitalize()' is called, it utilizes the capitalize method of the str class (since Foo inherits from str) which converts the first character of the string to uppercase and the rest to lowercase. Therefore, the output will be 'Hello world'.",
+      "correctAnswer": "Hello world",
+      "incorrectAnswers": [
+        "HELLO WORLD",
+        "hello world",
+        "AttributeError",
+        "None",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class String(str):\n    def __init__(self, value):\n        self.value = value\n\n    def __add__(self, other):\n        return super().__add__(other) + other\n\n\nfoo = String(\"Hello\")\nbar = String(\"World\")\n\nprint(foo + bar)",
+      "explanation": "The String class inherits from the built-in str class. The __init__ method initializes the instance variable 'value'. The __add__ method is overridden to concatenate the current string with 'other' using the parent class's __add__ method, then adds 'other' again. When 'foo + bar' is executed, it first concatenates 'foo' ('Hello') and 'bar' ('World') to get 'HelloWorld', and then concatenates 'World' again, resulting in 'HelloWorldWorld'.",
+      "correctAnswer": "HelloWorldWorld",
+      "incorrectAnswers": [
+        "HelloWorld",
+        "WorldHelloWorld",
+        "HelloWorldHello",
+        "AttributeError",
+        "RecursionError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class String(str):\n    def __init__(self, value):\n        self.value = value\n\nfoo = String(\"hello\")\nbar = String(\"world\")\n\nprint(len(foo + bar))",
+      "explanation": "The String class inherits from the built-in str class. The __init__ method initializes the instance variable 'value', but it does not affect the string behavior inherited from str. When 'foo + bar' is executed, it performs string concatenation of 'foo' ('hello') and 'bar' ('world'), resulting in 'helloworld'. The len() function then calculates the length of 'helloworld', which is 10 characters long.",
+      "correctAnswer": "10",
+      "incorrectAnswers": [
+        "5",
+        "AttributeError",
+        "ValueError",
+        "TypeError",
+        "helloworld"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class String(str):\n    def __init__(self, value):\n        self.value = value\n\n    def __add__(self, other):\n        return super().__add__(self.value)\n\n\nclass WeirdString(String):\n    def __add__(self, other):\n        return super().__add__(other).__len__()\n\n    def __mul__(self, other):\n        return self.value * 2\n\n\nfoo = WeirdString(\"hi\")\nbaz = WeirdString(\"the\")\nbar = WeirdString(\"world\")\n\nprint(foo + (bar + baz))",
+      "explanation": "The WeirdString class, a subclass of String, overrides the __add__ and __mul__ methods. When executing 'bar + baz', it concatenates 'world' with its value 'world', resulting in 'worldworld', and returns its length, which is 10. Then, 'foo + 10' invokes the __add__ method of foo, concatenating 'hi' with its value 'hi' and returns the length of 'hihi', which is 4.",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["10", "hitheworld", "hihi", "AttributeError", "None"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "class Integer(int):\n    def __add__(self, other):\n        return super().__add__(other) - 1\n\n    def __sub__(self, other):\n        return super().__add__(other) + 1\n\n    def __str__(self):\n        return f\"{super().__mul__(-1)}\"\n\n\nfoo = Integer(3)\nbar = Integer(5)\n\nprint(foo - bar)",
+      "explanation": "In the Integer class, which inherits from int, the __add__ method is overridden to subtract 1 from the sum, and the __sub__ method is overridden to add the numbers and then add 1. The __str__ method, though overridden, is not used in this snippet. When 'foo - bar' is executed, it invokes the __sub__ method of foo (3), which adds 3 to bar (5), resulting in 8, and then adds 1, giving a final result of 9.",
+      "correctAnswer": "9",
+      "incorrectAnswers": ["8", "-2", "2", "RecursionError", "-9"]
     }
   ]
 }
