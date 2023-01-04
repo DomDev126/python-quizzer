@@ -663,6 +663,158 @@
       "explanation": "The 'in' operator in Python checks if a value exists in a list. Since 2 is an element of the list 'foo', the output is True.",
       "correctAnswer": "True",
       "incorrectAnswers": ["False", "Error", "None", "0", "1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "x = [10, 20, 30, 40]\ny = x[1:3]\nprint(y)",
+      "explanation": "The code snippet demonstrates slicing a list in Python. The slice 'x[1:3]' means taking the elements from index 1 to 2 (since the upper bound in slicing is not inclusive). Therefore, the slice includes elements 20 and 30 from the list x, and the output will be [20, 30].",
+      "correctAnswer": "[20, 30]",
+      "incorrectAnswers": [
+        "[10, 20]",
+        "[30, 40]",
+        "[20, 30, 40]",
+        "SyntaxError",
+        "[10, 20, 30]"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the type of 'x' after executing the following code:",
+      "codeSnippet": "x = 7 / 2",
+      "explanation": "In Python, the '/' operator performs floating-point division, so the result will be a float. Therefore, the type of 'x' will be <class 'float'>.",
+      "correctAnswer": "<class 'float'>",
+      "incorrectAnswers": [
+        "<class 'int'>",
+        "<class 'str'>",
+        "<class 'list'>",
+        "<class 'number'>",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(2 ** 3)",
+      "explanation": "The '**' operator is used for exponentiation in Python. '2 ** 3' calculates 2 raised to the power of 3, which is 8.",
+      "correctAnswer": "8",
+      "incorrectAnswers": ["6", "9", "5", "101", "SyntaxError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(\"Python\"[1])",
+      "explanation": "In Python, strings are indexed starting from 0. The index 1 of the string 'Python' refers to the second character, which is 'y'.",
+      "correctAnswer": "y",
+      "incorrectAnswers": ["P", "h", "t", "SyntaxError", "IndexError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print([1, 2, 3] + [4, 5, 6])",
+      "explanation": "In Python, the '+' operator concatenates lists. This operation will combine the two lists into one.",
+      "correctAnswer": "[1, 2, 3, 4, 5, 6]",
+      "incorrectAnswers": [
+        "[4, 5, 6, 1, 2, 3]",
+        "6",
+        "SyntaxError",
+        "TypeError",
+        "[1, 2, 3]"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "type(\"42\")",
+      "explanation": "The 'type()' function in Python returns the type of the given object. Since \"42\" is a string, the function will return <class 'str'>.",
+      "correctAnswer": "<class 'str'>",
+      "incorrectAnswers": [
+        "<class 'int'>",
+        "<class 'float'>",
+        "<class 'bool'>",
+        "<class 'number'>",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(15 // 2 // 3)",
+      "explanation": "The '//' operator performs integer division. The expression '15 // 2' equals 7, and then '7 // 3' equals 2. The final output is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["1", "5", "2.5", "7", "-1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(15 % 4 % 2)",
+      "explanation": "The '%' operator is the modulo operator, giving the remainder of division. '15 % 4' equals 3, and '3 % 2' equals 1. The output is 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["0", "2", "3", "4", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(2 * 3 ** 2)",
+      "explanation": "The '**' operator is for exponentiation, and it has higher precedence than multiplication. So '3 ** 2' equals 9, and then '2 * 9' equals 18.",
+      "correctAnswer": "18",
+      "incorrectAnswers": ["36", "6", "9", "12", "TypeError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "print(10 - 4 * 2 + 3)",
+      "explanation": "Operator precedence dictates that multiplication is performed before addition and subtraction. Thus, '4 * 2' equals 8, and '10 - 8' equals 2, then '2 + 3' equals 5.",
+      "correctAnswer": "5",
+      "incorrectAnswers": ["9", "14", "0", "7", "ValueError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(6 // 2 + 3 % 2)",
+      "explanation": "The expression '6 // 2' results in 3, and '3 % 2' results in 1. Adding these together gives 4.",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["2", "1.5", "3", "5", "ValueError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(3 * (2 + 3))",
+      "explanation": "The parentheses dictate the order of operations. The expression inside, '2 + 3', equals 5. Multiplying this by 3 gives 15.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["25", "9", "11", "6", "SyntaxError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(4 + 3 - 2 * 5)",
+      "explanation": "According to operator precedence, multiplication is done first ('2 * 5' equals 10), followed by addition and subtraction in sequence ('4 + 3 - 10'). The result is -3.",
+      "correctAnswer": "-3",
+      "incorrectAnswers": ["9", "5", "1", "0", "-1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(8 % 3 * 4)",
+      "explanation": "The modulo operator '%' is evaluated first, with '8 % 3' equaling 2. Then, it's multiplied by 4, resulting in 8.",
+      "correctAnswer": "8",
+      "incorrectAnswers": ["2", "12", "4", "0", "7"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print((4 + 5) // 2)",
+      "explanation": "The parentheses are evaluated first, yielding '4 + 5' which equals 9. Then, the integer division '9 // 2' results in 4.",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["9", "4.5", "5", "0", "TypeError"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code snippet?",
+      "codeSnippet": "print(12 / 4 / 3)",
+      "explanation": "The division is performed from left to right. '12 / 4' equals 3, and then '3 / 3' equals 1.",
+      "correctAnswer": "1.0",
+      "incorrectAnswers": ["4", "0", "9", "0.5", "2.0"]
     }
   ],
   "medium": [
