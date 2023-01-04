@@ -1,8 +1,8 @@
-# Python Quizzer
+![Python Quizzer](public/socialmediabanner.png)
 
-Welcome to the **Python Quizzer** - an interactive way to test and improve your Python skills! This is an open source project built with React and TypeScript.
+Welcome to the **Python Quizzer** - an interactive way to test and improve your Python skills! This is a hobby project built with React and TypeScript.
 
-The Python Quiz Game presents users with 20 random Python questions, each featuring a question, a code snippet, and six possible answers. After responding to a question, the game displays an explanation of the code.
+The quiz presents users with 20 random Python questions, each featuring a question, a code snippet, and six possible answers. After responding to a question, the game displays an explanation of the code.
 
 Try the <a href="https://alexandengstrom.github.io/python-quizzer/">Python Quizzer!</a>
 
@@ -68,9 +68,11 @@ Make sure every question have a clear question, a code snippet and only one poss
 python3 scripts/validate_json.py
 ```
 
-### Design Improvements
+### Other Improvements
 
-If you're skilled in TypeScript and React, feel free to improve the design and the user interface of the game.
+If you're skilled in TypeScript and React, feel free to improve the design and the user interface of the game. I am not an expert in this but I have have designed it as good as I could. I am sure you can do it better!
+
+Currently, the project includes automated tests for validating the JSON file format. However, the rest of the codebase does not have accompanying tests. Contributions to develop tests for other parts of the code are highly welcome and appreciated!
 
 ## Report Issues
 
