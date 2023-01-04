@@ -113,10 +113,6 @@ p {
   animation: fade-in 1.3s forwards;
 }
 
-.explanation-container h2 {
-  font-size: 1.5rem;
-}
-
 .button-correct,
 .button-correct:hover {
   background-color: var(--correct-color);
