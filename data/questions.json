@@ -579,6 +579,90 @@
       "explanation": "The code accesses the third element (index 2) of the list 'list_numbers', which contains the numbers 1, 2, 3, 4, 5. Indexing in Python starts from 0, so the third element is 3.",
       "correctAnswer": "3",
       "incorrectAnswers": ["2", "4", "5", "IndexError", "1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "foo = 5\nbar = 3\nprint(foo // bar)",
+      "explanation": "The '//' operator in Python performs floor division. When 'foo' (5) is divided by 'bar' (3) using floor division, the result is the largest integer less than or equal to the division result, which is 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["1.67", "2", "0", "TypeError", "5"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "print(10 == 10.0)",
+      "explanation": "In Python, the '==' operator checks for value equality. It compares the values of 10 (integer) and 10.0 (float) and finds them to be equal, thus returning True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "TypeError", "10", "10.0", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code?",
+      "codeSnippet": "foo = 'Hello'\nbar = 'World'\nprint(foo + ' ' + bar)",
+      "explanation": "The '+' operator in Python concatenates strings. This code concatenates 'Hello', a space, and 'World', resulting in the string 'Hello World'.",
+      "correctAnswer": "Hello World",
+      "incorrectAnswers": [
+        "HelloWorld",
+        "hello world",
+        "TypeError",
+        "SyntaxError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the result of the following Python expression?",
+      "codeSnippet": "print(len('Python'))",
+      "explanation": "The 'len' function in Python returns the length of a string. The string 'Python' has 6 characters.",
+      "correctAnswer": "6",
+      "incorrectAnswers": ["7", "5", "TypeError", "'Python'", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What is the output of the following code snippet?",
+      "codeSnippet": "foo = [10, 20, 30]\nprint(foo[1])",
+      "explanation": "Python lists are zero-indexed. 'foo[1]' accesses the second element in the list 'foo', which is 20.",
+      "correctAnswer": "20",
+      "incorrectAnswers": ["10", "30", "IndexError", "TypeError", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "foo = True\nbar = False\nprint(foo and bar)",
+      "explanation": "The 'and' logical operator in Python returns True if both operands are true. Since 'foo' is True and 'bar' is False, the result is False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": [
+        "True",
+        "TrueFalse",
+        "SyntaxError",
+        "foo",
+        "True False"
+      ]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "foo = 10\nprint(foo > 5 and foo < 15)",
+      "explanation": "The code checks if 'foo' is greater than 5 and less than 15. Since 'foo' is 10, both conditions are True, so the result is True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "TypeError", "SyntaxError", "10", "None"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What will be the output of the following code?",
+      "codeSnippet": "print(15 % 4)",
+      "explanation": "The '%' operator in Python calculates the remainder of the division. The remainder of 15 divided by 4 is 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["4", "0", "12", "TypeError", "1"]
+    },
+    {
+      "difficulty": "beginner",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "foo = [1, 2, 3]\nprint(2 in foo)",
+      "explanation": "The 'in' operator in Python checks if a value exists in a list. Since 2 is an element of the list 'foo', the output is True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "Error", "None", "0", "1"]
     }
   ],
   "medium": [
@@ -1231,6 +1315,86 @@
       "explanation": "The 'multiply' function multiplies two numbers, with a default value of 2 for the second parameter. The first call, 'multiply(5)', multiplies 5 by 2, returning 10. The second call, 'multiply(3, 3)', multiplies 3 by 3, returning 9. Adding these together gives 19.",
       "correctAnswer": "19",
       "incorrectAnswers": ["10", "15", "18", "21", "24"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "foo = ['a', 'b', 'c', 'd', 'e']\nbar = foo[::2]\nprint(bar)",
+      "explanation": "The code uses slicing with a step of 2 to get every other element of the list 'foo'. It starts with the first element ('a') and then skips one element each time. The resulting list is ['a', 'c', 'e'].",
+      "correctAnswer": "['a', 'c', 'e']",
+      "incorrectAnswers": [
+        "['b', 'd']",
+        "['a', 'b', 'c']",
+        "SyntaxError",
+        "['a', 'b', 'd', 'e']",
+        "['c', 'e']"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of the following Python expression?",
+      "codeSnippet": "print(list(set([1, 2, 2, 3, 4, 4, 5])))",
+      "explanation": "The code first converts a list with duplicate elements into a set, which removes the duplicates. The resulting set is then converted back into a list. The final list will be [1, 2, 3, 4, 5]. Note that the order of elements in the set (and therefore in the final list) is not guaranteed.",
+      "correctAnswer": "[1, 2, 3, 4, 5]",
+      "incorrectAnswers": [
+        "[1, 2, 3, 4]",
+        "[2, 4, 5]",
+        "TypeError",
+        "[1, 3, 5]",
+        "SyntaxError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "x = 5\ny = x is not None and isinstance(x, int)\nprint(y)",
+      "explanation": "The code first checks if 'x' is not 'None' and then checks if 'x' is an instance of 'int'. Since both conditions are true for 'x = 5', the result is 'True'.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "TypeError", "None", "5", "SyntaxError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "foo = 10\nbar = 5\ntry:\n    result = foo // bar\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')\nelse:\n    print(result)",
+      "explanation": "The code in the 'try' block executes without any exceptions, as dividing 10 by 5 results in 2. Since there's no 'ZeroDivisionError', the 'except' block is skipped, and the 'else' block is executed, printing the 'result', which is 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": [
+        "Cannot divide by zero",
+        "5",
+        "ZeroDivisionError",
+        "None",
+        "1"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the following Python code snippet?",
+      "codeSnippet": "foo = [i for i in range(10) if i % 2 == 0]\nprint(sum(foo))",
+      "explanation": "The list comprehension creates a list of even numbers from 0 to 9 (inclusive). These numbers are 0, 2, 4, 6, and 8. The 'sum' function calculates the total of these numbers, which is 20.",
+      "correctAnswer": "20",
+      "incorrectAnswers": ["10", "25", "15", "5", "30"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "foo = 15\nif foo > 10:\n    print('Greater than 10')\nelif foo == 10:\n    print('Equal to 10')\nelse:\n    print('Less than 10')",
+      "explanation": "The if-elif-else block checks the value of 'foo'. Since 'foo' is 15, which is greater than 10, 'Greater than 10' is printed.",
+      "correctAnswer": "Greater than 10",
+      "incorrectAnswers": [
+        "Equal to 10",
+        "Less than 10",
+        "15",
+        "SyntaxError",
+        "foo"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of the following Python expression?",
+      "codeSnippet": "print(20 > 10 and 10 < 20)",
+      "explanation": "The expression uses the logical 'and' operator. It checks if 20 is greater than 10 and if 10 is less than 20. Both conditions are True, so the result is True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "20", "10", "SyntaxError", "TypeError"]
     }
   ],
   "hard": [
@@ -1827,6 +1991,158 @@
         "2",
         "3"
       ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "class Foo:\n    x = 5\n\n    @classmethod\n    def bar(cls):\n        return cls.x + 5\n\nprint(Foo.bar())",
+      "explanation": "The method 'bar' in the 'Foo' class is a class method, which means it takes the class itself as the first argument instead of an instance of the class. It accesses the class variable 'x' and returns its value plus 5. Since 'x' is 5, the method returns 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["5", "15", "TypeError", "0", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "def foo(x):\n    return x * 2\n\ndef bar(y):\n    return foo(y + 2)\n\nprint(bar(3))",
+      "explanation": "The function 'bar' calls 'foo' with its argument increased by 2. For 'bar(3)', it calls 'foo' with 5. The function 'foo' then returns this value multiplied by 2, resulting in 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["6", "8", "5", "TypeError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be the output of the following Python code?",
+      "codeSnippet": "x = 5\n\ntry:\n    assert x > 10, 'x should be greater than 10'\nexcept AssertionError as e:\n    print(e)",
+      "explanation": "The 'assert' statement checks if the condition 'x > 10' is True. If not, it raises an 'AssertionError' with the provided message. Since x is 5, the condition fails and 'AssertionError' is raised with the message 'x should be greater than 10'. The except block catches this error and prints the message.",
+      "correctAnswer": "x should be greater than 10",
+      "incorrectAnswers": ["5", "10", "e", "TypeError", "Nothing is printed"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "foo = [1, 2, 3, 4, 5]\ndef bar(x):\n    return x**2\n\nresult = map(bar, foo)\nprint(list(result))",
+      "explanation": "The 'map' function applies 'bar' to each element in 'foo'. The 'bar' function returns the square of its argument. Therefore, 'result' is an iterator over the squares of the numbers in 'foo'. Converting this iterator to a list results in [1, 4, 9, 16, 25].",
+      "correctAnswer": "[1, 4, 9, 16, 25]",
+      "incorrectAnswers": [
+        "[1, 2, 3, 4, 5]",
+        "[2, 4, 6, 8, 10]",
+        "[5, 4, 3, 2, 1]",
+        "TypeError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "class Foo:\n    def __init__(self, num):\n        self.num = num\n\n    def __add__(self, other):\n        return Foo(self.num + other.num)\n\nx = Foo(3)\ny = Foo(4)\nz = x + y\nprint(z.num)",
+      "explanation": "The '__add__' method in the 'Foo' class defines how two instances of 'Foo' should be added. When 'x + y' is executed, it creates a new 'Foo' instance with 'num' as the sum of 'x.num' and 'y.num'. Thus, 'z.num' is 7 (3 + 4).",
+      "correctAnswer": "7",
+      "incorrectAnswers": ["3", "4", "TypeError", "None", "AttributeError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "x = 0\ntry:\n    x += 1\n    raise ValueError\nexcept ValueError:\n    x += 2\nfinally:\n    x += 3\nprint(x)",
+      "explanation": "The code first increments 'x' by 1, then raises a 'ValueError'. The 'except' block catches the error and increments 'x' by 2. The 'finally' block is executed regardless of the exception, adding 3 to 'x'. Hence, 'x' becomes 6 (0 + 1 + 2 + 3).",
+      "correctAnswer": "6",
+      "incorrectAnswers": ["1", "3", "4", "5", "7"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "foo = lambda x, y: x * y\nbar = lambda x: foo(x, x)\n\nprint(bar(5))",
+      "explanation": "The lambda function 'foo' multiplies its two arguments. 'bar' is another lambda function that calls 'foo', passing its argument 'x' as both parameters to 'foo'. Thus, 'bar(5)' calls 'foo(5, 5)', which results in 25.",
+      "correctAnswer": "25",
+      "incorrectAnswers": ["10", "5", "0", "TypeError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "foo = [1, 3, 5, 7]\nprint(sum(filter(lambda x: x % 2 == 0, foo)))",
+      "explanation": "The 'filter' function applies a lambda function to each element in 'foo', keeping only those elements for which the lambda function returns True. Since the lambda function checks if elements are even, and all elements in 'foo' are odd, the filter results in an empty list. The sum of an empty list is 0.",
+      "correctAnswer": "0",
+      "incorrectAnswers": ["16", "1", "TypeError", "None", "9"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "def foo(x):\n    if x > 0:\n        return x + foo(x - 1)\n    else:\n        return 0\n\nprint(foo(4))",
+      "explanation": "The function 'foo' is a recursive function. It calls itself, decreasing the argument 'x' by 1 each time until 'x' is 0. For 'foo(4)', it returns 4 + 3 + 2 + 1 + 0, which is 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["4", "5", "24", "0", "TypeError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will be printed when the following code is executed?",
+      "codeSnippet": "class Foo:\n    def __str__(self):\n        return 'Foo'\n\nclass Bar(Foo):\n    def __str__(self):\n        return 'Bar'\n\nx = Foo()\ny = Bar()\nprint(x, y)",
+      "explanation": "The 'Foo' class defines a '__str__' method that returns 'Foo', and 'Bar' (subclass of 'Foo') overrides this method to return 'Bar'. When instances of 'Foo' and 'Bar' are printed, their respective '__str__' methods are called, printing 'Foo Bar'.",
+      "correctAnswer": "Foo Bar",
+      "incorrectAnswers": ["Bar Foo", "Foo", "Bar", "TypeError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "x = [1, 2, 3]\ndef foo(y):\n    return [i * 2 for i in y]\n\nx = foo(x)\nprint(x)",
+      "explanation": "The function 'foo' takes a list 'y' and returns a new list where each element is doubled. The list 'x' is passed to 'foo', and the resulting list [2, 4, 6] is assigned back to 'x'.",
+      "correctAnswer": "[2, 4, 6]",
+      "incorrectAnswers": [
+        "[1, 2, 3]",
+        "[3, 6, 9]",
+        "[1, 4, 9]",
+        "TypeError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "x = {'a': 1, 'b': 2, 'c': 3}\ndef foo(k, v):\n    x[k] = v\n\nfoo('b', 5)\nprint(x)",
+      "explanation": "The function 'foo' modifies the dictionary 'x' by setting the value of key 'k' to 'v'. Calling 'foo' with 'b' and 5 updates the value of 'b' in 'x' to 5. The final dictionary is {'a': 1, 'b': 5, 'c': 3}.",
+      "correctAnswer": "{'a': 1, 'b': 5, 'c': 3}",
+      "incorrectAnswers": [
+        "{'a': 1, 'b': 2, 'c': 3}",
+        "{'a': 1, 'b': 2, 'c': 5}",
+        "{'a': 5, 'b': 2, 'c': 3}",
+        "TypeError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the following Python code print?",
+      "codeSnippet": "foo = (lambda x, y: x * y)(3, 5)\nprint(foo)",
+      "explanation": "The lambda function takes two arguments 'x' and 'y' and returns their product. It is immediately invoked with 3 and 5 as arguments. The product of 3 and 5 is 15, which is printed.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["8", "3", "5", "TypeError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "def foo():\n    global x\n    x = 10\nx = 5\nfoo()\nprint(x)",
+      "explanation": "The function 'foo' declares 'x' as a global variable and sets it to 10. When 'foo' is called, it changes the global variable 'x' from 5 to 10. Therefore, when 'x' is printed, it is 10.",
+      "correctAnswer": "10",
+      "incorrectAnswers": ["5", "0", "None", "TypeError", "15"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following Python code output?",
+      "codeSnippet": "x = [1, 2, 3, 4, 5]\nprint(x[1:3])",
+      "explanation": "The slice operation 'x[1:3]' extracts a portion of the list 'x' from index 1 to index 2 (exclusive of index 3). The resulting sublist is [2, 3].",
+      "correctAnswer": "[2, 3]",
+      "incorrectAnswers": [
+        "[1, 2, 3]",
+        "[3, 4]",
+        "[2, 3, 4]",
+        "TypeError",
+        "IndexError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "def foo(x):\n    return x > 10\n\nbar = [foo(i) for i in range(15)]\nprint(bar.count(True))",
+      "explanation": "The list comprehension creates a list 'bar' by applying the function 'foo' to each number in the range 0 to 14. The function 'foo' returns True if the number is greater than 10. 'bar.count(True)' counts how many times True appears in 'bar'. There are 4 numbers greater than 10 in the range (11, 12, 13, 14).",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["3", "5", "10", "False", "TypeError"]
     }
   ],
   "expert": [
@@ -2462,6 +2778,128 @@
         "['cat']",
         "['car', 'dog']",
         "ValueError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code involving the 'textwrap' module?",
+      "codeSnippet": "import textwrap\ns = 'Python programming is fun.'\nresult = textwrap.shorten(s, width=12, placeholder='...')\nprint(result)",
+      "explanation": "The 'textwrap.shorten' function shortens the string 's' to a width of 12 characters, including the placeholder '...'. It attempts to break the string at a space near the end, resulting in 'Python...' for this input.",
+      "correctAnswer": "Python...",
+      "incorrectAnswers": [
+        "Python ...",
+        "[...]",
+        "Python programming is fun...",
+        "TypeError",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will the following Python code output, using the 'statistics' module?",
+      "codeSnippet": "import statistics\nnums = [1, 2, 2, 3, 4, 4, 5]\nresult = statistics.multimode(nums)\nprint(result)",
+      "explanation": "The 'statistics.multimode' function returns the most frequently occurring values in 'nums'. In this case, both 2 and 4 appear twice, making them the most common elements. Therefore, the output is a list containing both [2, 4].",
+      "correctAnswer": "[2, 4]",
+      "incorrectAnswers": [
+        "[2]",
+        "[4]",
+        "[1, 2, 3, 4, 5]",
+        "TypeError",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does the following Python code using the 'functools' module print?",
+      "codeSnippet": "import functools\nnums = [1, 2, 3, 4, 5]\nresult = functools.reduce(lambda x, y: x * y, nums)\nprint(result)",
+      "explanation": "The 'functools.reduce' function applies the lambda function (which multiplies two numbers) cumulatively to the items of 'nums'. It computes the product of all elements in the list, which is 1 * 2 * 3 * 4 * 5, resulting in 120.",
+      "correctAnswer": "120",
+      "incorrectAnswers": ["15", "5", "10", "TypeError", "None"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code using the 'weakref' module?",
+      "codeSnippet": "import weakref\nclass Foo:\n    pass\n\nobj = Foo()\nref = weakref.ref(obj)\nprint(ref() is obj)",
+      "explanation": "The 'weakref.ref' function creates a weak reference to the object 'obj'. The expression 'ref() is obj' checks if the object referred to by the weak reference 'ref' is the same as 'obj'. It evaluates to True since 'ref()' still refers to 'obj' at this point.",
+      "correctAnswer": "True",
+      "incorrectAnswers": [
+        "False",
+        "None",
+        "WeakReferenceError",
+        "TypeError",
+        "MemoryError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will the following Python code output, using the 'stringprep' module?",
+      "codeSnippet": "import stringprep\ns = 'Python3.8'\nresult = all(stringprep.in_table_c21_c22(c) for c in s)\nprint(result)",
+      "explanation": "The 'stringprep.in_table_c21_c22' function checks if characters are in table C.2.1 or C.2.2 (non-ASCII space characters). Since 'Python3.8' has no such characters, the output of the code is False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": [
+        "True",
+        "TypeError",
+        "None",
+        "ValueError",
+        "IndexError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code using the 'shelve' module?",
+      "codeSnippet": "import shelve\nwith shelve.open('myshelve.db') as db:\n    db['foo'] = 'bar'\n    print('foo' in db)",
+      "explanation": "The 'shelve.open' function opens a persistent dictionary-like object. The key 'foo' with value 'bar' is stored in the database. The expression 'foo' in db' checks if 'foo' is a key in the database, which evaluates to True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": [
+        "It depends on if the file 'myshelve.db' exists",
+        "'bar'",
+        "TypeError",
+        "None",
+        "KeyError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does the following Python code using 'functools' print?",
+      "codeSnippet": "import functools\n@functools.lru_cache(maxsize=2)\ndef foo(n):\n    return n * 2\n\nfoo(1)\nfoo(2)\nfoo(3)\nresult = foo.cache_info()\nprint(result.hits, result.misses)",
+      "explanation": "The 'foo' function is decorated with 'functools.lru_cache' with a maxsize of 2. This caches the most recent two calls. The function is called three times with different arguments. The 'cache_info' method returns a named tuple containing the number of cache hits and misses. Since no argument is repeated, there are 0 hits and 3 misses.",
+      "correctAnswer": "0 3",
+      "incorrectAnswers": ["1 2", "2 1", "3 0", "TypeError", "None"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of the following Python code using the 'functools' module?",
+      "codeSnippet": "import functools\ndef foo(x, y):\n    return x + y\n\nbar = functools.partial(foo, y=3)\nresult = bar(2)\nprint(result)",
+      "explanation": "The 'functools.partial' function creates a new version of 'foo' with 'y' pre-filled as 3. Calling 'bar(2)' is equivalent to calling 'foo(2, 3)', which returns 5.",
+      "correctAnswer": "5",
+      "incorrectAnswers": ["2", "3", "TypeError", "None", "8"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does the following Python code using 'graphlib' print?",
+      "codeSnippet": "from graphlib import TopologicalSorter\nts = TopologicalSorter()\nts.add('a', 'b')\nts.add('b', 'c')\ntry:\n    ts.prepare()\n    result = 'No Cycle Detected'\nexcept graphlib.CycleError:\n    result = 'Cycle Detected'\nprint(result)",
+      "explanation": "The 'TopologicalSorter' is used to find a topological ordering of the nodes. Since there is no cycle in the graph ('a' -> 'b' -> 'c'), the 'prepare' method does not raise a 'CycleError', resulting in 'No Cycle Detected' being printed.",
+      "correctAnswer": "No Cycle Detected",
+      "incorrectAnswers": [
+        "Cycle Detected",
+        "TypeError",
+        "RuntimeError",
+        "ValueError",
+        "GraphError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does the following Python code using 'graphlib' print?",
+      "codeSnippet": "from graphlib import CycleError, TopologicalSorter\nts = TopologicalSorter()\nts.add('eat', 'sleep')\nts.add('sleep', 'eat')\ntry:\n    list(ts.static_order())\n    result = 'No Cycle Detected'\nexcept CycleError:\n    result = 'Cycle Detected'\nprint(result)",
+      "explanation": "The added edges 'eat' -> 'sleep' and 'sleep' -> 'eat' create a cycle. When trying to find a topological order using 'static_order', a 'CycleError' is raised due to this cycle. Thus, 'Cycle Detected' is printed.",
+      "correctAnswer": "Cycle Detected",
+      "incorrectAnswers": [
+        "No Cycle Detected",
+        "TypeError",
+        "RuntimeError",
+        "ValueError",
+        "GraphError"
       ]
     }
   ]
