@@ -37,7 +37,6 @@ out/
 
 # Gatsby files
 .cache/
-public/
 
 # Parcel build output
 dist/
