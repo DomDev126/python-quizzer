@@ -2295,6 +2295,64 @@
       "explanation": "The list comprehension creates a list 'bar' by applying the function 'foo' to each number in the range 0 to 14. The function 'foo' returns True if the number is greater than 10. 'bar.count(True)' counts how many times True appears in 'bar'. There are 4 numbers greater than 10 in the range (11, 12, 13, 14).",
       "correctAnswer": "4",
       "incorrectAnswers": ["3", "5", "10", "False", "TypeError"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does the following Python code do?",
+      "codeSnippet": "import sys\n\nfoo = \"hello\"\nbar = \"world\"\n\nwith open(\"system_info\", \"a\") as system_info:\n    print(f\"{foo.title()} {bar}\", file=system_info)",
+      "explanation": "This code snippet uses file handling and string formatting in Python. The 'with' statement is used to open a file named 'system_info' in append mode ('a'). Inside this context, the 'print' function is used with file redirection to write to this file instead of the standard output. The 'f-string' is used for string formatting, where 'foo.title()' converts the first letter of 'foo' to uppercase ('Hello') and 'bar' remains as is ('world'). Thus, the code writes 'Hello world' to the end of the 'system_info' file, without printing anything to the console.",
+      "correctAnswer": "It appends \"Hello world\" to the end of a file named 'system_info'.",
+      "incorrectAnswers": [
+        "It prints \"Hello world\" to the console.",
+        "It creates a new file named 'system_info' but writes nothing to it.",
+        "It raises an error because the file mode is incorrect.",
+        "It prints \"hello world\" to the console",
+        "AttributeError"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the outcome of executing the following Python code?",
+      "codeSnippet": "import sys\n\nwhile len(sys.argv) > 0:\n    continue\n\nprint(len(sys.argv))",
+      "explanation": "This code snippet involves the use of the 'sys.argv' list, which contains the command-line arguments passed to a Python script. The 'while' loop is set to continue as long as the length of 'sys.argv' is greater than 0. Since 'sys.argv' always includes the script name as its first element, its length is always at least 1, making the loop's condition perpetually true. The 'continue' statement inside the loop does nothing to alter this condition. Therefore, the loop becomes infinite and never breaks, which means the 'print' statement outside the loop will never be executed.",
+      "correctAnswer": "Infinite loop",
+      "incorrectAnswers": [
+        "Prints the number of command-line arguments",
+        "RecursionError",
+        "0",
+        "ValueError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "def foo(x: str) -> bool:\n    return len(x)\n\nprint(foo(range(10)))",
+      "explanation": "This code snippet defines a function 'foo' that is expected to take a string argument 'x' and return a boolean. However, in the function body, 'len(x)' returns the length of 'x', which is an integer, not a boolean. When calling 'foo(range(10))', a range object with 10 elements (0 to 9) is passed instead of a string. Despite this type mismatch, Python does not enforce argument types at runtime, so 'len(range(10))' successfully returns 10. The type annotations in the function definition ('x: str' and '-> bool') are not enforced during execution.",
+      "correctAnswer": "10",
+      "incorrectAnswers": [
+        "TypeError",
+        "ValueError",
+        "SyntaxError",
+        "False",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "def foo(x=[]):\n    if len(x) > 5:\n        return x\n\n    x.append(len(x))\n    return foo()\n\nprint(foo())",
+      "explanation": "This code snippet involves a recursive function 'foo' with a default mutable argument (an empty list). In each recursive call, the length of the list 'x' is checked. If it is not greater than 5, the current length of 'x' is appended to 'x', and 'foo' is called again without arguments, hence using the same default list. This process repeats until the length of the list becomes 6. At this point, the condition 'len(x) > 5' becomes true, and the function returns the list. The list 'x' thus accumulates values [0, 1, 2, 3, 4, 5] over the recursive calls. A key point here is understanding how Python handles default mutable arguments and recursion.",
+      "correctAnswer": "[0, 1, 2, 3, 4, 5]",
+      "incorrectAnswers": ["[]", "5", "RecursionError", "ValueError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the time complexity, in Big O notation, of the following function based on the variable 'n'?",
+      "codeSnippet": "def foo(n):\n    return [i for i in range(n)]",
+      "explanation": "The function 'foo' creates a list comprehension that iterates over a range of 'n'. In each iteration, it performs a constant time operation of appending the current value 'i' to the new list. As the number of iterations is directly proportional to the input 'n', the time complexity of the function is linear. Therefore, for each increase in 'n', the number of operations increases linearly, making the time complexity O(n).",
+      "correctAnswer": "O(n)",
+      "incorrectAnswers": ["O(1)", "O(n^2)", "O(log n)", "O(n log n", "O(n^3)"]
     }
   ],
   "expert": [
