@@ -18,14 +18,14 @@ const Intro: React.FC<Props> = ({ onStartButtonClick }) => {
           <p>
             Get ready for a bit of Python fun. In total, we have{" "}
             {getTotalNumberOfQuestions()} Python questions available. You will
-            get 20 random questions each round. Each question contain a code
-            snippet and six possible answers, your job is to choose the correct
-            answer!
+            get <b>20 random questions</b> each round. Each question contain a
+            code snippet and six possible answers, your job is to choose the
+            correct answer!
           </p>
           <p>
             These questions will start easy and gradually get trickier. After
-            each question, we'll explain how the code works. Learning Python
-            while having fun, what could be better?
+            each question, we'll explain how the code works.{" "}
+            <i>Learning Python while having fun</i>, what could be better?
           </p>
           <p>
             Feel free to tackle the problems your way but we suggest making your
