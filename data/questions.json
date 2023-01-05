@@ -1547,6 +1547,248 @@
       "explanation": "The expression uses the logical 'and' operator. It checks if 20 is greater than 10 and if 10 is less than 20. Both conditions are True, so the result is True.",
       "correctAnswer": "True",
       "incorrectAnswers": ["False", "20", "10", "SyntaxError", "TypeError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will be the output of the following Python function when called as foo(1)?",
+      "codeSnippet": "def foo(x):\n    if x == 10:\n        return x\n    else:\n        return foo(x*3)\n\nfoo(1)",
+      "explanation": "This function is a recursive function where 'foo' calls itself with the argument 'x*3'. The base case for the recursion to stop is when 'x' equals 10. However, when called with 'foo(1)', the value of 'x' will never reach 10 as it gets multiplied by 3 in each recursive call. This leads to an infinite recursion without a terminating condition, eventually causing a RecursionError as Python's maximum recursion depth is exceeded.",
+      "correctAnswer": "RecursionError",
+      "incorrectAnswers": [
+        "ValueError",
+        "Nothing is printed",
+        "30",
+        "SyntaxError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "foo = 3 * 3 if 3 == 3 else 3 + 3\nbar = 2 * 2 if 2 != 2 else 2 - 2\n\nprint(foo + bar)",
+      "explanation": "This code uses the conditional (ternary) operator. For 'foo', the condition '3 == 3' is true, so 'foo' is set to '3 * 3', which equals 9. For 'bar', the condition '2 != 2' is false, so 'bar' is set to '2 - 2', which equals 0. Finally, 'foo + bar' is '9 + 0', which results in 9.",
+      "correctAnswer": "9",
+      "incorrectAnswers": ["6", "5", "0", "12", "3"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following code print?",
+      "codeSnippet": "print(8 % 3)",
+      "explanation": "The modulus operator (%) returns the remainder of the division. 8 divided by 3 leaves a remainder of 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["3", "2.67", "0", "1", "4"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this code?",
+      "codeSnippet": "x = 5\ny = x ** 2\nprint(y)",
+      "explanation": "The '**' operator is used for power. Here, 5 raised to the power of 2 equals 25.",
+      "correctAnswer": "25",
+      "incorrectAnswers": ["10", "5", "20", "30", "15"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following code output?",
+      "codeSnippet": "a = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
+      "explanation": "Since 'b' is a reference to the same list as 'a', modifying 'b' also modifies 'a'. Thus, the list becomes [1, 2, 3, 4].",
+      "correctAnswer": "[1, 2, 3, 4]",
+      "incorrectAnswers": [
+        "[1, 2, 3]",
+        "[4, 1, 2, 3]",
+        "SyntaxError",
+        "[4]",
+        "LoopError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of this code?",
+      "codeSnippet": "numbers = [1, 2, 3, 4]\nnumbers[1:3] = [5, 6, 7]\nprint(numbers)",
+      "explanation": "Slicing and assignment replace elements 1 and 2 with [5, 6, 7]. The resulting list is [1, 5, 6, 7, 4].",
+      "correctAnswer": "[1, 5, 6, 7, 4]",
+      "incorrectAnswers": [
+        "[1, 5, 6, 7]",
+        "[5, 6, 7, 4]",
+        "[1, 2, 3, 5, 6, 7, 4]",
+        "TypeError",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following code output?",
+      "codeSnippet": "def func(x=1, y=2):\n    return x + y\nprint(func(y=3, x=2))",
+      "explanation": "The function 'func' is called with named arguments, setting x to 2 and y to 3. Their sum, 5, is returned.",
+      "correctAnswer": "5",
+      "incorrectAnswers": ["3", "2", "6", "None", "Nothing is printed"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of this code?",
+      "codeSnippet": "text = 'Python'\nprint(text[::-1])",
+      "explanation": "The slicing [::-1] reverses the string. Thus, 'Python' becomes 'nohtyP'.",
+      "correctAnswer": "nohtyP",
+      "incorrectAnswers": ["Python", "Pytho", "nothyP", "P", "['Python']"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following code return?",
+      "codeSnippet": "def check(num):\n    return num > 10\nprint(check(5))",
+      "explanation": "The function 'check' returns True if the number is greater than 10. Since 5 is not greater than 10, it returns False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": ["True", "None", "10", "Error", "RecursionError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does this code snippet output?",
+      "codeSnippet": "x = 'py' 'thon'\nprint(x)",
+      "explanation": "In Python, adjacent strings are automatically concatenated. Thus, 'py' and 'thon' become 'python'.",
+      "correctAnswer": "python",
+      "incorrectAnswers": ["py thon", "SyntaxError", "None", "PytHon", "5"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of the following Python code?",
+      "codeSnippet": "tup = (1, 2, [3, 4])\ntup[2][0] = 'x'\nprint(tup)",
+      "explanation": "Though tuples are immutable, the list inside the tuple can be modified. The first element of the list [3, 4] is changed to 'x'.",
+      "correctAnswer": "333(1, 2, ['x', 4])",
+      "incorrectAnswers": [
+        "TypeError",
+        "(1, 2, 3, 'x')",
+        "(1, 'x', [3, 4])",
+        "None",
+        "Nothing is printed"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this code?",
+      "codeSnippet": "print('Python'.find('th'))",
+      "explanation": "The 'find' method returns the lowest index of the substring if found. In 'Python', the substring 'th' starts at index 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["3", "1", "-1", "0", "None"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of executing this code?",
+      "codeSnippet": "names = ['Alice', 'Bob', 'Craig', 'Diana']\nprint(names[-1])",
+      "explanation": "In Python, negative indexing starts from the end of the list. -1 refers to the last item, 'Diana'.",
+      "correctAnswer": "Diana",
+      "incorrectAnswers": ["Alice", "Bob", "Craig", "Error", "KeyError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this code?",
+      "codeSnippet": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(sum(my_dict.values()))",
+      "explanation": "The 'values()' method returns a view object that displays a list of all the values in the dictionary. The 'sum()' function then adds them up.",
+      "correctAnswer": "6",
+      "incorrectAnswers": [
+        "3",
+        "{'a': 1, 'b': 2, 'c': 3}",
+        "9",
+        "None",
+        "KeyError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will this Python function output?",
+      "codeSnippet": "def square(x):\n    return x ** 2\n\nprint(square(square(2)))",
+      "explanation": "The function 'square' is applied twice. First, square(2) results in 4. Then, square(4) results in 16.",
+      "correctAnswer": "16",
+      "incorrectAnswers": ["8", "4", "2", "64", "RecursionError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does this Python code output?",
+      "codeSnippet": "my_list = ['a', None, 'b', None]\nprint(my_list.count(None))",
+      "explanation": "The 'count' method in lists returns the number of occurrences of a value. Here, 'None' occurs twice in 'my_list'.",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["0", "4", "1", "None", "3"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this Python code?",
+      "codeSnippet": "a = 'python'\nb = a[:2] + a[-2:]\nprint(b)",
+      "explanation": "Slicing is used to create a new string consisting of the first two and last two characters of 'python', resulting in 'pyon'.",
+      "correctAnswer": "pyon",
+      "incorrectAnswers": ["python", "pyth", "on", "pt", "None"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does the following Python code output?",
+      "codeSnippet": "print('5'.zfill(3))",
+      "explanation": "The 'zfill' method pads the string with zeros on the left to fill the width. Here, '5' is padded to '005'.",
+      "correctAnswer": "005",
+      "incorrectAnswers": ["500", "5.00", "5", "50", "AttributeError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the result of this code?",
+      "codeSnippet": "info = {'name': 'Alice', 'age': 25}\ninfo.pop('age')\nprint('age' in info)",
+      "explanation": "The 'pop' method removes the key-value pair with key 'age'. The 'in' operator then checks for 'age' key presence, which is False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": ["True", "'Alice'", "25", "ValueError", "KeyError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will this Python code snippet output?",
+      "codeSnippet": "x = 10\ny = 0\nprint(x and y)",
+      "explanation": "In a logical 'and', if the first operand is false, Python returns it without checking the second. Since 10 is true, it returns 0 (y).",
+      "correctAnswer": "0",
+      "incorrectAnswers": ["10", "False", "True", "None", "SyntaxError"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will the following code snippet print?",
+      "codeSnippet": "x = 'Hello'\nprint(x.isalpha())",
+      "explanation": "The 'isalpha()' method checks if all characters in the string are alphabetic. 'Hello' is entirely alphabetic, so it returns True.",
+      "correctAnswer": "True",
+      "incorrectAnswers": ["False", "Error", "None", "Hello", "5"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What is the output of this code?",
+      "codeSnippet": "my_tuple = (1, 2, 3)\nprint(my_tuple[1:])",
+      "explanation": "Slicing a tuple from index 1 to the end creates a new tuple (2, 3).",
+      "correctAnswer": "(2, 3)",
+      "incorrectAnswers": ["(1, 2)", "1, 2, 3", "(3,)", "SyntaxError", "None"]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will the following code print?",
+      "codeSnippet": "print('\\n'.isspace())",
+      "explanation": "The 'isspace()' method checks if all characters in the string are whitespace. '\\n' is a newline character, which is considered whitespace.",
+      "correctAnswer": "True",
+      "incorrectAnswers": [
+        "False",
+        "SyntaxError",
+        "None",
+        "bar",
+        "['foo', 'bar', 'baz']"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What will the following code print?",
+      "codeSnippet": "print('\\n'.isspace())",
+      "explanation": "The 'isspace()' method checks if all characters in the string are whitespace. '\\n' is a newline character, which is considered whitespace.",
+      "correctAnswer": "True",
+      "incorrectAnswers": [
+        "False",
+        "SyntaxError",
+        "None",
+        "ValueError",
+        "TypeError"
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "question": "What does this code return?",
+      "codeSnippet": "def multiply(a, b):\n    return a * b\n\nprint(multiply(3, 'a'))",
+      "explanation": "Multiplying a string by a number repeats the string. Here, 'a' is repeated 3 times, resulting in 'aaa'.",
+      "correctAnswer": "aaa",
+      "incorrectAnswers": ["3a", "TypeError", "None", "9", "ValueError"]
     }
   ],
   "hard": [
@@ -3169,6 +3411,124 @@
       "explanation": "In the Integer class, which inherits from int, the __add__ method is overridden to subtract 1 from the sum, and the __sub__ method is overridden to add the numbers and then add 1. The __str__ method, though overridden, is not used in this snippet. When 'foo - bar' is executed, it invokes the __sub__ method of foo (3), which adds 3 to bar (5), resulting in 8, and then adds 1, giving a final result of 9.",
       "correctAnswer": "9",
       "incorrectAnswers": ["8", "-2", "2", "RecursionError", "-9"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code involving class inheritance?",
+      "codeSnippet": "class A:\n    def __init__(self, x=1):\n        self.x = x\n\nclass B(A):\n    def __init__(self, y=2):\n        super().__init__()\n        self.y = y\n\ndef main():\n    b = B()\n    print(b.x, b.y)\nmain()",
+      "explanation": "The class 'B' inherits from 'A'. The 'super().__init__()' call initializes 'x' from 'A'. Without arguments, 'x' defaults to 1. 'y' is initialized in 'B' as 2.",
+      "correctAnswer": "1 2",
+      "incorrectAnswers": [
+        "2 1",
+        "None None",
+        "1 1",
+        "SyntaxError",
+        "RecursionError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the result of this list comprehension involving bitwise operations?",
+      "codeSnippet": "result = [x ^ 2 for x in range(10) if x % 2 == 0]\nprint(result)",
+      "explanation": "The list comprehension selects even numbers (x % 2 == 0) from 0 to 9 and applies the bitwise XOR operator with 2. It yields [2, 0, 6, 4, 10].",
+      "correctAnswer": "[2, 0, 6, 4, 10]",
+      "incorrectAnswers": [
+        "[0, 1, 2, 3, 4]",
+        "[1, 3, 5, 7, 9]",
+        "[2, 3, 6, 7, 10]",
+        "SyntaxError",
+        "ValueError"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code that manipulates a generator?",
+      "codeSnippet": "def gen_func():\n    for i in range(5):\n        yield i\n\nx = gen_func()\nprint(next(x), next(x))",
+      "explanation": "The generator 'gen_func' yields numbers from 0 to 4. The 'next()' function retrieves the next value from the generator, thus printing 0 and then 1.",
+      "correctAnswer": "0 1",
+      "incorrectAnswers": ["1 2", "Error", "0 0", "[0, 0]", "[1, 2]"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this complex list slicing return?",
+      "codeSnippet": "my_list = [0, 1, 2, 3, 4, 5, 6]\nprint(my_list[2:5:-1])",
+      "explanation": "The slice starts at index 2 and ends before index 5, but the step -1 reverses the direction, resulting in an empty list as the start is after the end.",
+      "correctAnswer": "[]",
+      "incorrectAnswers": [
+        "[4, 3, 2]",
+        "[2, 3, 4]",
+        "[5, 4, 3]",
+        "SyntaxError",
+        "True"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What output is produced by this code involving the fractions module?",
+      "codeSnippet": "import fractions\n\nfrac = fractions.Fraction(10, 6)\nprint(frac)",
+      "explanation": "The 'fractions.Fraction' class automatically simplifies the fraction. 10/6 is simplified to 5/3.",
+      "correctAnswer": "5/3",
+      "incorrectAnswers": ["10/6", "1 2/3", "1.6666", "2/3", "1/2"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will this code output using the functools module?",
+      "codeSnippet": "import functools\n\nlst = [1, 2, 3, 4, 5]\nresult = functools.reduce(lambda x, y: x + y, lst)\nprint(result)",
+      "explanation": "The 'functools.reduce' function applies the lambda function cumulatively to the items of the list. This sums up the list elements, resulting in 15.",
+      "correctAnswer": "15",
+      "incorrectAnswers": ["10", "5", "20", "25", "None"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this code output using the bisect module?",
+      "codeSnippet": "import bisect\n\nnums = [1, 3, 4, 7]\nindex = bisect.bisect_left(nums, 5)\nprint(index)",
+      "explanation": "The 'bisect.bisect_left' function finds the position to insert an item in a sorted list to maintain order. Here, 5 would fit at index 3.",
+      "correctAnswer": "3",
+      "incorrectAnswers": ["2", "4", "5", "1", "0"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What will be printed using the heapq module?",
+      "codeSnippet": "import heapq\n\nheap = [5, 7, 9, 1, 3]\nheapq.heapify(heap)\nprint(heap[0])",
+      "explanation": "The 'heapq.heapify' function converts the list into a heap. The smallest element in a heap (here 1) is always at the root, i.e., heap[0].",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["5", "7", "9", "3", "0"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What does this code output using the re module for regular expressions?",
+      "codeSnippet": "import re\n\npattern = '^[a-z]+$'\nresult = re.match(pattern, 'HelloWorld')\nprint(bool(result))",
+      "explanation": "The regular expression '^[a-z]+$' matches a string of lowercase letters. 'HelloWorld' does not match this pattern, so 'result' is None, and bool(None) is False.",
+      "correctAnswer": "False",
+      "incorrectAnswers": [
+        "True",
+        "Error",
+        "None",
+        "'HelloWorld'",
+        "'^[a-z]+$'"
+      ]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the result of this code involving the datetime module?",
+      "codeSnippet": "from datetime import datetime, timedelta\n\ndt = datetime(2020, 1, 1)\ndt += timedelta(days=30)\nprint(dt.month)",
+      "explanation": "The code adds 30 days to January 1, 2020, resulting in January 31, 2020. Thus, the month printed is 1.",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["2", "30", "31", "0", "12"]
+    },
+    {
+      "difficulty": "expert",
+      "question": "What is the output of this code using the struct module?",
+      "codeSnippet": "import struct\n\npacked = struct.pack('>I', 1024)\nprint(packed)",
+      "explanation": "The 'struct.pack' function with format '>I' packs the integer 1024 into a byte object in big-endian format.",
+      "correctAnswer": "b'\\x00\\x00\\x04\\x00'",
+      "incorrectAnswers": [
+        "1024",
+        "b'1024'",
+        "b'\\x00\\x04\\x00\\x00'",
+        "Error",
+        "b'\\x04\\x00\\x00\\x00'"
+      ]
     }
   ]
 }

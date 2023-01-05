@@ -25,6 +25,8 @@ def validate_json(file_path):
                         assert "incorrectAnswers" in question
                         assert len(question["incorrectAnswers"]) == 5
                         assert question["correctAnswer"] not in question["incorrectAnswers"]
+                        assert len(set(question["incorrectAnswers"])) == len(
+                            question["incorrectAnswers"])
 
                     except AssertionError as err:
                         raise Exception(
