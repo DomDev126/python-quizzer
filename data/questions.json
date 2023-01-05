@@ -2653,6 +2653,66 @@
       "explanation": "The function 'foo' creates a list comprehension that iterates over a range of 'n'. In each iteration, it performs a constant time operation of appending the current value 'i' to the new list. As the number of iterations is directly proportional to the input 'n', the time complexity of the function is linear. Therefore, for each increase in 'n', the number of operations increases linearly, making the time complexity O(n).",
       "correctAnswer": "O(n)",
       "incorrectAnswers": ["O(1)", "O(n^2)", "O(log n)", "O(n log n", "O(n^3)"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following Python code output using a list comprehension?",
+      "codeSnippet": "x = [i ** 2 if i % 2 == 0 else i for i in range(5)]\nprint(x)",
+      "explanation": "The list comprehension creates a list where each even number is squared and each odd number is left as is, resulting in [0, 1, 4, 3, 16].",
+      "correctAnswer": "[0, 1, 4, 3, 16]",
+      "incorrectAnswers": [
+        "[1, 2, 3, 4, 5]",
+        "[0, 2, 4, 6, 8]",
+        "[25, 16, 9, 4, 1]",
+        "TypeError",
+        "None"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What does this Python code snippet with a generator expression print?",
+      "codeSnippet": "gen = (x ** 2 for x in range(10) if x % 2 == 0)\nprint(next(gen))",
+      "explanation": "The generator expression generates squares of even numbers from 0 to 9. The 'next' function retrieves the first element, which is 0^2, resulting in 0.",
+      "correctAnswer": "0",
+      "incorrectAnswers": ["1", "4", "16", "StopIteration", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this code using dictionary comprehension?",
+      "codeSnippet": "d = {i: i ** 2 for i in range(5)}\nprint(d.get(3))",
+      "explanation": "The dictionary comprehension creates a dictionary where each key is a number from 0 to 4 and each value is its square. The 'get' method returns the value for key 3, which is 9.",
+      "correctAnswer": "9",
+      "incorrectAnswers": ["3", "16", "None", "KeyError", "12"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What will the following code output?",
+      "codeSnippet": "def foo(n):\n    if n == 0:\n        return 'End'\n    else:\n        return foo(n-1)\n\nprint(foo(3))",
+      "explanation": "The function 'foo' is a recursive function that calls itself, decreasing 'n' by 1 each time, until 'n' becomes 0. When 'n' is 0, it returns 'End'.",
+      "correctAnswer": "End",
+      "incorrectAnswers": ["3", "2", "1", "RecursionError", "None"]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this Python code using tuple unpacking?",
+      "codeSnippet": "a, *b, c = range(5)\nprint(b)",
+      "explanation": "The code uses extended unpacking where 'a' is assigned the first value, 'c' the last value, and 'b' is a list of the remaining values in the range, resulting in [1, 2, 3].",
+      "correctAnswer": "[1, 2, 3]",
+      "incorrectAnswers": [
+        "[0, 1, 2]",
+        "[2, 3, 4]",
+        "[0, 1, 2, 3, 4]",
+        "TypeError",
+        "1"
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "question": "What is the output of this Python code snippet using a lambda function within a function?",
+      "codeSnippet": "def foo(x):\n    return (lambda y: y + x)(x * 2)\n\nprint(foo(3))",
+      "explanation": "The function 'foo' returns a lambda function that adds 'y' to 'x'. The lambda function is immediately invoked with 'x * 2'. For 'foo(3)', the lambda receives 6, and returns 6 + 3, resulting in 9.",
+      "correctAnswer": "9",
+      "incorrectAnswers": ["6", "12", "3", "TypeError", "None"]
     }
   ],
   "expert": [
