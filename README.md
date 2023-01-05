@@ -1,6 +1,6 @@
 ![Python Quizzer](public/banner-transparent.png)
 
-Welcome to the **Python Quizzer** - an interactive way to test and improve your Python skills! This is a hobby project built with React and TypeScript.
+Welcome to **Python Quizzer** - an interactive way to test and improve your Python skills! This is a hobby project built with React and TypeScript.
 
 The quiz presents users with 20 random Python questions, each featuring a question, a code snippet, and six possible answers. After responding to a question, the game displays an explanation of the code.
 
