@@ -17,20 +17,22 @@ def validate_json(file_path):
                     question_count[category] += 1
 
                     try:
-                        assert category == question["difficulty"]
-                        assert "question" in question
-                        assert "codeSnippet" in question
-                        assert "explanation" in question
-                        assert "correctAnswer" in question
-                        assert "incorrectAnswers" in question
-                        assert len(question["incorrectAnswers"]) == 5
-                        assert question["correctAnswer"] not in question["incorrectAnswers"]
+                        assert category == question["difficulty"], "Question have incorrect category"
+                        assert "question" in question, "The question doesnt have the key 'question'"
+                        assert "codeSnippet" in question, "The question doesnt have the key 'codeSnippet'"
+                        assert "explanation" in question, "The question doesnt have the key 'explanation'"
+                        assert "correctAnswer" in question, "The question doesnt have the key 'correctAnswer'"
+                        assert "incorrectAnswers" in question, "The question doesnt have the key 'incorrectAnswers'"
+                        assert len(
+                            question["incorrectAnswers"]) == 5, "The question doesnt have five incorrect options"
+                        assert question["correctAnswer"] not in question[
+                            "incorrectAnswers"], "The correct answer is also one of the incorrect options"
                         assert len(set(question["incorrectAnswers"])) == len(
-                            question["incorrectAnswers"])
+                            question["incorrectAnswers"]), "There is a duplicate incorrect answer"
 
                     except AssertionError as err:
                         raise Exception(
-                            f"Invalid question data: {err}\n{question}")
+                            f"\n\nInvalid question data: {err}\n{question}")
 
         print("JSON is valid!")
         total_questions = 0
