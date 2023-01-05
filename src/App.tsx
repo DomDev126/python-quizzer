@@ -96,6 +96,7 @@ function App() {
   };
 
   const startGame = () => {
+    scrollToTop();
     setGameStarted(true);
   };
 

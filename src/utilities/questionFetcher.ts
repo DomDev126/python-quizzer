@@ -88,4 +88,16 @@ export const questionFetcher = (): FormattedQuestionData[] => {
   return selectedQuestions;
 };
 
-export default questionFetcher;
+export const getTotalNumberOfQuestions = (): number => {
+  const questionsDataTyped = JSON.parse(JSON.stringify(questionsData)) as QuestionsDataStructure;
+  let totalQuestions = 0;
+
+  const keys = Object.keys(questionsDataTyped) as Array<keyof QuestionsDataStructure>;
+  keys.forEach(key => {
+    totalQuestions += questionsDataTyped[key].length;
+  });
+
+  return totalQuestions;
+};
+
+

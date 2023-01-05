@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="footer">
-        <p>Designed and Developed by Alexander Engström, 2023</p>
+        <p>Designed and Developed by Alexander Engström, 2024</p>
         <p>
           Contribute to this project on{" "}
           <a
