@@ -58,49 +58,49 @@ const Score: React.FC<Props> = ({ score, restart }) => {
         "Not a single point, but don't fret! Every coding hero begins with zero. Time to hit those Python books!"
       );
     }
-  });
+  }, [score]);
 
   return (
-    <>
-      <div className="main-container">
-        <div className="score-container">
-          <h1>{score}/20 points</h1>
+    <main className="main-container">
+      <section className="score-container">
+        <h1>Your Score: {score}/20 Points</h1>
+        <p>
+          <strong>{message}</strong>
+        </p>
+        {score < 10 && (
           <p>
-            <strong>{message}</strong>
-          </p>
-          {score < 10 && (
-            <p>
-              Enhance your Python skills by exploring the official
-              documentation. It's a great resource to deepen your understanding
-              and improve your performance.{" "}
-              <a
-                href="https://docs.python.org/3/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Discover more here!
-              </a>
-            </p>
-          )}
-
-          <p>
-            Do you want to create your own questions or did you find any errors
-            in the quiz? Contribute to this project on{" "}
+            Enhance your Python skills by exploring the official documentation.
+            It's a great resource to deepen your understanding and improve your
+            performance.{" "}
             <a
-              href="https://github.com/alexandengstrom/python-quizzer"
+              href="https://docs.python.org/3/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Discover more about Python documentation"
             >
-              GitHub
+              Discover more here!
             </a>
-            .
           </p>
-          <button className="wide-button" onClick={restart}>
-            Restart the quiz!
-          </button>
-        </div>
-      </div>
-    </>
+        )}
+
+        <p>
+          Do you want to create your own questions or did you find any errors in
+          the quiz? Contribute to this project on{" "}
+          <a
+            href="https://github.com/alexandengstrom/python-quizzer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contribute to Python Quizzer on GitHub"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+        <button className="wide-button" onClick={restart}>
+          Restart the quiz!
+        </button>
+      </section>
+    </main>
   );
 };
 

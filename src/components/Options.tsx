@@ -16,7 +16,6 @@ const Options: React.FC<Props> = ({ options, answer, onOptionClick }) => {
   }, [options]);
 
   const onOptionChosen = (key: string) => {
-    console.log(key);
     setChosenAnswer(key);
     onOptionClick(key);
   };
@@ -35,13 +34,23 @@ const Options: React.FC<Props> = ({ options, answer, onOptionClick }) => {
 
   return (
     <>
-      <div className="options-container">
+      <div
+        className="options-container"
+        role="radiogroup"
+        aria-labelledby="questionOptions"
+      >
         {Object.entries(options).map(([key, value]) => (
-          <div key={key} className="option">
+          <div
+            key={key}
+            className="option"
+            role="radio"
+            aria-checked={chosenAnswer === key}
+          >
             <button
               className={getButtonClassName(key)}
               onClick={() => onOptionChosen(key)}
               disabled={chosenAnswer !== null}
+              aria-label={`Option ${key.toUpperCase()}`}
             >
               <h3>{key.toUpperCase() + ")"}</h3>
               <p>{value}</p>

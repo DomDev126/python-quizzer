@@ -26,9 +26,12 @@ const Question: React.FC<Props> = ({ question, codeSnippet }) => {
   }, []);
 
   return (
-    <>
-      <div className="question-container">
-        <h2>{question}</h2>
+    <article className="question-container" aria-labelledby="questionHeading">
+      <header>
+        <h2 id="questionHeading">{question}</h2>
+      </header>
+
+      <section aria-labelledby="codeSnippetHeading">
         <SyntaxHighlighter
           className="code-snippet"
           language="python"
@@ -36,8 +39,8 @@ const Question: React.FC<Props> = ({ question, codeSnippet }) => {
         >
           {codeSnippet}
         </SyntaxHighlighter>
-      </div>
-    </>
+      </section>
+    </article>
   );
 };
 
